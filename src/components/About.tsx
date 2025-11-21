@@ -107,9 +107,9 @@ export const About = () => {
           className="mt-16 max-w-4xl mx-auto text-center"
         >
           <Card className="p-8">
-            <h3 className="text-2xl font-bold mb-4">Meet Your Instructor</h3>
+            <h3 className="text-2xl font-bold mb-4 font-heading">Meet Your Instructor</h3>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Kiran is a trader for over a decade in US & Indian markets having trained more than 3000+ students. Kiran is an alum of Columbia University and has worked at Wall Street as well. With 13+ proven trading strategies and a 98% success rate, Kiran brings world-class expertise to help you master the markets.
+              Kiran is a trader for over a decade in US & Indian markets having trained more than 3000+ students. Kiran is an alum of Columbia University and has worked at Wall Street as well. He has also cleared the NISM SEBI RA exam. With 13+ proven trading strategies and a 98% success rate, Kiran brings world-class expertise to help you master the markets.
             </p>
           </Card>
         </motion.div>
