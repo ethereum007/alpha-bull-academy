@@ -163,7 +163,7 @@ export const Contact = () => {
                 <div>
                   <h4 className="font-semibold text-lg mb-1">LinkedIn</h4>
                   <a 
-                    href="https://linkedin.com/in/kirandutta" 
+                    href="https://www.linkedin.com/in/kirandutta"
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-primary hover:underline mb-2 block"
