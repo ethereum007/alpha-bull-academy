@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { TrendingUp } from "lucide-react";
 import { motion } from "framer-motion";
+import { TradingChart } from "./TradingChart";
 
 export const Hero = () => {
   const scrollToSection = (sectionId: string) => {
@@ -12,6 +13,9 @@ export const Hero = () => {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 bg-gradient-to-br from-background via-muted/30 to-background">
+      {/* Trading Chart Background */}
+      <TradingChart />
+      
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
