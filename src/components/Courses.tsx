@@ -9,6 +9,7 @@ const courses = [
     title: "Beginner Trading Course",
     description: "Basics of markets, charts, and trading psychology.",
     price: "6,999",
+    enrollLink: "https://rzp.io/rzp/7UZGE0Dg",
     features: [
       "Understanding market structure",
       "Reading candlestick patterns",
@@ -22,6 +23,7 @@ const courses = [
     title: "Price Action Mastery",
     description: "CPR, EMA, support/resistance, and breakout setups.",
     price: "9,999",
+    enrollLink: "https://rzp.io/rzp/yB1bafTe",
     features: [
       "Advanced price action techniques",
       "CPR strategy implementation",
@@ -105,10 +107,31 @@ export const Courses = () => {
                   ))}
                 </ul>
                 
-                <Button variant="outline" className="w-full group/btn border-primary/30 hover:bg-primary hover:text-primary-foreground">
-                  Learn More
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                </Button>
+                <div className="flex gap-3">
+                  <Button 
+                    variant="outline" 
+                    className="flex-1 border-primary/30 hover:bg-primary/10"
+                    onClick={() => window.open('https://wa.me/919032999466', '_blank')}
+                  >
+                    Contact Us
+                  </Button>
+                  {course.enrollLink ? (
+                    <Button 
+                      className="flex-1"
+                      onClick={() => window.open(course.enrollLink, '_blank')}
+                    >
+                      Enroll
+                      <ArrowRight className="ml-2 w-4 h-4" />
+                    </Button>
+                  ) : (
+                    <Button 
+                      className="flex-1"
+                      onClick={() => window.open('https://wa.me/919032999466', '_blank')}
+                    >
+                      Contact Us
+                    </Button>
+                  )}
+                </div>
               </Card>
             </motion.div>
           ))}
