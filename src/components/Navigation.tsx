@@ -40,6 +40,14 @@ export const Navigation = () => {
             <button onClick={() => scrollToSection("contact")} className="text-sm font-medium hover:text-primary transition-colors">
               Contact
             </button>
+            <a 
+              href="https://t.me/alphabull_in" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-sm font-medium hover:text-primary transition-colors"
+            >
+              Join Our Community
+            </a>
             <Button onClick={() => scrollToSection("contact")}>Get Started</Button>
           </div>
 
@@ -68,6 +76,14 @@ export const Navigation = () => {
               <button onClick={() => scrollToSection("contact")} className="text-left text-sm font-medium hover:text-primary transition-colors">
                 Contact
               </button>
+              <a 
+                href="https://t.me/alphabull_in" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-left text-sm font-medium hover:text-primary transition-colors"
+              >
+                Join Our Community
+              </a>
               <Button onClick={() => scrollToSection("contact")} className="w-full">Get Started</Button>
             </div>
           </div>
