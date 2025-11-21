@@ -1,76 +1,79 @@
-import { motion } from "framer-motion";
+import { BookOpen, TrendingUp, Target, CheckCircle } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { BookOpen, TrendingUp, Video, ArrowRight } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { motion } from "framer-motion";
 
 const courses = [
   {
     icon: BookOpen,
-    title: "Beginner Trading Course",
-    description: "Basics of markets, charts, and trading psychology.",
-    price: "6,999",
-    enrollLink: "https://rzp.io/rzp/7UZGE0Dg",
+    title: "Stock Market Fundamentals",
+    level: "Basics",
+    duration: "8 Weeks",
+    description: "Perfect for beginners who want to start their trading journey. Learn the essential concepts, market structure, and fundamental analysis techniques.",
+    price: "₹14,999",
     features: [
-      "Understanding market structure",
-      "Reading candlestick patterns",
-      "Risk management fundamentals",
-      "Trading psychology basics",
+      "Live interactive sessions",
+      "Recorded video lectures",
+      "Trading simulator access"
     ],
-    color: "bg-blue-500/10 text-blue-600",
+    color: "bg-blue-500/10",
   },
   {
     icon: TrendingUp,
-    title: "Price Action Mastery",
-    description: "CPR, EMA, support/resistance, and breakout setups.",
-    price: "9,999",
-    enrollLink: "https://rzp.io/rzp/yB1bafTe",
+    title: "Technical Analysis Mastery",
+    level: "Intermediate",
+    duration: "12 Weeks",
+    description: "Deep dive into technical analysis, chart patterns, and advanced trading strategies. Build a systematic approach to trading Indian markets.",
+    price: "₹29,999",
     features: [
-      "Advanced price action techniques",
-      "CPR strategy implementation",
-      "EMA crossover strategies",
-      "Breakout and breakdown patterns",
+      "Live market analysis sessions",
+      "Advanced charting tools access",
+      "Weekly strategy webinars"
     ],
-    color: "bg-accent/10 text-accent",
+    color: "bg-green-500/10",
   },
   {
-    icon: Video,
-    title: "Live Market Mentorship",
-    description: "Daily recap, homework, and trade breakdowns.",
+    icon: Target,
+    title: "Options & Derivatives Mastery",
+    level: "Advanced",
+    duration: "16 Weeks",
+    description: "Master derivatives trading with advanced options strategies, futures trading, and hedging techniques. For serious traders ready to go professional.",
+    price: "₹49,999",
     features: [
-      "Live trading sessions",
-      "Real-time market analysis",
-      "Personalized feedback",
-      "Community support",
+      "Daily live market sessions",
+      "Options strategy builder tool",
+      "Advanced analytics dashboard"
     ],
-    color: "bg-success/10 text-success",
+    color: "bg-purple-500/10",
   },
 ];
 
 export const Courses = () => {
+  const scrollToContact = () => {
+    const element = document.getElementById("contact");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <section className="py-24 bg-muted/50 relative">
+    <section id="courses" className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-block px-4 py-2 rounded-full bg-primary/10 border border-primary/30 mb-6">
-            <span className="text-sm font-semibold text-primary">Our Courses</span>
-          </div>
-          
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
-            Choose Your Learning Path
-          </h2>
-          
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Structured courses designed to take you from beginner to confident trader
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Courses</h2>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Structured programs designed to take you from beginner to professional trader
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {courses.map((course, index) => (
             <motion.div
               key={course.title}
@@ -79,58 +82,46 @@ export const Courses = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
             >
-              <Card className="p-8 h-full bg-card border-2 border-border/60 hover:shadow-[var(--shadow-card)] hover:border-primary/30 transition-all duration-300 hover:scale-105 group">
-                <div className={`w-16 h-16 rounded-2xl ${course.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <course.icon className="w-8 h-8" />
+              <Card className="p-6 h-full flex flex-col hover:shadow-xl transition-all duration-300 hover:scale-105 group border-2">
+                <div className="flex items-start justify-between mb-4">
+                  <Badge variant="secondary" className="text-xs">
+                    {course.level}
+                  </Badge>
+                  <span className="text-sm text-muted-foreground">{course.duration}</span>
                 </div>
-                
-                <h3 className="text-2xl font-bold mb-3 text-foreground">
+
+                <div className={`w-16 h-16 rounded-2xl ${course.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                  <course.icon className="w-8 h-8 text-primary" />
+                </div>
+
+                <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">
                   {course.title}
                 </h3>
-                
-                {course.price && (
-                  <div className="mb-4">
-                    <span className="text-3xl font-bold text-primary">₹{course.price}</span>
-                  </div>
-                )}
-                
-                <p className="text-muted-foreground mb-6">
+
+                <p className="text-muted-foreground mb-6 flex-grow">
                   {course.description}
                 </p>
-                
-                <ul className="space-y-3 mb-8">
-                  {course.features.map((feature) => (
-                    <li key={feature} className="flex items-start gap-2 text-sm text-muted-foreground">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2" />
-                      {feature}
+
+                <div className="text-3xl font-bold text-primary mb-6">
+                  {course.price}
+                </div>
+
+                <ul className="space-y-3 mb-6">
+                  {course.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-start gap-2">
+                      <CheckCircle className="w-5 h-5 text-success flex-shrink-0 mt-0.5" />
+                      <span className="text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
-                
-                <div className="flex gap-3">
-                  <Button 
-                    variant="outline" 
-                    className="flex-1 border-primary/30 hover:bg-primary/10"
-                    onClick={() => window.open('https://wa.me/919032999466', '_blank')}
-                  >
-                    Contact Us
+
+                <div className="mt-auto flex gap-3">
+                  <Button variant="outline" className="flex-1" onClick={scrollToContact}>
+                    View Details
                   </Button>
-                  {course.enrollLink ? (
-                    <Button 
-                      className="flex-1"
-                      onClick={() => window.open(course.enrollLink, '_blank')}
-                    >
-                      Enroll
-                      <ArrowRight className="ml-2 w-4 h-4" />
-                    </Button>
-                  ) : (
-                    <Button 
-                      className="flex-1"
-                      onClick={() => window.open('https://wa.me/919032999466', '_blank')}
-                    >
-                      Contact Us
-                    </Button>
-                  )}
+                  <Button className="flex-1" onClick={scrollToContact}>
+                    Book Now
+                  </Button>
                 </div>
               </Card>
             </motion.div>
