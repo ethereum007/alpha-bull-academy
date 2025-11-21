@@ -147,10 +147,10 @@ export const Footer = () => {
               <li className="flex items-start gap-2">
                 <Mail className="w-4 h-4 mt-0.5 flex-shrink-0" />
                 <a 
-                  href="mailto:contact@alphabull.in" 
+                  href="mailto:contact@alphabull.club" 
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
                 >
-                  contact@alphabull.in
+                  contact@alphabull.club
                 </a>
               </li>
               <li className="flex items-start gap-2">
