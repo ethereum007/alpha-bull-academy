@@ -26,7 +26,7 @@ const courses = [
     level: "Intermediate",
     duration: "12 Weeks",
     description: "Deep dive into technical analysis, chart patterns, and advanced trading strategies. Price Action Mastery – CPR, EMA, support/resistance, and breakout setups.",
-    price: "₹29,999",
+    price: "₹9,999",
     enrollLink: "https://rzp.io/rzp/yB1bafTe",
     features: [
       "Live market analysis sessions",
