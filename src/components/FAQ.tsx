@@ -20,10 +20,6 @@ const faqs = [
     answer: "We accept all major payment methods including UPI, credit/debit cards, net banking, and wallets. EMI options are available for courses above ₹10,000 through our payment partner Razorpay. Contact us on WhatsApp for custom payment plans."
   },
   {
-    question: "Is there a refund policy?",
-    answer: "Yes, we offer a 7-day money-back guarantee. If you're not satisfied with the course quality within the first week, we'll provide a full refund, no questions asked."
-  },
-  {
     question: "Will I receive a certificate after completion?",
     answer: "Yes, upon successful completion of the course and passing the final assessment, you'll receive an industry-recognized certificate from AlphaBull Trading Academy that you can showcase on LinkedIn and your resume."
   },

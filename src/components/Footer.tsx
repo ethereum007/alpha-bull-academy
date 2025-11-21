@@ -176,9 +176,6 @@ export const Footer = () => {
               <a href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                 Terms of Service
               </a>
-              <a href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
-                Refund Policy
-              </a>
             </div>
           </div>
         </div>
