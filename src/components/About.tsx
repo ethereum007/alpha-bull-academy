@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 
 const stats = [
-  { icon: TrendingUp, label: "Years Experience", value: "10+" },
+  { icon: TrendingUp, label: "Years Experience", value: "6+" },
   { icon: Users, label: "Students", value: "3000+" },
   { icon: Award, label: "Success Rate", value: "98%" },
 ];
@@ -12,7 +12,7 @@ const benefits = [
   {
     icon: Target,
     title: "Market Expertise",
-    description: "Over 10 years of experience trading in Indian markets with proven track record"
+    description: "Over 6 years of experience trading in Indian markets with proven track record"
   },
   {
     icon: Users,
@@ -42,11 +42,11 @@ export const About = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Why Choose AlphaBull?</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-            AlphaBull Trading Academy is dedicated to empowering individuals with the knowledge and skills needed to succeed in Indian stock markets. Our comprehensive courses are designed by professional traders who have navigated the markets successfully for over a decade.
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 font-heading">Why Choose AlphaBull?</h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8 leading-relaxed">
+            AlphaBull Trading Academy is dedicated to empowering individuals with the knowledge and skills needed to succeed in Indian stock markets. Our comprehensive courses are designed by professional traders who have navigated the markets successfully for over 6 years.
           </p>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             We believe in practical, hands-on learning combined with strong theoretical foundations. Our students don't just learn strategies—they learn to think like professional traders, manage risk effectively, and build sustainable trading careers.
           </p>
         </motion.div>
