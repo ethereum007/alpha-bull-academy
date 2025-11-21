@@ -48,7 +48,7 @@ const courses = [
 
 export const Courses = () => {
   return (
-    <section className="py-24 bg-muted/30 relative">
+    <section className="py-24 bg-muted/50 relative">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -79,7 +79,7 @@ export const Courses = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
             >
-              <Card className="p-8 h-full bg-card border-border hover:shadow-[var(--shadow-card)] transition-all duration-300 hover:scale-105 group">
+              <Card className="p-8 h-full bg-card border-2 border-border/60 hover:shadow-[var(--shadow-card)] hover:border-primary/30 transition-all duration-300 hover:scale-105 group">
                 <div className={`w-16 h-16 rounded-2xl ${course.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <course.icon className="w-8 h-8" />
                 </div>
