@@ -15,7 +15,7 @@ export const AnnouncementBanner = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className="bg-gradient-to-r from-green-600 via-green-500 to-green-600 text-white py-3 px-4 relative overflow-hidden"
+      className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-green-600 via-green-500 to-green-600 text-white py-3 px-4 relative overflow-hidden"
     >
       {/* Animated background pattern */}
       <div className="absolute inset-0 opacity-20">
