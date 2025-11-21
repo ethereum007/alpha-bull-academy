@@ -11,7 +11,8 @@ const courses = [
     level: "Basics",
     duration: "8 Weeks",
     description: "Perfect for beginners who want to start their trading journey. Learn the essential concepts, market structure, and fundamental analysis techniques.",
-    price: "₹14,999",
+    price: "₹6,999",
+    enrollLink: "https://rzp.io/rzp/7UZGE0Dg",
     features: [
       "Live interactive sessions",
       "Recorded video lectures",
@@ -24,8 +25,9 @@ const courses = [
     title: "Technical Analysis Mastery",
     level: "Intermediate",
     duration: "12 Weeks",
-    description: "Deep dive into technical analysis, chart patterns, and advanced trading strategies. Build a systematic approach to trading Indian markets.",
+    description: "Deep dive into technical analysis, chart patterns, and advanced trading strategies. Price Action Mastery – CPR, EMA, support/resistance, and breakout setups.",
     price: "₹29,999",
+    enrollLink: "https://rzp.io/rzp/yB1bafTe",
     features: [
       "Live market analysis sessions",
       "Advanced charting tools access",
@@ -39,7 +41,8 @@ const courses = [
     level: "Advanced",
     duration: "16 Weeks",
     description: "Master derivatives trading with advanced options strategies, futures trading, and hedging techniques. For serious traders ready to go professional.",
-    price: "₹49,999",
+    price: "₹14,999",
+    enrollLink: "https://wa.me/919032999466",
     features: [
       "Daily live market sessions",
       "Options strategy builder tool",
@@ -50,12 +53,7 @@ const courses = [
 ];
 
 export const Courses = () => {
-  const scrollToContact = () => {
-    const element = document.getElementById("contact");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  const whatsappLink = "https://wa.me/919032999466";
 
   return (
     <section id="courses" className="py-24 bg-background">
@@ -116,11 +114,18 @@ export const Courses = () => {
                 </ul>
 
                 <div className="mt-auto flex gap-3">
-                  <Button variant="outline" className="flex-1" onClick={scrollToContact}>
-                    View Details
+                  <Button 
+                    variant="outline" 
+                    className="flex-1" 
+                    onClick={() => window.open(whatsappLink, '_blank')}
+                  >
+                    Contact Us
                   </Button>
-                  <Button className="flex-1" onClick={scrollToContact}>
-                    Book Now
+                  <Button 
+                    className="flex-1"
+                    onClick={() => window.open(course.enrollLink, '_blank')}
+                  >
+                    Enroll Now
                   </Button>
                 </div>
               </Card>
