@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { Award, Users, TrendingUp, Target } from "lucide-react";
 
 const stats = [
-  { icon: Award, label: "Years Experience", value: "5+" },
-  { icon: Users, label: "Students Trained", value: "1000+" },
-  { icon: TrendingUp, label: "Success Rate", value: "85%" },
-  { icon: Target, label: "Trading Strategies", value: "15+" },
+  { icon: Award, label: "Years Experience", value: "10+" },
+  { icon: Users, label: "Students Trained", value: "3000+" },
+  { icon: TrendingUp, label: "Success Rate", value: "98%" },
+  { icon: Target, label: "Trading Strategies", value: "13+" },
 ];
 
 export const About = () => {
@@ -29,11 +29,11 @@ export const About = () => {
             </h2>
             
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              I am Kiran, a trader and educator helping students understand price action, technical analysis, and profitable trading systems.
+              Kiran is a trader for over a decade in US & Indian markets having trained more than 3000+ students.
             </p>
             
             <p className="text-lg text-muted-foreground leading-relaxed">
-              With years of experience in the markets, I've developed a teaching methodology that breaks down complex trading concepts into easy-to-understand lessons, empowering traders to make confident decisions.
+              Kiran is an alum of Columbia University and has worked at Wall Street as well.
             </p>
           </motion.div>
 

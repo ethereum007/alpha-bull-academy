@@ -61,7 +61,7 @@ export const Courses = () => {
             <span className="text-sm font-semibold text-primary">Our Courses</span>
           </div>
           
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
             Choose Your Learning Path
           </h2>
           
