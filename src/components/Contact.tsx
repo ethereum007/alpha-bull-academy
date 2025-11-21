@@ -1,90 +1,174 @@
-import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { MessageCircle, Mail, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Mail, Phone, Linkedin, MapPin } from "lucide-react";
+import { motion } from "framer-motion";
+import { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
 
 export const Contact = () => {
-  return (
-    <section className="py-24 bg-gradient-to-br from-primary to-primary/80 relative overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-10 left-10 w-64 h-64 bg-accent rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-10 right-10 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
-      </div>
+  const { toast } = useToast();
+  const [formData, setFormData] = useState({
+    name: "",
+    mobile: "",
+    email: "",
+    message: ""
+  });
 
-      <div className="container mx-auto px-4 relative z-10">
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    toast({
+      title: "Message Sent!",
+      description: "We'll get back to you within 24 hours.",
+    });
+    setFormData({ name: "", mobile: "", email: "", message: "" });
+  };
+
+  return (
+    <section id="contact" className="py-24 bg-background">
+      <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-            Ready to Start Your Journey?
-          </h2>
-          
-          <p className="text-lg text-white/90 max-w-2xl mx-auto">
-            Get in touch with us today and take the first step towards becoming a successful trader
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Get in Touch</h2>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Ready to start your trading journey? Contact us today for a free consultation
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <Card className="p-8 bg-white/10 backdrop-blur-lg border-white/20 hover:bg-white/15 transition-all duration-300 group h-full">
-              <div className="w-14 h-14 rounded-xl bg-success/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <MessageCircle className="w-7 h-7 text-success" />
-              </div>
+            <Card className="p-8">
+              <h3 className="text-2xl font-bold mb-6">Send us a Message</h3>
+              <p className="text-muted-foreground mb-6">Fill out the form and we'll get back to you within 24 hours</p>
               
-              <h3 className="text-2xl font-bold mb-3 text-white">
-                WhatsApp
-              </h3>
-              
-              <p className="text-white/80 mb-6">
-                Quick response and instant communication
-              </p>
-              
-              <Button 
-                className="w-full bg-success hover:bg-success/90 text-white"
-                onClick={() => window.open('https://wa.me/919032999466', '_blank')}
-              >
-                Message on WhatsApp
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  <label className="block text-sm font-medium mb-2">Full Name *</label>
+                  <Input
+                    required
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    placeholder="Your full name"
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium mb-2">Mobile Number *</label>
+                  <Input
+                    required
+                    type="tel"
+                    value={formData.mobile}
+                    onChange={(e) => setFormData({ ...formData, mobile: e.target.value })}
+                    placeholder="+91 98765 43210"
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium mb-2">Email Address *</label>
+                  <Input
+                    required
+                    type="email"
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    placeholder="your.email@example.com"
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium mb-2">Message *</label>
+                  <Textarea
+                    required
+                    value={formData.message}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    placeholder="Tell us about your trading goals..."
+                    rows={5}
+                  />
+                </div>
+                
+                <Button type="submit" className="w-full" size="lg">
+                  Send Message
+                </Button>
+              </form>
             </Card>
           </motion.div>
 
+          {/* Contact Information */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="space-y-6"
           >
-            <Card className="p-8 bg-white/10 backdrop-blur-lg border-white/20 hover:bg-white/15 transition-all duration-300 group h-full">
-              <div className="w-14 h-14 rounded-xl bg-accent/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <Mail className="w-7 h-7 text-accent" />
+            <Card className="p-6 hover:shadow-lg transition-shadow">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <Mail className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-lg mb-1">Email</h4>
+                  <p className="text-muted-foreground mb-2">info@alphabull.in</p>
+                  <p className="text-sm text-muted-foreground">We'll respond within 24 hours</p>
+                </div>
               </div>
-              
-              <h3 className="text-2xl font-bold mb-3 text-white">
-                Email
-              </h3>
-              
-              <p className="text-white/80 mb-6">
-                Detailed inquiries and support
-              </p>
-              
-              <Button 
-                className="w-full bg-accent hover:bg-accent/90 text-primary"
-                onClick={() => window.location.href = 'mailto:support@alphabullschool.com'}
-              >
-                Send an Email
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
+            </Card>
+
+            <Card className="p-6 hover:shadow-lg transition-shadow">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <Phone className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-lg mb-1">Phone</h4>
+                  <p className="text-muted-foreground mb-2">+91 98765 43210</p>
+                  <p className="text-sm text-muted-foreground">Mon-Sat, 9:00 AM - 7:00 PM IST</p>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="p-6 hover:shadow-lg transition-shadow">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <Linkedin className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-lg mb-1">LinkedIn</h4>
+                  <a 
+                    href="https://linkedin.com/in/kirandutta" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-primary hover:underline mb-2 block"
+                  >
+                    Connect with our founder
+                  </a>
+                  <p className="text-sm text-muted-foreground">Professional networking and updates</p>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="p-6 hover:shadow-lg transition-shadow">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-lg mb-1">Location</h4>
+                  <p className="text-muted-foreground mb-2">Mumbai, India</p>
+                  <p className="text-sm text-muted-foreground">Online classes available nationwide</p>
+                </div>
+              </div>
             </Card>
           </motion.div>
         </div>
