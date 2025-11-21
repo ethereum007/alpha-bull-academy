@@ -8,6 +8,7 @@ const courses = [
     icon: BookOpen,
     title: "Beginner Trading Course",
     description: "Basics of markets, charts, and trading psychology.",
+    price: "6,999",
     features: [
       "Understanding market structure",
       "Reading candlestick patterns",
@@ -20,6 +21,7 @@ const courses = [
     icon: TrendingUp,
     title: "Price Action Mastery",
     description: "CPR, EMA, support/resistance, and breakout setups.",
+    price: "9,999",
     features: [
       "Advanced price action techniques",
       "CPR strategy implementation",
@@ -83,6 +85,12 @@ export const Courses = () => {
                 <h3 className="text-2xl font-bold mb-3 text-foreground">
                   {course.title}
                 </h3>
+                
+                {course.price && (
+                  <div className="mb-4">
+                    <span className="text-3xl font-bold text-primary">₹{course.price}</span>
+                  </div>
+                )}
                 
                 <p className="text-muted-foreground mb-6">
                   {course.description}
