@@ -123,7 +123,7 @@ export const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-lg mb-1">Email</h4>
-                  <p className="text-muted-foreground mb-2">info@alphabull.in</p>
+                  <p className="text-muted-foreground mb-2">contact@alphabull.in</p>
                   <p className="text-sm text-muted-foreground">We'll respond within 24 hours</p>
                 </div>
               </div>
