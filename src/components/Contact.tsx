@@ -1,7 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, Linkedin, MapPin, MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState } from "react";
@@ -12,8 +11,7 @@ export const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     mobile: "",
-    email: "",
-    message: ""
+    email: ""
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -22,7 +20,7 @@ export const Contact = () => {
       title: "Message Sent!",
       description: "We'll get back to you within 24 hours.",
     });
-    setFormData({ name: "", mobile: "", email: "", message: "" });
+    setFormData({ name: "", mobile: "", email: "" });
   };
 
   return (
@@ -54,29 +52,27 @@ export const Contact = () => {
               <p className="text-muted-foreground mb-6">Fill out the form and we'll get back to you within 24 hours</p>
               
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium mb-2">Full Name *</label>
-                    <Input
-                      required
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      placeholder="Your full name"
-                      maxLength={100}
-                    />
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium mb-2">Mobile Number *</label>
-                    <Input
-                      required
-                      type="tel"
-                      value={formData.mobile}
-                      onChange={(e) => setFormData({ ...formData, mobile: e.target.value })}
-                      placeholder="+91 98765 43210"
-                      maxLength={15}
-                    />
-                  </div>
+                <div>
+                  <label className="block text-sm font-medium mb-2">Name *</label>
+                  <Input
+                    required
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    placeholder="Your name"
+                    maxLength={100}
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium mb-2">Mobile Number *</label>
+                  <Input
+                    required
+                    type="tel"
+                    value={formData.mobile}
+                    onChange={(e) => setFormData({ ...formData, mobile: e.target.value })}
+                    placeholder="+91 98765 43210"
+                    maxLength={15}
+                  />
                 </div>
                 
                 <div>
@@ -91,18 +87,6 @@ export const Contact = () => {
                   />
                 </div>
                 
-                <div>
-                  <label className="block text-sm font-medium mb-2">Message *</label>
-                  <Textarea
-                    required
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    placeholder="Tell us about your trading goals..."
-                    rows={5}
-                    maxLength={1000}
-                  />
-                </div>
-                
                 <Button type="submit" className="w-full" size="lg">
                   Send Message
                 </Button>
@@ -110,14 +94,14 @@ export const Contact = () => {
               
               <div className="mt-8 pt-8 border-t">
                 <div className="text-center">
-                  <p className="text-lg font-semibold mb-4">Or contact us directly on WhatsApp</p>
+                  <p className="text-lg font-semibold mb-4">Or chat with us instantly</p>
                   <Button 
                     size="lg" 
-                    className="w-full gap-2"
+                    className="w-full gap-3 bg-green-600 hover:bg-green-700 text-white shadow-lg hover:shadow-xl transition-all"
                     onClick={() => window.open('https://wa.me/919032999466', '_blank')}
                   >
                     <MessageCircle className="w-5 h-5" />
-                    Contact Us on WhatsApp
+                    Contact on WhatsApp
                   </Button>
                 </div>
               </div>
@@ -206,6 +190,22 @@ export const Contact = () => {
           </motion.div>
         </div>
       </div>
+
+      {/* Floating WhatsApp Button */}
+      <motion.div
+        initial={{ scale: 0 }}
+        animate={{ scale: 1 }}
+        transition={{ delay: 1, type: "spring", stiffness: 260, damping: 20 }}
+        className="fixed bottom-6 right-6 z-50"
+      >
+        <Button
+          size="lg"
+          className="w-16 h-16 rounded-full bg-green-600 hover:bg-green-700 text-white shadow-2xl hover:shadow-green-600/50 transition-all hover:scale-110"
+          onClick={() => window.open('https://wa.me/919032999466', '_blank')}
+        >
+          <MessageCircle className="w-7 h-7" />
+        </Button>
+      </motion.div>
     </section>
   );
 };
