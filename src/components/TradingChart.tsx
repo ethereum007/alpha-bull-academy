@@ -56,7 +56,7 @@ export const TradingChart = () => {
 
     const drawCandle = (candle: Candle) => {
       const isBullish = candle.close > candle.open;
-      const color = isBullish ? 'rgba(34, 197, 94, 0.6)' : 'rgba(239, 68, 68, 0.6)';
+      const color = isBullish ? 'rgba(34, 197, 94, 0.8)' : 'rgba(239, 68, 68, 0.8)';
       
       const bodyTop = Math.min(candle.open, candle.close);
       const bodyBottom = Math.max(candle.open, candle.close);
@@ -64,7 +64,7 @@ export const TradingChart = () => {
 
       // Draw wick
       ctx.strokeStyle = color;
-      ctx.lineWidth = 1.5;
+      ctx.lineWidth = 2;
       ctx.beginPath();
       ctx.moveTo(candle.x + candleWidth / 2, candle.high);
       ctx.lineTo(candle.x + candleWidth / 2, candle.low);
@@ -113,8 +113,8 @@ export const TradingChart = () => {
   return (
     <canvas
       ref={canvasRef}
-      className="absolute inset-0 w-full h-full opacity-20"
-      style={{ filter: 'blur(1px)' }}
+      className="absolute inset-0 w-full h-full opacity-30"
+      style={{ filter: 'blur(0.5px)' }}
     />
   );
 };
