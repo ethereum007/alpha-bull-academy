@@ -1,4 +1,4 @@
-import { BookOpen, TrendingUp, Target, CheckCircle } from "lucide-react";
+import { BookOpen, TrendingUp, Target } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -13,11 +13,6 @@ const courses = [
     description: "Perfect for beginners who want to start their trading journey. Learn the essential concepts, market structure, and fundamental analysis techniques.",
     price: "₹6,999",
     enrollLink: "https://rzp.io/rzp/7UZGE0Dg",
-    features: [
-      "Live interactive sessions",
-      "Recorded video lectures",
-      "Trading simulator access"
-    ],
     color: "bg-blue-500/10",
   },
   {
@@ -28,11 +23,6 @@ const courses = [
     description: "Deep dive into technical analysis, chart patterns, and advanced trading strategies. Price Action Mastery – CPR, EMA, support/resistance, and breakout setups.",
     price: "₹9,999",
     enrollLink: "https://rzp.io/rzp/yB1bafTe",
-    features: [
-      "Live market analysis sessions",
-      "Advanced charting tools access",
-      "Weekly strategy webinars"
-    ],
     color: "bg-green-500/10",
   },
   {
@@ -43,11 +33,6 @@ const courses = [
     description: "Master derivatives trading with advanced options strategies, futures trading, and hedging techniques. For serious traders ready to go professional.",
     price: "₹14,999",
     enrollLink: "https://wa.me/919032999466",
-    features: [
-      "Daily live market sessions",
-      "Options strategy builder tool",
-      "Advanced analytics dashboard"
-    ],
     color: "bg-purple-500/10",
   },
 ];
@@ -103,15 +88,6 @@ export const Courses = () => {
                 <div className="text-3xl font-bold text-primary mb-6">
                   {course.price}
                 </div>
-
-                <ul className="space-y-3 mb-6">
-                  {course.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start gap-2">
-                      <CheckCircle className="w-5 h-5 text-success flex-shrink-0 mt-0.5" />
-                      <span className="text-sm">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
 
                 <div className="mt-auto flex gap-3">
                   <Button 
