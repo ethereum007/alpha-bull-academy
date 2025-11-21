@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     question: "What support do I get after enrolling?",
-    answer: "You get lifetime access to course materials, entry to our private trading community group, weekly live Q&A sessions, and ongoing mentor support via WhatsApp group. Plus, all course updates and new content are free."
+    answer: "You get lifetime access to course materials, entry to our private trading community group, weekly live Q&A sessions, and ongoing mentor support via WhatsApp group."
   },
   {
     question: "Can I access courses on mobile?",
