@@ -51,7 +51,7 @@ export const Contact = () => {
               
               <Button 
                 className="w-full bg-success hover:bg-success/90 text-white"
-                onClick={() => window.open('https://wa.me/919876543210', '_blank')}
+                onClick={() => window.open('https://wa.me/919032999466', '_blank')}
               >
                 Message on WhatsApp
                 <ArrowRight className="ml-2 w-4 h-4" />
