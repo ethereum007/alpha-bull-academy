@@ -2,7 +2,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, Linkedin, MapPin } from "lucide-react";
+import { Mail, Phone, Linkedin, MapPin, MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
@@ -54,25 +54,29 @@ export const Contact = () => {
               <p className="text-muted-foreground mb-6">Fill out the form and we'll get back to you within 24 hours</p>
               
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label className="block text-sm font-medium mb-2">Full Name *</label>
-                  <Input
-                    required
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    placeholder="Your full name"
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium mb-2">Mobile Number *</label>
-                  <Input
-                    required
-                    type="tel"
-                    value={formData.mobile}
-                    onChange={(e) => setFormData({ ...formData, mobile: e.target.value })}
-                    placeholder="+91 98765 43210"
-                  />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium mb-2">Full Name *</label>
+                    <Input
+                      required
+                      value={formData.name}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      placeholder="Your full name"
+                      maxLength={100}
+                    />
+                  </div>
+                  
+                  <div>
+                    <label className="block text-sm font-medium mb-2">Mobile Number *</label>
+                    <Input
+                      required
+                      type="tel"
+                      value={formData.mobile}
+                      onChange={(e) => setFormData({ ...formData, mobile: e.target.value })}
+                      placeholder="+91 98765 43210"
+                      maxLength={15}
+                    />
+                  </div>
                 </div>
                 
                 <div>
@@ -83,6 +87,7 @@ export const Contact = () => {
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="your.email@example.com"
+                    maxLength={255}
                   />
                 </div>
                 
@@ -94,6 +99,7 @@ export const Contact = () => {
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     placeholder="Tell us about your trading goals..."
                     rows={5}
+                    maxLength={1000}
                   />
                 </div>
                 
@@ -101,6 +107,20 @@ export const Contact = () => {
                   Send Message
                 </Button>
               </form>
+              
+              <div className="mt-8 pt-8 border-t">
+                <div className="text-center">
+                  <p className="text-lg font-semibold mb-4">Or contact us directly on WhatsApp</p>
+                  <Button 
+                    size="lg" 
+                    className="w-full gap-2"
+                    onClick={() => window.open('https://wa.me/919032999466', '_blank')}
+                  >
+                    <MessageCircle className="w-5 h-5" />
+                    Contact Us on WhatsApp
+                  </Button>
+                </div>
+              </div>
             </Card>
           </motion.div>
 
@@ -125,6 +145,19 @@ export const Contact = () => {
               </div>
             </Card>
 
+            <Card className="p-6 hover:shadow-lg transition-shadow cursor-pointer" onClick={() => window.open('https://wa.me/919032999466', '_blank')}>
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-lg bg-green-500/10 flex items-center justify-center flex-shrink-0">
+                  <MessageCircle className="w-6 h-6 text-green-600" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-lg mb-1">WhatsApp</h4>
+                  <p className="text-muted-foreground mb-2">+91 90329 99466</p>
+                  <p className="text-sm text-green-600 font-medium">Click to chat instantly →</p>
+                </div>
+              </div>
+            </Card>
+
             <Card className="p-6 hover:shadow-lg transition-shadow">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
@@ -132,7 +165,7 @@ export const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-lg mb-1">Phone</h4>
-                  <p className="text-muted-foreground mb-2">+91 98765 43210</p>
+                  <p className="text-muted-foreground mb-2">+91 90329 99466</p>
                   <p className="text-sm text-muted-foreground">Mon-Sat, 9:00 AM - 7:00 PM IST</p>
                 </div>
               </div>
