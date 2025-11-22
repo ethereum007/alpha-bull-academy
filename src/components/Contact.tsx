@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Mail, Phone, Linkedin, MapPin, MessageCircle } from "lucide-react";
+import { Mail, Phone, Linkedin, MapPin, MessageCircle, Instagram, Send } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
@@ -171,6 +171,32 @@ export const Contact = () => {
                     Connect with our founder
                   </a>
                   <p className="text-sm text-muted-foreground">Professional networking and updates</p>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="p-6 hover:shadow-lg transition-shadow cursor-pointer" onClick={() => window.open('https://www.instagram.com/alphabull_club/', '_blank')}>
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-lg bg-pink-500/10 flex items-center justify-center flex-shrink-0">
+                  <Instagram className="w-6 h-6 text-pink-600" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-lg mb-1">Instagram</h4>
+                  <p className="text-muted-foreground mb-2">@alphabull_club</p>
+                  <p className="text-sm text-pink-600 font-medium">Follow for daily insights →</p>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="p-6 hover:shadow-lg transition-shadow cursor-pointer" onClick={() => window.open('https://t.me/alphabull_in', '_blank')}>
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center flex-shrink-0">
+                  <Send className="w-6 h-6 text-blue-600" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-lg mb-1">Telegram</h4>
+                  <p className="text-muted-foreground mb-2">Join our community</p>
+                  <p className="text-sm text-blue-600 font-medium">Get live updates & signals →</p>
                 </div>
               </div>
             </Card>

@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Linkedin, Instagram, Youtube } from "lucide-react";
+import { MapPin, Phone, Mail, Linkedin, Instagram, Send } from "lucide-react";
 
 export const Footer = () => {
   const scrollToSection = (sectionId: string) => {
@@ -31,18 +31,22 @@ export const Footer = () => {
                 <Linkedin className="w-4 h-4" />
               </a>
               <a 
-                href="#" 
+                href="https://www.instagram.com/alphabull_club/" 
+                target="_blank" 
+                rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-primary-foreground/10 hover:bg-primary-foreground/20 flex items-center justify-center transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram className="w-4 h-4" />
               </a>
               <a 
-                href="#" 
+                href="https://t.me/alphabull_in" 
+                target="_blank" 
+                rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-primary-foreground/10 hover:bg-primary-foreground/20 flex items-center justify-center transition-colors"
-                aria-label="YouTube"
+                aria-label="Telegram"
               >
-                <Youtube className="w-4 h-4" />
+                <Send className="w-4 h-4" />
               </a>
             </div>
           </div>
