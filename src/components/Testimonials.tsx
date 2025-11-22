@@ -56,8 +56,37 @@ const testimonials = [
 ];
 
 export const Testimonials = () => {
+  // Generate Review schema for SEO
+  const reviewSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": testimonials.map((testimonial, index) => ({
+      "@type": "Review",
+      "position": index + 1,
+      "author": {
+        "@type": "Person",
+        "name": testimonial.name
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": testimonial.rating,
+        "bestRating": 5
+      },
+      "reviewBody": testimonial.text,
+      "itemReviewed": {
+        "@type": "EducationalOrganization",
+        "name": "AlphaBull Trading Academy"
+      }
+    }))
+  };
+
   return (
     <section className="py-24 bg-background relative overflow-hidden">
+      {/* Add Review Schema for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
+      />
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
