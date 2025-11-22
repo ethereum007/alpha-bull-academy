@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { TrendingUp, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,6 +35,9 @@ export const Navigation = () => {
             <button onClick={() => scrollToSection("about")} className="text-sm font-medium hover:text-primary transition-colors">
               About
             </button>
+            <Link to="/blog" className="text-sm font-medium hover:text-primary transition-colors">
+              Blog
+            </Link>
             <button onClick={() => scrollToSection("testimonials")} className="text-sm font-medium hover:text-primary transition-colors">
               Testimonials
             </button>
@@ -70,6 +74,9 @@ export const Navigation = () => {
               <button onClick={() => scrollToSection("about")} className="text-left text-sm font-medium hover:text-primary transition-colors">
                 About
               </button>
+              <Link to="/blog" className="text-left text-sm font-medium hover:text-primary transition-colors">
+                Blog
+              </Link>
               <button onClick={() => scrollToSection("testimonials")} className="text-left text-sm font-medium hover:text-primary transition-colors">
                 Testimonials
               </button>
