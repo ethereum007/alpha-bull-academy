@@ -5,6 +5,8 @@ import { Calendar, Clock, User, ArrowLeft } from "lucide-react";
 import { Link, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { Button } from "@/components/ui/button";
+import tradingWorkspace from "@/assets/blog-trading-workspace.jpg";
+import tradingSuccess from "@/assets/blog-trading-success.jpg";
 
 const blogContent = {
   "how-to-learn-trading-india-2025": {
@@ -17,6 +19,10 @@ const blogContent = {
     image: "/placeholder.svg",
     content: `
       <p class="lead">Trading is not gambling. Trading is a skill. And like any skill, it requires proper learning, proven strategies, and discipline. This comprehensive guide will take you from complete beginner to consistent trader in just 90 days.</p>
+
+      <div class="blog-image-wrapper">
+        <img src="${tradingWorkspace}" alt="Professional trading workspace with multiple monitors showing stock charts" class="blog-image" />
+      </div>
 
       <h2>STEP 1 — Understand Different Trading Styles</h2>
       <p>Before diving into trading, you need to understand the different styles available:</p>
@@ -66,6 +72,10 @@ const blogContent = {
         <li><strong>Never use borrowed money:</strong> Only trade with capital you can afford to lose</li>
         <li><strong>Maintain a detailed journal:</strong> Track every trade, emotion, and lesson learned</li>
       </ul>
+
+      <div class="blog-image-wrapper">
+        <img src="${tradingSuccess}" alt="Success in trading - upward trending charts showing growth and progress" class="blog-image" />
+      </div>
 
       <h2>STEP 6 — Start Paper Trading</h2>
       <p>Before risking real money, practice with paper trading for 2-4 weeks. This allows you to:</p>
@@ -219,7 +229,7 @@ const BlogPost = () => {
             </header>
 
             <div 
-              className="prose prose-lg max-w-none prose-headings:font-bold prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-4 prose-p:text-foreground prose-p:leading-relaxed prose-ul:my-6 prose-li:my-2 prose-strong:text-foreground"
+              className="prose prose-lg max-w-none prose-headings:font-bold prose-h2:text-3xl prose-h2:mt-16 prose-h2:mb-6 prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4 prose-p:text-foreground prose-p:leading-relaxed prose-p:mb-6 prose-ul:my-8 prose-li:my-3 prose-strong:text-foreground prose-img:rounded-lg prose-img:shadow-lg"
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
 
