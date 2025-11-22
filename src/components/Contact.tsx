@@ -182,7 +182,7 @@ export const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-lg mb-1">Location</h4>
-                  <p className="text-muted-foreground mb-2">Mumbai, India</p>
+                  <p className="text-muted-foreground mb-2">Hyderabad, India</p>
                   <p className="text-sm text-muted-foreground">Online classes available nationwide</p>
                 </div>
               </div>
