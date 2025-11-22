@@ -125,6 +125,38 @@ All colors MUST be HSL.
     font-weight: 700;
     letter-spacing: -0.02em;
   }
+  
+  .lead {
+    @apply text-xl text-muted-foreground mb-8 leading-relaxed;
+  }
+  
+  .highlight {
+    @apply bg-accent/10 border-l-4 border-accent px-6 py-4 my-6 rounded-r-md;
+  }
+  
+  .timeline {
+    @apply space-y-6 my-8;
+  }
+  
+  .timeline-item {
+    @apply bg-card border border-border rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow;
+  }
+  
+  .timeline-item h3 {
+    @apply text-xl font-bold mb-2 text-primary;
+  }
+  
+  .timeline-item p {
+    @apply text-muted-foreground;
+  }
+  
+  .blog-image-wrapper {
+    @apply my-12 rounded-xl overflow-hidden shadow-lg;
+  }
+  
+  .blog-image {
+    @apply w-full h-auto;
+  }
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
