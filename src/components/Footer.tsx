@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Linkedin, Instagram, Send } from "lucide-react";
+import { MapPin, Phone, Mail, Linkedin, Instagram, Send, Star } from "lucide-react";
 
 export const Footer = () => {
   const scrollToSection = (sectionId: string) => {
@@ -47,6 +47,15 @@ export const Footer = () => {
                 aria-label="Telegram"
               >
                 <Send className="w-4 h-4" />
+              </a>
+              <a 
+                href="https://share.google/Rfav74cMJxvuEEdtT" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-full bg-primary-foreground/10 hover:bg-primary-foreground/20 flex items-center justify-center transition-colors"
+                aria-label="Google Reviews"
+              >
+                <Star className="w-4 h-4" />
               </a>
             </div>
           </div>

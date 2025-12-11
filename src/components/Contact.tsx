@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Mail, Phone, Linkedin, MapPin, MessageCircle, Instagram, Send } from "lucide-react";
+import { Mail, Phone, Linkedin, MapPin, MessageCircle, Instagram, Send, Star } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
@@ -197,6 +197,19 @@ export const Contact = () => {
                   <h4 className="font-semibold text-lg mb-1">Telegram</h4>
                   <p className="text-muted-foreground mb-2">Join our community</p>
                   <p className="text-sm text-blue-600 font-medium">Get live updates & signals →</p>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="p-6 hover:shadow-lg transition-shadow cursor-pointer" onClick={() => window.open('https://share.google/Rfav74cMJxvuEEdtT', '_blank')}>
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-lg bg-yellow-500/10 flex items-center justify-center flex-shrink-0">
+                  <Star className="w-6 h-6 text-yellow-600" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-lg mb-1">Google Reviews</h4>
+                  <p className="text-muted-foreground mb-2">See what our students say</p>
+                  <p className="text-sm text-yellow-600 font-medium">Read reviews & rate us →</p>
                 </div>
               </div>
             </Card>
