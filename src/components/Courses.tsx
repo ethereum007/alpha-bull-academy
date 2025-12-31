@@ -50,9 +50,9 @@ export const Courses = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Courses</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">Best Trading Courses in Hyderabad</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Structured programs designed to take you from beginner to professional trader
+            Top-rated stock market training programs in Hyderabad. From beginner to professional trader with expert mentorship.
           </p>
         </motion.div>
 
