@@ -1,6 +1,7 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 
 const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
+const HCAPTCHA_SECRET_KEY = Deno.env.get("HCAPTCHA_SECRET_KEY");
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -11,6 +12,7 @@ interface ContactFormRequest {
   name: string;
   mobile: string;
   email: string;
+  captchaToken: string;
 }
 
 const handler = async (req: Request): Promise<Response> => {
@@ -24,9 +26,29 @@ const handler = async (req: Request): Promise<Response> => {
       throw new Error("RESEND_API_KEY is not configured");
     }
 
-    const { name, mobile, email }: ContactFormRequest = await req.json();
+    if (!HCAPTCHA_SECRET_KEY) {
+      throw new Error("HCAPTCHA_SECRET_KEY is not configured");
+    }
+
+    const { name, mobile, email, captchaToken }: ContactFormRequest = await req.json();
 
     console.log("Received contact form submission:", { name, mobile, email });
+
+    // Verify hCaptcha token
+    const captchaVerification = await fetch("https://api.hcaptcha.com/siteverify", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: `response=${captchaToken}&secret=${HCAPTCHA_SECRET_KEY}`,
+    });
+
+    const captchaResult = await captchaVerification.json();
+    console.log("hCaptcha verification result:", captchaResult);
+
+    if (!captchaResult.success) {
+      throw new Error("Captcha verification failed");
+    }
 
     // Send notification email to the business
     const notificationRes = await fetch("https://api.resend.com/emails", {
