@@ -7,4 +7,4 @@ Allow: /
 # Disallow: /private/
 
 # Sitemap location
-Sitemap: https://alphabull.lovable.app/sitemap.xml
+Sitemap: https://alphabull.club/sitemap.xml
