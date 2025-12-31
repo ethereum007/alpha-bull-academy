@@ -3,9 +3,12 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Mail, Phone, Linkedin, MapPin, MessageCircle, Instagram, Send, Star, Loader2 } from "lucide-react";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import HCaptcha from "@hcaptcha/react-hcaptcha";
+
+const HCAPTCHA_SITE_KEY = import.meta.env.VITE_HCAPTCHA_SITE_KEY || "";
 
 export const Contact = () => {
   const { toast } = useToast();
@@ -15,14 +18,26 @@ export const Contact = () => {
     email: ""
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+  const captchaRef = useRef<HCaptcha>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (!captchaToken) {
+      toast({
+        title: "Verification Required",
+        description: "Please complete the captcha verification.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
       const { data, error } = await supabase.functions.invoke('send-contact-email', {
-        body: formData
+        body: { ...formData, captchaToken }
       });
 
       if (error) throw error;
@@ -32,6 +47,8 @@ export const Contact = () => {
         description: "We'll get back to you within 24 hours.",
       });
       setFormData({ name: "", mobile: "", email: "" });
+      setCaptchaToken(null);
+      captchaRef.current?.resetCaptcha();
     } catch (error: any) {
       console.error("Error sending message:", error);
       toast({
@@ -39,6 +56,8 @@ export const Contact = () => {
         description: "Failed to send message. Please try again or contact us via WhatsApp.",
         variant: "destructive",
       });
+      captchaRef.current?.resetCaptcha();
+      setCaptchaToken(null);
     } finally {
       setIsSubmitting(false);
     }
@@ -107,8 +126,19 @@ export const Contact = () => {
                     maxLength={255}
                   />
                 </div>
+
+                {HCAPTCHA_SITE_KEY && (
+                  <div className="flex justify-center">
+                    <HCaptcha
+                      ref={captchaRef}
+                      sitekey={HCAPTCHA_SITE_KEY}
+                      onVerify={(token) => setCaptchaToken(token)}
+                      onExpire={() => setCaptchaToken(null)}
+                    />
+                  </div>
+                )}
                 
-                <Button type="submit" className="w-full" size="lg" disabled={isSubmitting}>
+                <Button type="submit" className="w-full" size="lg" disabled={isSubmitting || !captchaToken}>
                   {isSubmitting ? (
                     <>
                       <Loader2 className="w-4 h-4 mr-2 animate-spin" />
