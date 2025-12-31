@@ -49,7 +49,7 @@ export const Footer = () => {
                 <Send className="w-4 h-4" />
               </a>
               <a 
-                href="https://share.google/Rfav74cMJxvuEEdtT" 
+                href="https://share.google/m50PyVkPpNTRpXUVC" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-primary-foreground/10 hover:bg-primary-foreground/20 flex items-center justify-center transition-colors"

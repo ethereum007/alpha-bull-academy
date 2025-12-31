@@ -201,7 +201,7 @@ export const Contact = () => {
               </div>
             </Card>
 
-            <Card className="p-6 hover:shadow-lg transition-shadow cursor-pointer" onClick={() => window.open('https://share.google/Rfav74cMJxvuEEdtT', '_blank')}>
+            <Card className="p-6 hover:shadow-lg transition-shadow cursor-pointer" onClick={() => window.open('https://share.google/m50PyVkPpNTRpXUVC', '_blank')}>
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-lg bg-yellow-500/10 flex items-center justify-center flex-shrink-0">
                   <Star className="w-6 h-6 text-yellow-600" />
