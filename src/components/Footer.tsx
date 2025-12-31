@@ -40,7 +40,7 @@ export const Footer = () => {
                 <Instagram className="w-4 h-4" />
               </a>
               <a 
-                href="https://t.me/alphabull_in" 
+                href="https://t.me/alpha_bull" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-primary-foreground/10 hover:bg-primary-foreground/20 flex items-center justify-center transition-colors"

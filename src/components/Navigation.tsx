@@ -66,7 +66,7 @@ export const Navigation = () => {
               Contact
             </button>
             <a 
-              href="https://t.me/alphabull_in" 
+              href="https://t.me/alpha_bull" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-sm font-medium hover:text-primary transition-colors"
@@ -105,7 +105,7 @@ export const Navigation = () => {
                 Contact
               </button>
               <a 
-                href="https://t.me/alphabull_in" 
+                href="https://t.me/alpha_bull" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-left text-sm font-medium hover:text-primary transition-colors"
