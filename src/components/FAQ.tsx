@@ -103,7 +103,7 @@ export const FAQ = () => {
         >
           <p className="text-muted-foreground mb-4">Still have questions?</p>
           <a
-            href="https://wa.me/919032999466"
+            href="https://web.whatsapp.com/send?phone=919032999466"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-primary hover:underline font-semibold"
