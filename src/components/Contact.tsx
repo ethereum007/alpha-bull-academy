@@ -246,7 +246,7 @@ export const Contact = () => {
               </div>
             </Card>
 
-            <Card className="p-6 hover:shadow-lg transition-shadow cursor-pointer" onClick={() => window.open('https://t.me/alphabull_in', '_blank')}>
+            <Card className="p-6 hover:shadow-lg transition-shadow cursor-pointer" onClick={() => window.open('https://t.me/alpha_bull', '_blank')}>
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center flex-shrink-0">
                   <Send className="w-6 h-6 text-blue-600" />

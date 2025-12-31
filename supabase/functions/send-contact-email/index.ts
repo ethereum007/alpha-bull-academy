@@ -98,7 +98,7 @@ const handler = async (req: Request): Promise<Response> => {
           <ul>
             <li>Connect with us on <a href="https://wa.me/919032999466">WhatsApp</a> for instant support</li>
             <li>Follow us on <a href="https://www.instagram.com/alphabull_club/">Instagram</a> for daily insights</li>
-            <li>Join our <a href="https://t.me/alphabull_in">Telegram</a> community</li>
+            <li>Join our <a href="https://t.me/alpha_bull">Telegram</a> community</li>
           </ul>
           <p>Best regards,<br>The AlphaBull Team</p>
         `,
