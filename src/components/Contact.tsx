@@ -156,7 +156,7 @@ export const Contact = () => {
                   <Button 
                     size="lg" 
                     className="w-full gap-3 bg-green-600 hover:bg-green-700 text-white shadow-lg hover:shadow-xl transition-all"
-                    onClick={() => window.open('https://web.whatsapp.com/send?phone=919032999466', '_blank')}
+                    onClick={() => window.open('https://wa.me/919032999466', '_blank')}
                   >
                     <MessageCircle className="w-5 h-5" />
                     Contact on WhatsApp
@@ -187,7 +187,7 @@ export const Contact = () => {
               </div>
             </Card>
 
-            <Card className="p-6 hover:shadow-lg transition-shadow cursor-pointer" onClick={() => window.open('https://web.whatsapp.com/send?phone=919032999466', '_blank')}>
+            <Card className="p-6 hover:shadow-lg transition-shadow cursor-pointer" onClick={() => window.open('https://wa.me/919032999466', '_blank')}>
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-lg bg-green-500/10 flex items-center justify-center flex-shrink-0">
                   <MessageCircle className="w-6 h-6 text-green-600" />
@@ -298,7 +298,7 @@ export const Contact = () => {
         <Button
           size="lg"
           className="w-16 h-16 rounded-full bg-green-600 hover:bg-green-700 text-white shadow-2xl hover:shadow-green-600/50 transition-all hover:scale-110"
-          onClick={() => window.open('https://web.whatsapp.com/send?phone=919032999466', '_blank')}
+          onClick={() => window.open('https://wa.me/919032999466', '_blank')}
         >
           <MessageCircle className="w-7 h-7" />
         </Button>

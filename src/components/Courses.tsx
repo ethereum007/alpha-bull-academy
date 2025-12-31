@@ -32,13 +32,13 @@ const courses = [
     duration: "4 Weeks",
     description: "Master derivatives trading with advanced options strategies, futures trading, and hedging techniques. For serious traders ready to go professional.",
     price: "₹14,999",
-    enrollLink: "https://web.whatsapp.com/send?phone=919032999466",
+    enrollLink: "https://wa.me/919032999466",
     color: "bg-purple-500/10",
   },
 ];
 
 export const Courses = () => {
-  const whatsappLink = "https://web.whatsapp.com/send?phone=919032999466";
+  const whatsappLink = "https://wa.me/919032999466";
 
   return (
     <section id="courses" className="py-24 bg-background">
