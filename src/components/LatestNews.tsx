@@ -24,6 +24,11 @@ const orders = [
     text: "Refex bagged an order of 43.74 Crore from a large conglomerate",
     date: "Jan 7, 2026",
   },
+  {
+    id: 4,
+    text: "DEV IT bagged an order of 96.00 lakhs from Ahmedabad Urban Development Authority (AUDA)",
+    date: "Jan 7, 2026",
+  },
 ];
 
 export const LatestNews = () => {
