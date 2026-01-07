@@ -6,7 +6,7 @@ export const Q3ResultsScroller = () => {
   return (
     <Link 
       to="/q3-results"
-      className="block bg-gradient-to-r from-accent/10 via-primary/10 to-accent/10 border-b border-accent/20 py-2 overflow-hidden cursor-pointer hover:from-accent/20 hover:via-primary/20 hover:to-accent/20 transition-colors"
+      className="fixed top-[200px] left-0 right-0 z-30 block bg-primary/10 border-b border-primary/30 py-3 overflow-hidden cursor-pointer hover:bg-primary/20 transition-colors"
     >
       <div className="flex items-center justify-center">
         <motion.div
@@ -19,9 +19,9 @@ export const Q3ResultsScroller = () => {
           }}
         >
           <Clock className="w-4 h-4 text-primary" />
-          <span className="font-semibold text-foreground">Q3 Results FY25</span>
+          <span className="font-bold text-primary">Q3 Results FY25</span>
           <span className="text-muted-foreground">—</span>
-          <span className="text-accent-foreground">Coming Soon</span>
+          <span className="font-medium text-foreground">Coming Soon</span>
           <ChevronRight className="w-4 h-4 text-primary" />
         </motion.div>
       </div>
