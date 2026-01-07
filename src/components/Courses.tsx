@@ -51,11 +51,11 @@ export const Courses = () => {
           className="text-center mb-16"
         >
           <span className="inline-block px-4 py-1.5 mb-4 text-sm font-medium bg-primary/10 text-primary rounded-full">
-            📍 Hyderabad's #1 Trading Institute
+            📍 Share Market Classes Near Me - Hyderabad
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Best Stock Market Courses in Hyderabad</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">Best Share Market Classes in Hyderabad</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Join 3000+ successful traders from Ameerpet, Madhapur, Gachibowli & across Hyderabad. Top-rated stock market training with practical strategies & lifetime mentorship support.
+            Join 3000+ successful traders from Ameerpet, Madhapur, Gachibowli, HITEC City & across Hyderabad. Top-rated share market training with practical strategies & lifetime mentorship support. Online & offline classes available.
           </p>
         </motion.div>
 
