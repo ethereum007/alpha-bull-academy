@@ -1,25 +1,45 @@
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
-import { TrendingUp, TrendingDown, RefreshCw } from "lucide-react";
+import { useEffect, useState, useRef } from "react";
+import { TrendingUp, TrendingDown } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 
-interface MarketIndex {
-  name: string;
+interface MarketData {
   symbol: string;
+  name: string;
   price: number;
   change: number;
   changePercent: number;
+  type: 'index' | 'stock';
 }
 
+// Brand colors for stocks (simplified)
+const stockColors: Record<string, string> = {
+  'RELIANCE': '#0055a4',
+  'TCS': '#0055a4',
+  'HDFCBANK': '#004C8F',
+  'ICICIBANK': '#F58220',
+  'INFY': '#007CC3',
+  'SBIN': '#22409A',
+  'BHARTIARTL': '#E60012',
+  'ITC': '#003087',
+  'KOTAKBANK': '#ED1C24',
+  'LT': '#005BAC',
+  'HUL': '#1F36C7',
+  'AXISBANK': '#97144D',
+  'ADANIENT': '#0055A4',
+  'BAJFINANCE': '#00A6E8',
+  'MARUTI': '#ED1C24',
+  'TATAMOTORS': '#0055A4',
+  'SUNPHARMA': '#FF6600',
+  'WIPRO': '#481986',
+  'HCLTECH': '#0097CD',
+  'TATASTEEL': '#0055A4',
+};
+
 export const MarketTicker = () => {
-  const [indices, setIndices] = useState<MarketIndex[]>([
-    { name: "NIFTY 50", symbol: "NIFTY", price: 0, change: 0, changePercent: 0 },
-    { name: "BANK NIFTY", symbol: "BANKNIFTY", price: 0, change: 0, changePercent: 0 },
-    { name: "NIFTY IT", symbol: "NIFTYIT", price: 0, change: 0, changePercent: 0 },
-    { name: "SENSEX", symbol: "SENSEX", price: 0, change: 0, changePercent: 0 },
-  ]);
+  const [marketData, setMarketData] = useState<MarketData[]>([]);
   const [loading, setLoading] = useState(true);
-  const [lastUpdated, setLastUpdated] = useState<Date | null>(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const animationRef = useRef<number>();
 
   const fetchMarketData = async () => {
     try {
@@ -30,9 +50,8 @@ export const MarketTicker = () => {
         return;
       }
 
-      if (data?.indices) {
-        setIndices(data.indices);
-        setLastUpdated(new Date());
+      if (data?.data) {
+        setMarketData(data.data);
       }
     } catch (error) {
       console.error('Error fetching market data:', error);
@@ -43,71 +62,110 @@ export const MarketTicker = () => {
 
   useEffect(() => {
     fetchMarketData();
-    
-    // Refresh every 5 minutes during market hours
     const interval = setInterval(fetchMarketData, 5 * 60 * 1000);
     return () => clearInterval(interval);
   }, []);
 
-  // Duplicate indices for seamless loop
-  const duplicatedIndices = [...indices, ...indices];
+  // Smooth scroll animation
+  useEffect(() => {
+    const scrollContainer = scrollRef.current;
+    if (!scrollContainer || marketData.length === 0) return;
+
+    let scrollPosition = 0;
+    const speed = 0.5;
+
+    const animate = () => {
+      scrollPosition += speed;
+      const maxScroll = scrollContainer.scrollWidth / 2;
+      
+      if (scrollPosition >= maxScroll) {
+        scrollPosition = 0;
+      }
+      
+      scrollContainer.style.transform = `translateX(-${scrollPosition}px)`;
+      animationRef.current = requestAnimationFrame(animate);
+    };
+
+    animationRef.current = requestAnimationFrame(animate);
+
+    return () => {
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
+    };
+  }, [marketData]);
+
+  if (loading || marketData.length === 0) {
+    return (
+      <div className="bg-card border-b border-border py-2.5">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
+            <div className="w-3 h-3 border-2 border-primary border-t-transparent rounded-full animate-spin" />
+            Loading market data...
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // Duplicate for seamless loop
+  const duplicatedData = [...marketData, ...marketData];
 
   return (
-    <div className="bg-card/80 backdrop-blur-sm border-b border-border/50 py-2 overflow-hidden">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center gap-4">
-          <div className="flex items-center gap-2 text-xs text-muted-foreground shrink-0 border-r border-border/50 pr-4">
-            <RefreshCw className={`w-3 h-3 ${loading ? 'animate-spin' : ''}`} />
-            <span className="hidden sm:inline">
-              {lastUpdated 
-                ? `Updated: ${lastUpdated.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit' })}`
-                : 'Loading...'}
-            </span>
-          </div>
-          
-          <div className="overflow-hidden flex-1">
-            <motion.div
-              className="flex gap-8"
-              animate={{
-                x: [0, -50 * indices.length * 8],
-              }}
-              transition={{
-                x: {
-                  duration: 30,
-                  repeat: Infinity,
-                  ease: "linear",
-                },
-              }}
+    <div className="bg-card border-b border-border py-2.5 overflow-hidden">
+      <div className="relative">
+        <div 
+          ref={scrollRef}
+          className="flex gap-6 whitespace-nowrap"
+          style={{ willChange: 'transform' }}
+        >
+          {duplicatedData.map((item, index) => (
+            <div
+              key={`${item.symbol}-${index}`}
+              className="flex items-center gap-3 px-3 py-1 rounded-lg bg-muted/30 hover:bg-muted/50 transition-colors"
             >
-              {duplicatedIndices.map((index, i) => (
-                <div
-                  key={`${index.symbol}-${i}`}
-                  className="flex items-center gap-3 shrink-0"
-                >
-                  <span className="font-semibold text-sm whitespace-nowrap">
-                    {index.name}
-                  </span>
-                  <span className="text-sm font-medium">
-                    {index.price > 0 ? index.price.toLocaleString('en-IN', { maximumFractionDigits: 2 }) : '—'}
-                  </span>
-                  {index.price > 0 && (
-                    <span
-                      className={`flex items-center gap-1 text-xs font-medium ${
-                        index.change >= 0 ? 'text-success' : 'text-destructive'
-                      }`}
-                    >
-                      {index.change >= 0 ? (
-                        <TrendingUp className="w-3 h-3" />
-                      ) : (
-                        <TrendingDown className="w-3 h-3" />
-                      )}
-                      {index.change >= 0 ? '+' : ''}{index.change.toFixed(2)} ({index.changePercent.toFixed(2)}%)
-                    </span>
-                  )}
-                </div>
-              ))}
-            </motion.div>
-          </div>
+              {/* Stock/Index Icon */}
+              <div 
+                className="w-6 h-6 rounded-full flex items-center justify-center text-white text-xs font-bold shrink-0"
+                style={{ 
+                  backgroundColor: item.type === 'index' 
+                    ? 'hsl(var(--primary))' 
+                    : stockColors[item.symbol] || '#666'
+                }}
+              >
+                {item.symbol.charAt(0)}
+              </div>
+
+              {/* Symbol */}
+              <span className="font-semibold text-sm">
+                {item.name}
+              </span>
+
+              {/* Price */}
+              <span className="text-sm font-medium text-foreground">
+                {item.price.toLocaleString('en-IN', { 
+                  maximumFractionDigits: 2,
+                  minimumFractionDigits: 2 
+                })}
+                {item.type === 'index' ? '' : ''}
+              </span>
+
+              {/* Change */}
+              <span
+                className={`flex items-center gap-1 text-xs font-semibold ${
+                  item.change >= 0 ? 'text-green-500' : 'text-red-500'
+                }`}
+              >
+                {item.change >= 0 ? (
+                  <TrendingUp className="w-3 h-3" />
+                ) : (
+                  <TrendingDown className="w-3 h-3" />
+                )}
+                {item.change >= 0 ? '+' : ''}
+                {item.change.toFixed(2)} ({item.changePercent >= 0 ? '+' : ''}{item.changePercent.toFixed(2)}%)
+              </span>
+            </div>
+          ))}
         </div>
       </div>
     </div>
