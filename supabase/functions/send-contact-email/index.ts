@@ -15,6 +15,40 @@ interface ContactFormRequest {
   captchaToken: string;
 }
 
+// Simple in-memory rate limiting (resets on function cold start)
+const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
+const RATE_LIMIT_MAX = 5; // Max 5 requests per hour per IP
+const RATE_LIMIT_WINDOW = 60 * 60 * 1000; // 1 hour in ms
+
+function checkRateLimit(clientIP: string): boolean {
+  const now = Date.now();
+  const entry = rateLimitMap.get(clientIP);
+  
+  if (!entry || now > entry.resetTime) {
+    rateLimitMap.set(clientIP, { count: 1, resetTime: now + RATE_LIMIT_WINDOW });
+    return true;
+  }
+  
+  if (entry.count >= RATE_LIMIT_MAX) {
+    return false;
+  }
+  
+  entry.count++;
+  return true;
+}
+
+// Escape HTML to prevent XSS in emails
+function escapeHtml(text: string): string {
+  const map: Record<string, string> = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#039;'
+  };
+  return text.replace(/[&<>"']/g, m => map[m]);
+}
+
 const handler = async (req: Request): Promise<Response> => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
@@ -22,12 +56,27 @@ const handler = async (req: Request): Promise<Response> => {
   }
 
   try {
-    if (!RESEND_API_KEY) {
-      throw new Error("RESEND_API_KEY is not configured");
+    // Check required environment variables (log server-side only)
+    if (!RESEND_API_KEY || !HCAPTCHA_SECRET_KEY) {
+      console.error("Missing required environment variables");
+      return new Response(
+        JSON.stringify({ error: "Service temporarily unavailable. Please try again later." }),
+        { status: 503, headers: { "Content-Type": "application/json", ...corsHeaders } }
+      );
     }
 
-    if (!HCAPTCHA_SECRET_KEY) {
-      throw new Error("HCAPTCHA_SECRET_KEY is not configured");
+    // Get client IP for rate limiting
+    const clientIP = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || 
+                     req.headers.get("cf-connecting-ip") || 
+                     "unknown";
+
+    // Check rate limit
+    if (!checkRateLimit(clientIP)) {
+      console.warn(`Rate limit exceeded for IP: ${clientIP}`);
+      return new Response(
+        JSON.stringify({ error: "Too many requests. Please try again later." }),
+        { status: 429, headers: { "Content-Type": "application/json", ...corsHeaders } }
+      );
     }
 
     const { name, mobile, email, captchaToken }: ContactFormRequest = await req.json();
@@ -47,8 +96,16 @@ const handler = async (req: Request): Promise<Response> => {
     console.log("hCaptcha verification result:", captchaResult);
 
     if (!captchaResult.success) {
-      throw new Error("Captcha verification failed");
+      return new Response(
+        JSON.stringify({ error: "Captcha verification failed. Please try again." }),
+        { status: 400, headers: { "Content-Type": "application/json", ...corsHeaders } }
+      );
     }
+
+    // Escape user inputs for safe HTML embedding
+    const safeName = escapeHtml(name);
+    const safeMobile = escapeHtml(mobile);
+    const safeEmail = escapeHtml(email);
 
     // Send notification email to the business
     const notificationRes = await fetch("https://api.resend.com/emails", {
@@ -60,12 +117,12 @@ const handler = async (req: Request): Promise<Response> => {
       body: JSON.stringify({
         from: "AlphaBull Contact Form <onboarding@resend.dev>",
         to: ["alphabullacademy@gmail.com"],
-        subject: `New Contact Form Submission from ${name}`,
+        subject: `New Contact Form Submission from ${safeName}`,
         html: `
           <h2>New Contact Form Submission</h2>
-          <p><strong>Name:</strong> ${name}</p>
-          <p><strong>Mobile:</strong> ${mobile}</p>
-          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Name:</strong> ${safeName}</p>
+          <p><strong>Mobile:</strong> ${safeMobile}</p>
+          <p><strong>Email:</strong> ${safeEmail}</p>
           <hr>
           <p>This message was sent from the AlphaBull website contact form.</p>
         `,
@@ -75,7 +132,7 @@ const handler = async (req: Request): Promise<Response> => {
     if (!notificationRes.ok) {
       const errorData = await notificationRes.text();
       console.error("Failed to send notification email:", errorData);
-      throw new Error(`Failed to send notification email: ${errorData}`);
+      throw new Error("Email service error");
     }
 
     console.log("Notification email sent successfully");
@@ -92,7 +149,7 @@ const handler = async (req: Request): Promise<Response> => {
         to: [email],
         subject: "We received your message - AlphaBull",
         html: `
-          <h2>Thank you for contacting AlphaBull, ${name}!</h2>
+          <h2>Thank you for contacting AlphaBull, ${safeName}!</h2>
           <p>We have received your message and will get back to you within 24 hours.</p>
           <p>In the meantime, feel free to:</p>
           <ul>
@@ -121,9 +178,12 @@ const handler = async (req: Request): Promise<Response> => {
       }
     );
   } catch (error: any) {
-    console.error("Error in send-contact-email function:", error);
+    console.error("Error in send-contact-email function:", {
+      error: error.message,
+      timestamp: new Date().toISOString()
+    });
     return new Response(
-      JSON.stringify({ error: error.message }),
+      JSON.stringify({ error: "Unable to send message. Please try again or contact us via WhatsApp." }),
       {
         status: 500,
         headers: { "Content-Type": "application/json", ...corsHeaders },
