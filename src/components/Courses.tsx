@@ -50,9 +50,12 @@ export const Courses = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Best Trading Courses in Hyderabad</h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Top-rated stock market training programs in Hyderabad. From beginner to professional trader with expert mentorship.
+          <span className="inline-block px-4 py-1.5 mb-4 text-sm font-medium bg-primary/10 text-primary rounded-full">
+            📍 Hyderabad's #1 Trading Institute
+          </span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">Best Stock Market Courses in Hyderabad</h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Join 3000+ successful traders from Ameerpet, Madhapur, Gachibowli & across Hyderabad. Top-rated stock market training with practical strategies & lifetime mentorship support.
           </p>
         </motion.div>
 
