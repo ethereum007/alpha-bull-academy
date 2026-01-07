@@ -22,7 +22,7 @@ export const EarningsScroller = () => {
   return (
     <Link 
       to="/earnings"
-      className="block bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20 border-y border-primary/30 py-2 overflow-hidden cursor-pointer hover:from-primary/30 hover:via-accent/30 hover:to-primary/30 transition-colors"
+      className="fixed top-[160px] left-0 right-0 z-30 block bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20 border-y border-primary/30 py-2 overflow-hidden cursor-pointer hover:from-primary/30 hover:via-accent/30 hover:to-primary/30 transition-colors"
     >
       <div className="flex items-center">
         {/* Static Label */}

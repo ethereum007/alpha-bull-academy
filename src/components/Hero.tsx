@@ -12,7 +12,7 @@ export const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-[160px] bg-gradient-to-br from-background via-muted/30 to-background">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-[240px] bg-gradient-to-br from-background via-muted/30 to-background">
       {/* Trading Chart Background */}
       <TradingChart />
       
