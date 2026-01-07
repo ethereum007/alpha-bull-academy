@@ -79,7 +79,7 @@ export const Hero = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
           >
-            Top <span className="text-primary">Trading Courses</span> in Hyderabad
+            <span className="text-primary">Share Market Classes</span> Near Me in Hyderabad
           </motion.h1>
 
           <motion.p
@@ -88,7 +88,7 @@ export const Hero = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed max-w-3xl mx-auto"
           >
-            Hyderabad's #1 stock market training academy. Learn technical analysis, options trading & price action strategies from expert mentor Kiran Dutta. 3000+ successful traders trained.
+            Looking for the best share market classes near you? AlphaBull is Hyderabad's #1 stock market training academy. Learn technical analysis, options trading & price action from expert mentor Kiran Dutta. 3000+ successful traders trained.
           </motion.p>
 
           <motion.div
