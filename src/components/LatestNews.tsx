@@ -29,6 +29,11 @@ const orders = [
     text: "DEV IT bagged an order of 96.00 lakhs from Ahmedabad Urban Development Authority (AUDA)",
     date: "Jan 7, 2026",
   },
+  {
+    id: 5,
+    text: "PTC Industries bagged an order from ISRO",
+    date: "Jan 7, 2026",
+  },
 ];
 
 export const LatestNews = () => {
