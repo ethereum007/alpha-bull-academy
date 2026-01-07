@@ -1,10 +1,10 @@
 import { lazy, Suspense } from "react";
 import { AnnouncementBanner } from "@/components/AnnouncementBanner";
+import { MarketTicker } from "@/components/MarketTicker";
 import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
 import { TrustBadges } from "@/components/TrustBadges";
 import { Footer } from "@/components/Footer";
-
 // Lazy load below-the-fold components for better performance
 const About = lazy(() => import("@/components/About").then(m => ({ default: m.About })));
 const Courses = lazy(() => import("@/components/Courses").then(m => ({ default: m.Courses })));
@@ -22,6 +22,7 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <AnnouncementBanner />
+      <MarketTicker />
       <Navigation />
       <main>
         <Hero />

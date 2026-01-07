@@ -2,22 +2,10 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, Clock, User } from "lucide-react";
+import { Calendar, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
-
-const blogPosts = [
-  {
-    id: "how-to-learn-trading-india-2025",
-    title: "How to Learn Trading as a Beginner in India (2025 Guide)",
-    excerpt: "From zero knowledge to consistent trading in 90 days. Learn the proven step-by-step process to master trading in India with proper strategies and discipline.",
-    author: "AlphaBull Academy",
-    date: "2025-11-22",
-    readTime: "8 min read",
-    category: "Beginner Guide",
-    image: "/placeholder.svg",
-  },
-];
+import { blogPostsMeta } from "@/data/blogPosts";
 
 const Blog = () => {
   const blogSchema = {
@@ -25,14 +13,10 @@ const Blog = () => {
     "@type": "Blog",
     "name": "AlphaBull Trading Academy Blog",
     "description": "Expert insights on stock market trading, technical analysis, and investment strategies for Indian traders",
-    "url": "https://alphabull.lovable.app/blog",
+    "url": "https://alphabull.club/blog",
     "publisher": {
       "@type": "Organization",
       "name": "AlphaBull Trading Academy",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://alphabull.lovable.app/placeholder.svg"
-      }
     }
   };
 
@@ -41,16 +25,12 @@ const Blog = () => {
       <Helmet>
         <title>Trading Blog - Expert Market Insights | AlphaBull Academy</title>
         <meta name="description" content="Learn stock market trading with expert guides, technical analysis strategies, and investment tips for Indian traders. Free educational content for beginners to advanced traders." />
-        <meta name="keywords" content="trading blog, stock market India, technical analysis, trading strategies, beginner trading guide, investment tips" />
-        <link rel="canonical" href="https://alphabull.lovable.app/blog" />
-        
-        {/* Open Graph */}
+        <meta name="keywords" content="trading blog, stock market India, technical analysis, trading strategies, beginner trading guide, investment tips, options trading" />
+        <link rel="canonical" href="https://alphabull.club/blog" />
         <meta property="og:title" content="Trading Blog - Expert Market Insights | AlphaBull Academy" />
         <meta property="og:description" content="Learn stock market trading with expert guides, technical analysis strategies, and investment tips for Indian traders." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://alphabull.lovable.app/blog" />
-        
-        {/* Twitter Card */}
+        <meta property="og:url" content="https://alphabull.club/blog" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Trading Blog - Expert Market Insights | AlphaBull Academy" />
         <meta name="twitter:description" content="Learn stock market trading with expert guides, technical analysis strategies, and investment tips for Indian traders." />
@@ -73,7 +53,7 @@ const Blog = () => {
             </header>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-              {blogPosts.map((post) => (
+              {blogPostsMeta.map((post) => (
                 <Link key={post.id} to={`/blog/${post.id}`} className="group">
                   <Card className="h-full hover:shadow-lg transition-all duration-300 overflow-hidden">
                     <div className="aspect-video bg-muted overflow-hidden">
