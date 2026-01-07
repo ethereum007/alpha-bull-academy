@@ -79,7 +79,7 @@ export const Hero = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
           >
-            <span className="text-primary">Share Market Classes</span> Near Me in Hyderabad
+            Best <span className="text-primary">Stock Market Training</span> Institute in Hyderabad
           </motion.h1>
 
           <motion.p
