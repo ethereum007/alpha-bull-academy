@@ -8,7 +8,13 @@ const updates = [
   },
 ];
 
-const orders: { id: number; text: string; date: string }[] = [];
+const orders = [
+  {
+    id: 1,
+    text: "Akash Infra-Projects Ltd. received a ₹21.53 crore work order on January 7, 2026",
+    date: "Jan 7, 2026",
+  },
+];
 
 export const LatestNews = () => {
   return (
