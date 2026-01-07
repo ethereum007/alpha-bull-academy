@@ -34,6 +34,11 @@ const orders = [
     text: "PTC Industries bagged an order from ISRO",
     date: "Jan 7, 2026",
   },
+  {
+    id: 6,
+    text: "Welspun Corp has secured a new export order for large-diameter coated line pipes for the Americas, taking cumulative new orders since September 2025 to ₹3,100 crore. The consolidated global order book now stands at ₹23,460 crore (≈US$2.6 billion), ensuring strong visibility through FY26–FY28.",
+    date: "Jan 7, 2026",
+  },
 ];
 
 export const LatestNews = () => {
