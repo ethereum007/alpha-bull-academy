@@ -1,41 +1,14 @@
-import { ArrowRight, TrendingUp, FileText } from "lucide-react";
-import { Link } from "react-router-dom";
+import { TrendingUp, FileText } from "lucide-react";
 
 const updates = [
   {
     id: 1,
-    title: "Q3 Results: TCS reports strong revenue growth",
+    text: "Samvardhana Motherson International has completed its joint venture with South Korea–based Egtronics as of January 7, 2026, following fulfillment of all conditions precedent. The JV will focus on designing and manufacturing clean-mobility vehicle electronics, with shareholding at 51% for Motherson and 49% for Egtronics.",
     date: "Jan 7, 2026",
-  },
-  {
-    id: 2,
-    title: "Infosys announces dividend of ₹20 per share",
-    date: "Jan 6, 2026",
-  },
-  {
-    id: 3,
-    title: "HDFC Bank merger integration complete",
-    date: "Jan 5, 2026",
   },
 ];
 
-const orders = [
-  {
-    id: 1,
-    title: "L&T bags ₹5,000 Cr infrastructure order",
-    date: "Jan 7, 2026",
-  },
-  {
-    id: 2,
-    title: "Tata Power wins solar project worth ₹2,500 Cr",
-    date: "Jan 6, 2026",
-  },
-  {
-    id: 3,
-    title: "Bharat Electronics secures defense contract",
-    date: "Jan 5, 2026",
-  },
-];
+const orders: { id: number; text: string; date: string }[] = [];
 
 export const LatestNews = () => {
   return (
@@ -51,28 +24,26 @@ export const LatestNews = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {/* Updates Column */}
+          {/* Updates Column - Scrolling */}
           <div className="bg-card rounded-xl border border-border p-6 shadow-sm">
             <div className="flex items-center gap-2 mb-5">
               <TrendingUp className="w-5 h-5 text-primary" />
               <h3 className="text-xl font-semibold text-foreground">Updates</h3>
             </div>
-            <div className="space-y-4">
-              {updates.map((item) => (
-                <div
-                  key={item.id}
-                  className="group flex items-start gap-3 p-3 rounded-lg hover:bg-muted/50 transition-colors cursor-pointer"
-                >
-                  <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <div className="flex-1">
-                    <p className="text-foreground font-medium group-hover:text-primary transition-colors">
-                      {item.title}
+            <div className="h-48 overflow-hidden relative">
+              <div className="animate-scroll-up space-y-4">
+                {[...updates, ...updates].map((item, index) => (
+                  <div
+                    key={`${item.id}-${index}`}
+                    className="p-4 rounded-lg bg-muted/50 border border-border/50"
+                  >
+                    <p className="text-foreground text-sm leading-relaxed">
+                      {item.text}
                     </p>
-                    <span className="text-sm text-muted-foreground">{item.date}</span>
+                    <span className="text-xs text-muted-foreground mt-2 block">{item.date}</span>
                   </div>
-                  <ArrowRight className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity mt-1" />
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
 
@@ -82,22 +53,26 @@ export const LatestNews = () => {
               <FileText className="w-5 h-5 text-accent" />
               <h3 className="text-xl font-semibold text-foreground">Orders</h3>
             </div>
-            <div className="space-y-4">
-              {orders.map((item) => (
-                <div
-                  key={item.id}
-                  className="group flex items-start gap-3 p-3 rounded-lg hover:bg-muted/50 transition-colors cursor-pointer"
-                >
-                  <div className="w-2 h-2 rounded-full bg-accent mt-2 flex-shrink-0" />
-                  <div className="flex-1">
-                    <p className="text-foreground font-medium group-hover:text-accent transition-colors">
-                      {item.title}
-                    </p>
-                    <span className="text-sm text-muted-foreground">{item.date}</span>
-                  </div>
-                  <ArrowRight className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity mt-1" />
+            <div className="h-48 overflow-hidden relative">
+              {orders.length > 0 ? (
+                <div className="animate-scroll-up space-y-4">
+                  {[...orders, ...orders].map((item, index) => (
+                    <div
+                      key={`${item.id}-${index}`}
+                      className="p-4 rounded-lg bg-muted/50 border border-border/50"
+                    >
+                      <p className="text-foreground text-sm leading-relaxed">
+                        {item.text}
+                      </p>
+                      <span className="text-xs text-muted-foreground mt-2 block">{item.date}</span>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              ) : (
+                <div className="flex items-center justify-center h-full text-muted-foreground text-sm">
+                  No orders yet
+                </div>
+              )}
             </div>
           </div>
         </div>
