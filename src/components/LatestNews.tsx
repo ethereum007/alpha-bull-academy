@@ -14,6 +14,11 @@ const orders = [
     text: "Akash Infra-Projects Ltd. received a ₹21.53 crore work order on January 7, 2026",
     date: "Jan 7, 2026",
   },
+  {
+    id: 2,
+    text: "Aarvi Encon has bagged an order of INR 180 cr from a confidential company",
+    date: "Jan 7, 2026",
+  },
 ];
 
 export const LatestNews = () => {
