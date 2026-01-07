@@ -97,7 +97,7 @@ export const MarketTicker = () => {
 
   if (loading || marketData.length === 0) {
     return (
-      <div className="bg-card border-b border-border py-2.5">
+      <div className="fixed top-[116px] left-0 right-0 z-30 bg-card border-b border-border py-2.5">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
             <div className="w-3 h-3 border-2 border-primary border-t-transparent rounded-full animate-spin" />
@@ -112,7 +112,7 @@ export const MarketTicker = () => {
   const duplicatedData = [...marketData, ...marketData];
 
   return (
-    <div className="bg-card border-b border-border py-2.5 overflow-hidden">
+    <div className="fixed top-[116px] left-0 right-0 z-30 bg-card border-b border-border py-2.5 overflow-hidden">
       <div className="relative">
         <div 
           ref={scrollRef}
