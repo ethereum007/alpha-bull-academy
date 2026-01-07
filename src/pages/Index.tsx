@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import { AnnouncementBanner } from "@/components/AnnouncementBanner";
 import { MarketTicker } from "@/components/MarketTicker";
+import { EarningsScroller } from "@/components/EarningsScroller";
 import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
 import { TrustBadges } from "@/components/TrustBadges";
@@ -24,6 +25,7 @@ const Index = () => {
       <AnnouncementBanner />
       <Navigation />
       <MarketTicker />
+      <EarningsScroller />
       <main>
         <Hero />
         <TrustBadges />
