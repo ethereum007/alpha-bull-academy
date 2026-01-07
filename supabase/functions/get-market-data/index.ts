@@ -101,9 +101,23 @@ serve(async (req) => {
       'Referer': 'https://www.nseindia.com/market-data/live-equity-market',
     };
 
-    // Get cookies from NSE
-    const homeResponse = await fetch('https://www.nseindia.com/', { headers: nseHeaders });
-    const cookies = homeResponse.headers.get('set-cookie') || '';
+    // Get cookies from NSE with timeout
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 3000); // 3s timeout for NSE
+    
+    let cookies = '';
+    try {
+      const homeResponse = await fetch('https://www.nseindia.com/', { 
+        headers: nseHeaders,
+        signal: controller.signal
+      });
+      cookies = homeResponse.headers.get('set-cookie') || '';
+    } catch (e) {
+      console.log('NSE cookie fetch timeout, using cached/fallback');
+      throw new Error('NSE timeout');
+    } finally {
+      clearTimeout(timeoutId);
+    }
 
     const results: MarketData[] = [];
 
