@@ -14,6 +14,33 @@ interface MarketData {
   type: 'index' | 'stock';
 }
 
+// Simple in-memory cache (resets on function cold start)
+let cachedData: { data: MarketData[]; timestamp: string; marketStatus: string } | null = null;
+let cacheExpiry = 0;
+const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes cache
+
+// Rate limiting
+const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
+const RATE_LIMIT_MAX = 60; // Max 60 requests per minute per IP
+const RATE_LIMIT_WINDOW = 60 * 1000; // 1 minute in ms
+
+function checkRateLimit(clientIP: string): boolean {
+  const now = Date.now();
+  const entry = rateLimitMap.get(clientIP);
+  
+  if (!entry || now > entry.resetTime) {
+    rateLimitMap.set(clientIP, { count: 1, resetTime: now + RATE_LIMIT_WINDOW });
+    return true;
+  }
+  
+  if (entry.count >= RATE_LIMIT_MAX) {
+    return false;
+  }
+  
+  entry.count++;
+  return true;
+}
+
 // Top Nifty 50 stocks to fetch
 const topStocks = [
   { symbol: 'RELIANCE', name: 'RELIANCE' },
@@ -41,6 +68,29 @@ const topStocks = [
 serve(async (req) => {
   if (req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders });
+  }
+
+  // Get client IP for rate limiting
+  const clientIP = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || 
+                   req.headers.get("cf-connecting-ip") || 
+                   "unknown";
+
+  // Check rate limit
+  if (!checkRateLimit(clientIP)) {
+    console.warn(`Rate limit exceeded for IP: ${clientIP}`);
+    return new Response(
+      JSON.stringify({ error: "Too many requests. Please try again later." }),
+      { status: 429, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+    );
+  }
+
+  // Return cached data if valid
+  const now = Date.now();
+  if (cachedData && now < cacheExpiry) {
+    return new Response(
+      JSON.stringify(cachedData),
+      { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+    );
   }
 
   try {
@@ -113,7 +163,7 @@ serve(async (req) => {
       console.error('Stock fetch error:', e);
     }
 
-    // If we got data, return it
+    // If we got data, cache and return it
     if (results.length > 0) {
       // Sort: indices first, then stocks by absolute change percent
       results.sort((a, b) => {
@@ -121,12 +171,15 @@ serve(async (req) => {
         return Math.abs(b.changePercent) - Math.abs(a.changePercent);
       });
 
+      cachedData = { 
+        data: results,
+        timestamp: new Date().toISOString(),
+        marketStatus: isMarketOpen() ? 'open' : 'closed',
+      };
+      cacheExpiry = now + CACHE_DURATION;
+
       return new Response(
-        JSON.stringify({ 
-          data: results,
-          timestamp: new Date().toISOString(),
-          marketStatus: isMarketOpen() ? 'open' : 'closed',
-        }),
+        JSON.stringify(cachedData),
         { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
       );
     }
@@ -135,7 +188,7 @@ serve(async (req) => {
     throw new Error('No data fetched');
 
   } catch (error) {
-    console.error('Error:', error);
+    console.error('Market data error:', error);
     
     const fallbackData: MarketData[] = [
       { symbol: 'NIFTY50', name: 'NIFTY 50', price: 24150.45, change: 125.30, changePercent: 0.52, type: 'index' },
