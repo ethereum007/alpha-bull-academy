@@ -55,6 +55,7 @@ const CompanyCard = ({ result }: { result: EarningsResult }) => {
           <div className="flex items-start justify-between">
             <div>
               <CardTitle className="text-lg font-bold">{result.company}</CardTitle>
+              <p className="text-xs text-amber-500 font-medium mt-0.5">Coming Soon</p>
               <div className="flex items-center gap-2 mt-1">
                 <span className="text-primary font-mono text-sm">{result.ticker}</span>
                 <span className="text-muted-foreground text-xs">
