@@ -19,6 +19,11 @@ const orders = [
     text: "Aarvi Encon has bagged an order of INR 180 cr from a confidential company",
     date: "Jan 7, 2026",
   },
+  {
+    id: 3,
+    text: "Refex bagged an order of 43.74 Crore from a large conglomerate",
+    date: "Jan 7, 2026",
+  },
 ];
 
 export const LatestNews = () => {
