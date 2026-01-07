@@ -22,8 +22,8 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <AnnouncementBanner />
-      <MarketTicker />
       <Navigation />
+      <MarketTicker />
       <main>
         <Hero />
         <TrustBadges />
