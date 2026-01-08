@@ -2,7 +2,7 @@ import { lazy, Suspense } from "react";
 import { AnnouncementBanner } from "@/components/AnnouncementBanner";
 import { MarketTicker } from "@/components/MarketTicker";
 // import { EarningsScroller } from "@/components/EarningsScroller";
-// import { Q3ResultsScroller } from "@/components/Q3ResultsScroller";
+import { Q3ResultsScroller } from "@/components/Q3ResultsScroller";
 import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
 import { TrustBadges } from "@/components/TrustBadges";
@@ -28,7 +28,7 @@ const Index = () => {
       <Navigation />
       <MarketTicker />
       {/* <EarningsScroller /> - Hidden until Q3 FY25 results are released */}
-      {/* <Q3ResultsScroller /> - Hidden until Q3 results are released */}
+      <Q3ResultsScroller />
       <main>
         <Hero />
         <TrustBadges />
