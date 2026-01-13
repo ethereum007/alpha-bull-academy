@@ -20,7 +20,8 @@ import {
   Building,
   Menu,
   X,
-  ChevronDown
+  ChevronDown,
+  Shield
 } from "lucide-react";
 import {
   Collapsible,
@@ -60,7 +61,7 @@ interface SectorData {
 
 const Q3Results = () => {
   const [navOpen, setNavOpen] = useState(false);
-  const [openSectors, setOpenSectors] = useState<string[]>(["Information Technology", "Wealth Management", "Banking"]);
+  const [openSectors, setOpenSectors] = useState<string[]>(["Information Technology", "Wealth Management", "Banking", "Insurance"]);
 
   const toggleSector = (sector: string) => {
     setOpenSectors(prev => 
@@ -185,6 +186,44 @@ const Q3Results = () => {
             { segment: "CRAR", performance: "~17.1%", trend: "up" }
           ],
           outlook: "Management remains cautiously optimistic on the outlook, supported by strong credit demand especially in retail and MSME segments, stable margins despite a declining rate environment, sustained improvement in asset quality, and focus on digital transformation and cost efficiency. While external risks such as global uncertainty and margin pressure remain, Bank of Maharashtra appears well-positioned to deliver sustainable profitability and return ratios."
+        }
+      ]
+    },
+    {
+      sector: "Insurance",
+      icon: <Shield className="w-6 h-6" />,
+      companies: [
+        {
+          name: "ICICI Prudential Life",
+          ticker: "ICICIPRULI",
+          quarter: "Q3 FY26",
+          summary: "ICICI Prudential Life Insurance Company Limited reported a resilient and high-quality performance in Q3 FY26, driven by strong profit growth, stable Value of New Business (VNB) margins, and continued traction in protection and annuity products. The company's disciplined focus on profitability, risk management, and customer-centric execution continues to deliver consistent outcomes.",
+          metrics: [
+            { label: "PAT (9M)", value: "₹99.2 Bn", trend: "up", trendValue: "+23.5% YoY" },
+            { label: "Total Premium", value: "₹334.8 Bn", trend: "up", trendValue: "+4.2% YoY" },
+            { label: "VNB", value: "₹16.64 Bn", trend: "up", trendValue: "+5.7% YoY" },
+            { label: "VNB Margin", value: "24.4%", trend: "up", trendValue: "Improved YoY" },
+            { label: "AUM", value: "₹3.31 Tn", trend: "up", trendValue: "+6.5% YoY" },
+            { label: "Solvency Ratio", value: "214.8%", trend: "up" },
+          ],
+          highlights: [
+            "APE at ₹68.11 billion with Retail Sum Assured up 29.5% YoY to ₹2,956 billion",
+            "Balanced business mix: Linked 49%, Non-linked savings 20%, Protection 19%, Annuity 5%",
+            "Retail Protection APE grew 10.7% YoY to ₹12.92 billion",
+            "13-month persistency at 84.4%, 49-month persistency at 71.3%",
+            "Claim settlement ratio of 99.3% with average settlement time of 1.1 days",
+            "Zero NPAs since inception; 95.8% fixed-income in sovereign/AAA securities",
+            "Cost-to-total premium ratio improved to 19.3%; savings cost ratio improved 90 bps YoY",
+            "Over 99% digital customer logins; 96.8% digital service interactions",
+            "AI-driven underwriting, fraud detection, and GenAI-powered customer service"
+          ],
+          segmentPerformance: [
+            { segment: "Linked Products", performance: "49% of mix", trend: "neutral" },
+            { segment: "Protection", performance: "19% of mix (+10.7% APE)", trend: "up" },
+            { segment: "Non-linked Savings", performance: "20% of mix", trend: "neutral" },
+            { segment: "Annuity", performance: "5% of mix (growing)", trend: "up" }
+          ],
+          outlook: "While near-term premium growth may remain measured, the company's strategy of balancing growth, margins, and risk prudence continues to deliver superior profitability and capital efficiency. Strong solvency, stable VNB margins, and improving protection mix provide confidence in medium-term earnings visibility. Management reiterated confidence in long-term growth driven by rising financialisation, large protection gap, growing retirement population, and under-penetration of annuity products."
         }
       ]
     }
