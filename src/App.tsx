@@ -12,6 +12,7 @@ const Blog = lazy(() => import("./pages/Blog"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
 const Earnings = lazy(() => import("./pages/Earnings"));
 const Q3Results = lazy(() => import("./pages/Q3Results"));
+const StockTrading101 = lazy(() => import("./pages/StockTrading101"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -37,6 +38,7 @@ const App = () => (
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/earnings" element={<Earnings />} />
             <Route path="/q3-results" element={<Q3Results />} />
+            <Route path="/stock-trading-101" element={<StockTrading101 />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
