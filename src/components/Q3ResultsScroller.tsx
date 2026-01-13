@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Clock, ChevronRight } from "lucide-react";
+import { TrendingUp, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export const Q3ResultsScroller = () => {
@@ -18,10 +18,12 @@ export const Q3ResultsScroller = () => {
             repeat: Infinity,
           }}
         >
-          <Clock className="w-4 h-4 text-primary" />
-          <span className="font-bold text-primary">Q3 Results FY25</span>
+          <TrendingUp className="w-4 h-4 text-primary" />
+          <span className="font-bold text-primary">Q3 Results FY26</span>
           <span className="text-muted-foreground">—</span>
-          <span className="font-medium text-foreground">Coming Soon</span>
+          <span className="font-medium text-foreground">Tata Elxsi & More</span>
+          <span className="text-muted-foreground">|</span>
+          <span className="text-primary font-semibold">View Results</span>
           <ChevronRight className="w-4 h-4 text-primary" />
         </motion.div>
       </div>
