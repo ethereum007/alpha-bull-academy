@@ -10,7 +10,7 @@ import { LatestNews } from "@/components/LatestNews";
 import { Footer } from "@/components/Footer";
 // Lazy load below-the-fold components for better performance
 const About = lazy(() => import("@/components/About").then(m => ({ default: m.About })));
-const Courses = lazy(() => import("@/components/Courses").then(m => ({ default: m.Courses })));
+// const Courses = lazy(() => import("@/components/Courses").then(m => ({ default: m.Courses }))); // Hidden for now
 const Testimonials = lazy(() => import("@/components/Testimonials").then(m => ({ default: m.Testimonials })));
 const FAQ = lazy(() => import("@/components/FAQ").then(m => ({ default: m.FAQ })));
 const Contact = lazy(() => import("@/components/Contact").then(m => ({ default: m.Contact })));
@@ -36,9 +36,9 @@ const Index = () => {
         <Suspense fallback={<SectionLoader />}>
           <About />
         </Suspense>
-        <Suspense fallback={<SectionLoader />}>
+        {/* <Suspense fallback={<SectionLoader />}>
           <Courses />
-        </Suspense>
+        </Suspense> - Hidden for now */}
         <Suspense fallback={<SectionLoader />}>
           <Testimonials />
         </Suspense>
