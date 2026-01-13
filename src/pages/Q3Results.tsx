@@ -1,35 +1,286 @@
 import { Helmet } from "react-helmet";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
-import { Clock } from "lucide-react";
+import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { 
+  TrendingUp, 
+  TrendingDown, 
+  Building2, 
+  BarChart3, 
+  Target,
+  Globe,
+  Cpu,
+  ChevronRight,
+  ArrowUpRight,
+  ArrowDownRight
+} from "lucide-react";
+
+interface FinancialMetric {
+  label: string;
+  value: string;
+  subValue?: string;
+  trend?: "up" | "down" | "neutral";
+  trendValue?: string;
+}
+
+interface CompanyResult {
+  name: string;
+  ticker?: string;
+  quarter: string;
+  summary: string;
+  metrics: FinancialMetric[];
+  highlights: string[];
+  segmentPerformance?: {
+    segment: string;
+    performance: string;
+    trend: "up" | "down" | "neutral";
+  }[];
+  outlook?: string;
+  dealWins?: string[];
+}
+
+interface SectorData {
+  sector: string;
+  icon: React.ReactNode;
+  companies: CompanyResult[];
+}
 
 const Q3Results = () => {
+  const sectors: SectorData[] = [
+    {
+      sector: "Information Technology",
+      icon: <Cpu className="w-6 h-6" />,
+      companies: [
+        {
+          name: "Tata Elxsi",
+          ticker: "TATAELXSI",
+          quarter: "Q3 FY26",
+          summary: "Tata Elxsi reported a resilient performance in Q3 FY26, with sequential revenue growth, sharp margin expansion, and strong execution in its Transportation business. While year-on-year growth remained modest due to global macro uncertainty, the company demonstrated operational strength and improving deal momentum.",
+          metrics: [
+            { label: "Revenue", value: "₹953.5 Cr", trend: "up", trendValue: "+3.9% QoQ" },
+            { label: "EBITDA", value: "₹222.2 Cr", trend: "up", trendValue: "+15.0% QoQ" },
+            { label: "EBITDA Margin", value: "23.3%", trend: "up", trendValue: "+220 bps QoQ" },
+            { label: "Net Profit (PAT)", value: "₹179.1 Cr", trend: "up", trendValue: "+15.7% QoQ" },
+            { label: "YoY Revenue Growth", value: "+1.5%", trend: "up" },
+          ],
+          highlights: [
+            "Margin expansion driven by improved utilisation, delivery efficiencies, and disciplined cost management",
+            "Margins exclude a one-time exceptional item related to the new labour code",
+            "Europe and Americas led growth with strong demand from strategic clients",
+            "Top 10 clients contributing ~59% of total revenue",
+            "Continued investment in AI and GenAI-enabled engineering across automotive, healthcare, media, and telecom"
+          ],
+          segmentPerformance: [
+            { segment: "Transportation", performance: "+7.7% QoQ", trend: "up" },
+            { segment: "Media & Communications", performance: "−0.3% QoQ", trend: "down" },
+            { segment: "Healthcare & Life Sciences", performance: "−3.6% QoQ", trend: "down" }
+          ],
+          dealWins: [
+            "Large autonomous network transformation project with a European telecom major",
+            "Regulatory workflow transformation program for a global MedTech company",
+            "Digital platform development for a leading global media and publishing group",
+            "End-to-end product engineering engagements with US-based healthcare and off-highway OEMs"
+          ],
+          outlook: "Management commentary suggests a gradual improvement in growth momentum heading into Q4 FY26, supported by a strong deal pipeline, continued demand for SDV and autonomous systems, AI-led digital transformation programs, and stable margins. While near-term macro uncertainty persists, the company is well-positioned for steady growth and margin stability over the medium term."
+        }
+      ]
+    }
+  ];
+
+  const getTrendIcon = (trend: "up" | "down" | "neutral") => {
+    switch (trend) {
+      case "up":
+        return <ArrowUpRight className="w-4 h-4 text-green-500" />;
+      case "down":
+        return <ArrowDownRight className="w-4 h-4 text-red-500" />;
+      default:
+        return null;
+    }
+  };
+
+  const getTrendColor = (trend: "up" | "down" | "neutral") => {
+    switch (trend) {
+      case "up":
+        return "text-green-600 bg-green-50 dark:bg-green-950 border-green-200";
+      case "down":
+        return "text-red-600 bg-red-50 dark:bg-red-950 border-red-200";
+      default:
+        return "text-muted-foreground bg-muted";
+    }
+  };
+
   return (
     <>
       <Helmet>
-        <title>Q3 Results FY25 | AlphaBull</title>
-        <meta name="description" content="Q3 FY25 earnings results coming soon. Stay tuned for comprehensive analysis of quarterly performance." />
+        <title>Q3 Results FY26 - IT Sector Earnings Analysis | AlphaBull</title>
+        <meta name="description" content="Comprehensive Q3 FY26 earnings analysis covering Tata Elxsi financial performance, revenue growth, margin expansion, segment performance, deal wins, and management outlook." />
+        <meta name="keywords" content="Tata Elxsi Q3 FY26 results, Tata Elxsi earnings, IT sector Q3 results, Tata Elxsi financial performance" />
       </Helmet>
       
       <Navigation />
       
       <main className="min-h-screen bg-background pt-20">
-        <div className="container mx-auto px-4 py-20">
-          <div className="flex flex-col items-center justify-center text-center space-y-6">
-            <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center">
-              <Clock className="w-10 h-10 text-primary" />
+        {/* Hero Section */}
+        <section className="bg-gradient-to-br from-primary/5 via-background to-accent/5 py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <Badge className="mb-4 bg-primary/10 text-primary border-primary/20">
+                Q3 FY26 Earnings Season
+              </Badge>
+              <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+                Q3 Results <span className="text-primary">FY26</span>
+              </h1>
+              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+                Comprehensive analysis of quarterly earnings, financial performance, and outlook across sectors.
+              </p>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground">
-              Q3 Results FY25
-            </h1>
-            <p className="text-xl text-muted-foreground max-w-md">
-              Coming Soon
-            </p>
-            <p className="text-muted-foreground max-w-lg">
-              We're preparing comprehensive analysis of Q3 FY25 earnings. Check back soon for detailed results and insights.
-            </p>
           </div>
-        </div>
+        </section>
+
+        {/* Results Content */}
+        <section className="py-12">
+          <div className="container mx-auto px-4">
+            {sectors.map((sector, sectorIndex) => (
+              <div key={sectorIndex} className="mb-16">
+                {/* Sector Header */}
+                <div className="flex items-center gap-3 mb-8 pb-4 border-b border-border">
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                    {sector.icon}
+                  </div>
+                  <div>
+                    <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+                      {sector.sector}
+                    </h2>
+                    <p className="text-muted-foreground">{sector.companies.length} {sector.companies.length === 1 ? 'Company' : 'Companies'}</p>
+                  </div>
+                </div>
+
+                {/* Companies in Sector */}
+                {sector.companies.map((company, companyIndex) => (
+                  <Card key={companyIndex} className="p-6 md:p-8 mb-8">
+                    {/* Company Header */}
+                    <div className="flex flex-wrap items-start justify-between gap-4 mb-6">
+                      <div>
+                        <div className="flex items-center gap-3 mb-2">
+                          <h3 className="text-2xl md:text-3xl font-bold text-foreground">
+                            {company.name}
+                          </h3>
+                          {company.ticker && (
+                            <Badge variant="outline" className="text-xs">
+                              {company.ticker}
+                            </Badge>
+                          )}
+                        </div>
+                        <Badge className="bg-primary/10 text-primary border-primary/20">
+                          {company.quarter} Results
+                        </Badge>
+                      </div>
+                    </div>
+
+                    {/* Summary */}
+                    <p className="text-muted-foreground mb-8 leading-relaxed">
+                      {company.summary}
+                    </p>
+
+                    {/* Financial Metrics */}
+                    <div className="mb-8">
+                      <h4 className="text-lg font-semibold mb-4 flex items-center gap-2">
+                        <BarChart3 className="w-5 h-5 text-primary" />
+                        Financial Highlights
+                      </h4>
+                      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                        {company.metrics.map((metric, i) => (
+                          <div key={i} className="bg-muted/50 rounded-lg p-4">
+                            <p className="text-xs text-muted-foreground mb-1">{metric.label}</p>
+                            <p className="text-xl font-bold text-foreground">{metric.value}</p>
+                            {metric.trendValue && (
+                              <div className={`flex items-center gap-1 text-xs mt-1 ${metric.trend === 'up' ? 'text-green-600' : metric.trend === 'down' ? 'text-red-600' : 'text-muted-foreground'}`}>
+                                {getTrendIcon(metric.trend || "neutral")}
+                                {metric.trendValue}
+                              </div>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Segment Performance */}
+                    {company.segmentPerformance && (
+                      <div className="mb-8">
+                        <h4 className="text-lg font-semibold mb-4 flex items-center gap-2">
+                          <Building2 className="w-5 h-5 text-primary" />
+                          Segment Performance
+                        </h4>
+                        <div className="grid md:grid-cols-3 gap-4">
+                          {company.segmentPerformance.map((seg, i) => (
+                            <div key={i} className={`rounded-lg p-4 border ${getTrendColor(seg.trend)}`}>
+                              <p className="font-medium mb-1">{seg.segment}</p>
+                              <div className="flex items-center gap-2">
+                                {getTrendIcon(seg.trend)}
+                                <span className="font-semibold">{seg.performance}</span>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                        <p className="text-sm text-muted-foreground mt-3">
+                          Transportation was the standout performer, driven by Software-Defined Vehicle (SDV) programs. Media & Healthcare saw temporary softness due to seasonal furloughs and deal closure delays.
+                        </p>
+                      </div>
+                    )}
+
+                    {/* Key Highlights */}
+                    <div className="mb-8">
+                      <h4 className="text-lg font-semibold mb-4 flex items-center gap-2">
+                        <Target className="w-5 h-5 text-primary" />
+                        Key Highlights
+                      </h4>
+                      <ul className="space-y-2">
+                        {company.highlights.map((highlight, i) => (
+                          <li key={i} className="flex items-start gap-3 text-muted-foreground">
+                            <ChevronRight className="w-4 h-4 text-primary mt-1 shrink-0" />
+                            <span>{highlight}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    {/* Deal Wins */}
+                    {company.dealWins && (
+                      <div className="mb-8">
+                        <h4 className="text-lg font-semibold mb-4 flex items-center gap-2">
+                          <Globe className="w-5 h-5 text-primary" />
+                          Strategic Deal Wins
+                        </h4>
+                        <div className="grid md:grid-cols-2 gap-3">
+                          {company.dealWins.map((deal, i) => (
+                            <div key={i} className="flex items-start gap-3 bg-green-50 dark:bg-green-950/30 rounded-lg p-4 border border-green-200 dark:border-green-900">
+                              <TrendingUp className="w-4 h-4 text-green-600 mt-1 shrink-0" />
+                              <span className="text-sm text-foreground">{deal}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Outlook */}
+                    {company.outlook && (
+                      <div className="bg-primary/5 rounded-lg p-6 border border-primary/10">
+                        <h4 className="text-lg font-semibold mb-3 flex items-center gap-2">
+                          <TrendingUp className="w-5 h-5 text-primary" />
+                          Outlook
+                        </h4>
+                        <p className="text-muted-foreground leading-relaxed">
+                          {company.outlook}
+                        </p>
+                      </div>
+                    )}
+                  </Card>
+                ))}
+              </div>
+            ))}
+          </div>
+        </section>
       </main>
       
       <Footer />
