@@ -14,7 +14,8 @@ import {
   ChevronRight,
   ArrowUpRight,
   ArrowDownRight,
-  Landmark
+  Landmark,
+  Building
 } from "lucide-react";
 
 interface FinancialMetric {
@@ -120,6 +121,44 @@ const Q3Results = () => {
             { segment: "Equity MF Net Inflows", performance: "₹2,715 Cr", trend: "up" }
           ],
           outlook: "Management remains confident about sustained growth, supported by strong equity market participation, expanding relationship manager base, increasing wallet share from existing clients, and scalable digital and platform-led initiatives. With strong visibility on earnings, AUM growth, and margins, Anand Rathi Wealth remains well positioned to capitalise on India's evolving wealth landscape."
+        }
+      ]
+    },
+    {
+      sector: "Banking",
+      icon: <Building className="w-6 h-6" />,
+      companies: [
+        {
+          name: "Bank of Maharashtra",
+          ticker: "MAHABANK",
+          quarter: "Q3 FY26",
+          summary: "Bank of Maharashtra reported a strong operational and financial performance in Q3 FY26, marked by healthy growth in profits, sustained expansion in advances and deposits, and continued improvement in asset quality. The bank continues to benefit from balanced loan growth, strong retail traction, and disciplined risk management.",
+          metrics: [
+            { label: "Net Profit", value: "₹1,779 Cr", trend: "up", trendValue: "+26.5% YoY" },
+            { label: "Operating Profit", value: "₹2,736 Cr", trend: "up", trendValue: "+18.8% YoY" },
+            { label: "NII", value: "₹3,422 Cr", trend: "up", trendValue: "+16.3% YoY" },
+            { label: "RoA", value: "1.86%", trend: "up", trendValue: "vs 1.78% YoY" },
+            { label: "Cost-to-Income", value: "37.19%", trend: "up", trendValue: "vs 38.27% YoY" },
+            { label: "NIM", value: "~3.86%", trend: "neutral" },
+          ],
+          highlights: [
+            "Total Business grew 17.2% YoY to ₹5.95 lakh crore",
+            "Total Deposits up 15.3% YoY to ₹3.22 lakh crore",
+            "Global Advances grew 19.6% YoY to ₹2.74 lakh crore",
+            "Retail Advances surged 36.4% YoY to ₹83,418 crore",
+            "MSME Advances grew 7.5% YoY to ₹51,197 crore",
+            "RAM advances now account for over 63% of domestic advances",
+            "Credit-Deposit ratio improved to 85.0%",
+            "Digital transaction share crossed 98%",
+            "GoI shareholding reduced to 73.6% through OFS, meeting SEBI norms"
+          ],
+          segmentPerformance: [
+            { segment: "Gross NPA", performance: "1.60% (vs 1.80% YoY)", trend: "up" },
+            { segment: "Net NPA", performance: "0.15% (vs 0.20% YoY)", trend: "up" },
+            { segment: "PCR", performance: "~90.7%", trend: "up" },
+            { segment: "CRAR", performance: "~17.1%", trend: "up" }
+          ],
+          outlook: "Management remains cautiously optimistic on the outlook, supported by strong credit demand especially in retail and MSME segments, stable margins despite a declining rate environment, sustained improvement in asset quality, and focus on digital transformation and cost efficiency. While external risks such as global uncertainty and margin pressure remain, Bank of Maharashtra appears well-positioned to deliver sustainable profitability and return ratios."
         }
       ]
     }
