@@ -13,7 +13,8 @@ import {
   Cpu,
   ChevronRight,
   ArrowUpRight,
-  ArrowDownRight
+  ArrowDownRight,
+  Landmark
 } from "lucide-react";
 
 interface FinancialMetric {
@@ -83,6 +84,42 @@ const Q3Results = () => {
             "End-to-end product engineering engagements with US-based healthcare and off-highway OEMs"
           ],
           outlook: "Management commentary suggests a gradual improvement in growth momentum heading into Q4 FY26, supported by a strong deal pipeline, continued demand for SDV and autonomous systems, AI-led digital transformation programs, and stable margins. While near-term macro uncertainty persists, the company is well-positioned for steady growth and margin stability over the medium term."
+        }
+      ]
+    },
+    {
+      sector: "Wealth Management",
+      icon: <Landmark className="w-6 h-6" />,
+      companies: [
+        {
+          name: "Anand Rathi Wealth",
+          ticker: "ANANDRATHI",
+          quarter: "Q3 FY26",
+          summary: "Anand Rathi Wealth Limited delivered a strong performance in Q3 FY26, marked by robust growth in revenues, profits, and assets under management (AUM). The company continues to benefit from rising equity participation, improving market share, and a disciplined focus on high-quality HNI and UHNI clients.",
+          metrics: [
+            { label: "Revenue", value: "₹289.6 Cr", trend: "up", trendValue: "+22.2% YoY" },
+            { label: "Total Revenue", value: "₹305.7 Cr", trend: "up", trendValue: "+25.2% YoY" },
+            { label: "PAT", value: "₹100.1 Cr", trend: "up", trendValue: "+29.6% YoY" },
+            { label: "PAT Margin", value: "32.7%", trend: "up", trendValue: "vs 31.6% Q3 FY25" },
+            { label: "EPS", value: "₹12.1", trend: "up", trendValue: "+29.9% YoY" },
+            { label: "AUM", value: "₹99,008 Cr", trend: "up", trendValue: "+29.6% YoY" },
+          ],
+          highlights: [
+            "AUM grew 29.6% YoY to ₹99,008 crore, achieving 99% of FY26 AUM guidance in 9 months",
+            "Industry-leading profitability with ~47% Return on Equity (ROE)",
+            "Equity MF market share (net inflows) increased to 2.38%",
+            "Equity MF AUM market share rose to 1.46%",
+            "Monthly SIP inflows of ₹5,831 crore with net inflows of ₹2,715 crore",
+            "AUM attrition remained extremely low at below 0.15%",
+            "AUM per Relationship Manager at ₹246 crore with 34 client families per RM",
+            "Focus on ₹5–50 crore and ₹50+ crore client segments for improved revenue stability"
+          ],
+          segmentPerformance: [
+            { segment: "9M FY26 Revenue", performance: "₹896.9 Cr (+21.4% YoY)", trend: "up" },
+            { segment: "9M FY26 PAT", performance: "₹293.7 Cr (+29.5% YoY)", trend: "up" },
+            { segment: "Equity MF Net Inflows", performance: "₹2,715 Cr", trend: "up" }
+          ],
+          outlook: "Management remains confident about sustained growth, supported by strong equity market participation, expanding relationship manager base, increasing wallet share from existing clients, and scalable digital and platform-led initiatives. With strong visibility on earnings, AUM growth, and margins, Anand Rathi Wealth remains well positioned to capitalise on India's evolving wealth landscape."
         }
       ]
     }
