@@ -1,8 +1,10 @@
+import { useState } from "react";
 import { Helmet } from "react-helmet";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { 
   TrendingUp, 
   TrendingDown, 
@@ -15,8 +17,16 @@ import {
   ArrowUpRight,
   ArrowDownRight,
   Landmark,
-  Building
+  Building,
+  Menu,
+  X,
+  ChevronDown
 } from "lucide-react";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
 
 interface FinancialMetric {
   label: string;
@@ -49,6 +59,22 @@ interface SectorData {
 }
 
 const Q3Results = () => {
+  const [navOpen, setNavOpen] = useState(false);
+  const [openSectors, setOpenSectors] = useState<string[]>(["Information Technology", "Wealth Management", "Banking"]);
+
+  const toggleSector = (sector: string) => {
+    setOpenSectors(prev => 
+      prev.includes(sector) 
+        ? prev.filter(s => s !== sector)
+        : [...prev, sector]
+    );
+  };
+
+  const scrollToSection = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    setNavOpen(false);
+  };
+
   const sectors: SectorData[] = [
     {
       sector: "Information Technology",
@@ -214,27 +240,126 @@ const Q3Results = () => {
           </div>
         </section>
 
+        {/* Quick Navigation Toggle */}
+        <Button
+          onClick={() => setNavOpen(!navOpen)}
+          className="fixed bottom-6 right-6 z-50 rounded-full w-14 h-14 shadow-lg md:hidden"
+          size="icon"
+        >
+          {navOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        </Button>
+
+        {/* Mobile Navigation Drawer */}
+        {navOpen && (
+          <div className="fixed inset-0 z-40 md:hidden">
+            <div className="absolute inset-0 bg-black/50" onClick={() => setNavOpen(false)} />
+            <div className="absolute right-0 top-0 bottom-0 w-72 bg-card border-l border-border p-4 overflow-y-auto">
+              <div className="flex items-center justify-between mb-6">
+                <h3 className="font-bold text-lg">Quick Navigation</h3>
+                <Button variant="ghost" size="icon" onClick={() => setNavOpen(false)}>
+                  <X className="w-5 h-5" />
+                </Button>
+              </div>
+              {sectors.map((sector, i) => (
+                <Collapsible
+                  key={i}
+                  open={openSectors.includes(sector.sector)}
+                  onOpenChange={() => toggleSector(sector.sector)}
+                  className="mb-2"
+                >
+                  <CollapsibleTrigger className="flex items-center justify-between w-full p-3 rounded-lg hover:bg-muted text-left">
+                    <div className="flex items-center gap-2">
+                      <span className="text-primary">{sector.icon}</span>
+                      <span className="font-medium text-sm">{sector.sector}</span>
+                    </div>
+                    <ChevronDown className={`w-4 h-4 transition-transform ${openSectors.includes(sector.sector) ? 'rotate-180' : ''}`} />
+                  </CollapsibleTrigger>
+                  <CollapsibleContent>
+                    <div className="ml-8 space-y-1 mt-1">
+                      {sector.companies.map((company, j) => (
+                        <button
+                          key={j}
+                          onClick={() => scrollToSection(`company-${sector.sector}-${company.name}`.replace(/\s+/g, '-').toLowerCase())}
+                          className="block w-full text-left text-sm py-2 px-3 rounded hover:bg-muted text-muted-foreground hover:text-foreground transition-colors"
+                        >
+                          {company.name}
+                        </button>
+                      ))}
+                    </div>
+                  </CollapsibleContent>
+                </Collapsible>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* Results Content */}
         <section className="py-12">
           <div className="container mx-auto px-4">
-            {sectors.map((sector, sectorIndex) => (
-              <div key={sectorIndex} className="mb-16">
-                {/* Sector Header */}
-                <div className="flex items-center gap-3 mb-8 pb-4 border-b border-border">
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
-                    {sector.icon}
-                  </div>
-                  <div>
-                    <h2 className="text-2xl md:text-3xl font-bold text-foreground">
-                      {sector.sector}
-                    </h2>
-                    <p className="text-muted-foreground">{sector.companies.length} {sector.companies.length === 1 ? 'Company' : 'Companies'}</p>
-                  </div>
+            <div className="flex gap-8">
+              {/* Desktop Sidebar Navigation */}
+              <aside className="hidden md:block w-64 shrink-0">
+                <div className="sticky top-24 bg-card border border-border rounded-lg p-4">
+                  <h3 className="font-bold text-lg mb-4 flex items-center gap-2">
+                    <Menu className="w-5 h-5 text-primary" />
+                    Quick Navigation
+                  </h3>
+                  {sectors.map((sector, i) => (
+                    <Collapsible
+                      key={i}
+                      open={openSectors.includes(sector.sector)}
+                      onOpenChange={() => toggleSector(sector.sector)}
+                      className="mb-2"
+                    >
+                      <CollapsibleTrigger className="flex items-center justify-between w-full p-2 rounded-lg hover:bg-muted text-left">
+                        <div className="flex items-center gap-2">
+                          <span className="text-primary">{sector.icon}</span>
+                          <span className="font-medium text-sm">{sector.sector}</span>
+                        </div>
+                        <ChevronDown className={`w-4 h-4 transition-transform ${openSectors.includes(sector.sector) ? 'rotate-180' : ''}`} />
+                      </CollapsibleTrigger>
+                      <CollapsibleContent>
+                        <div className="ml-7 space-y-1 mt-1 border-l-2 border-primary/20 pl-3">
+                          {sector.companies.map((company, j) => (
+                            <button
+                              key={j}
+                              onClick={() => scrollToSection(`company-${sector.sector}-${company.name}`.replace(/\s+/g, '-').toLowerCase())}
+                              className="block w-full text-left text-sm py-1.5 px-2 rounded hover:bg-muted text-muted-foreground hover:text-foreground transition-colors"
+                            >
+                              {company.name}
+                            </button>
+                          ))}
+                        </div>
+                      </CollapsibleContent>
+                    </Collapsible>
+                  ))}
                 </div>
+              </aside>
 
-                {/* Companies in Sector */}
-                {sector.companies.map((company, companyIndex) => (
-                  <Card key={companyIndex} className="p-6 md:p-8 mb-8">
+              {/* Main Content */}
+              <div className="flex-1">
+                {sectors.map((sector, sectorIndex) => (
+                  <div key={sectorIndex} className="mb-16" id={`sector-${sector.sector}`.replace(/\s+/g, '-').toLowerCase()}>
+                    {/* Sector Header */}
+                    <div className="flex items-center gap-3 mb-8 pb-4 border-b border-border">
+                      <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                        {sector.icon}
+                      </div>
+                      <div>
+                        <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+                          {sector.sector}
+                        </h2>
+                        <p className="text-muted-foreground">{sector.companies.length} {sector.companies.length === 1 ? 'Company' : 'Companies'}</p>
+                      </div>
+                    </div>
+
+                    {/* Companies in Sector */}
+                    {sector.companies.map((company, companyIndex) => (
+                      <Card 
+                        key={companyIndex} 
+                        id={`company-${sector.sector}-${company.name}`.replace(/\s+/g, '-').toLowerCase()}
+                        className="p-6 md:p-8 mb-8 scroll-mt-24"
+                      >
                     {/* Company Header */}
                     <div className="flex flex-wrap items-start justify-between gap-4 mb-6">
                       <div>
@@ -355,6 +480,8 @@ const Q3Results = () => {
                 ))}
               </div>
             ))}
+              </div>
+            </div>
           </div>
         </section>
       </main>
