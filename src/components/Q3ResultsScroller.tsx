@@ -20,8 +20,6 @@ export const Q3ResultsScroller = () => {
         >
           <TrendingUp className="w-4 h-4 text-primary" />
           <span className="font-bold text-primary">Q3 Results FY26</span>
-          <span className="text-muted-foreground">—</span>
-          <span className="font-medium text-foreground">Tata Elxsi & More</span>
           <span className="text-muted-foreground">|</span>
           <span className="text-primary font-semibold">View Results</span>
           <ChevronRight className="w-4 h-4 text-primary" />
