@@ -424,9 +424,6 @@ const Q3Results = () => {
                             </div>
                           ))}
                         </div>
-                        <p className="text-sm text-muted-foreground mt-3">
-                          Transportation was the standout performer, driven by Software-Defined Vehicle (SDV) programs. Media & Healthcare saw temporary softness due to seasonal furloughs and deal closure delays.
-                        </p>
                       </div>
                     )}
 
