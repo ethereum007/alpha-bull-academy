@@ -6,7 +6,7 @@ import { Q3ResultsScroller } from "@/components/Q3ResultsScroller";
 import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
 import { TrustBadges } from "@/components/TrustBadges";
-import { LatestNews } from "@/components/LatestNews";
+// import { LatestNews } from "@/components/LatestNews"; // Hidden for now
 import { Footer } from "@/components/Footer";
 // Lazy load below-the-fold components for better performance
 const About = lazy(() => import("@/components/About").then(m => ({ default: m.About })));
@@ -32,7 +32,7 @@ const Index = () => {
       <main>
         <Hero />
         <TrustBadges />
-        <LatestNews />
+        {/* <LatestNews /> - Hidden for now */}
         <Suspense fallback={<SectionLoader />}>
           <About />
         </Suspense>
