@@ -1,15 +1,9 @@
 import { useEffect } from 'react';
 
+const GA_MEASUREMENT_ID = 'G-BFJDFEGV9D';
+
 export const GoogleAnalytics = () => {
   useEffect(() => {
-    // Get GA4 Measurement ID from environment variable
-    const GA_MEASUREMENT_ID = import.meta.env.VITE_GA_MEASUREMENT_ID;
-    
-    if (!GA_MEASUREMENT_ID) {
-      console.warn('Google Analytics: VITE_GA_MEASUREMENT_ID not configured');
-      return;
-    }
-
     // Load Google Analytics script
     const script1 = document.createElement('script');
     script1.async = true;
@@ -22,9 +16,7 @@ export const GoogleAnalytics = () => {
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', '${GA_MEASUREMENT_ID}', {
-        page_path: window.location.pathname,
-      });
+      gtag('config', '${GA_MEASUREMENT_ID}');
     `;
     document.head.appendChild(script2);
 
