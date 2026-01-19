@@ -76,11 +76,9 @@ export const blogPostsContent: Record<string, BlogPostContent> = {
       
       <p><strong>Above all,</strong></p>
       
-      <ul>
-        <li>What is my entry?</li>
-        <li>What is my exit?</li>
-        <li>What is the risk positioning?</li>
-      </ul>
+      <p>• What is my entry?</p>
+      <p>• What is my exit?</p>
+      <p>• What is the risk positioning?</p>
       
       <p>We will discuss other rookie mistakes in the coming blogs.</p>
 
