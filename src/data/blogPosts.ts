@@ -74,11 +74,11 @@ export const blogPostsContent: Record<string, BlogPostContent> = {
         <li>Is there volume build up from few sessions etc?</li>
       </ul>
       
-      <p><strong>Above all,</strong></p>
+      <p class="mb-8"><strong>Above all,</strong></p>
       
-      <p>• What is my entry?</p>
-      <p>• What is my exit?</p>
-      <p>• What is the risk positioning?</p>
+      <p class="mb-4">• What is my entry?</p>
+      <p class="mb-4">• What is my exit?</p>
+      <p class="mb-4">• What is the risk positioning?</p>
       
       <p>We will discuss other rookie mistakes in the coming blogs.</p>
 
