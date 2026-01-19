@@ -6,24 +6,24 @@ import { motion } from "framer-motion";
 
 const courses = [
   {
+    icon: TrendingUp,
+    title: "Price Action Mastery",
+    level: "Advanced",
+    duration: "5 Months",
+    description: "Master price action trading with CPR, EMA, support/resistance, breakout setups, and advanced chart pattern analysis. Complete hands-on training for serious traders.",
+    price: "₹24,999",
+    enrollLink: "https://wa.me/919032999466",
+    color: "bg-green-500/10",
+  },
+  {
     icon: BookOpen,
-    title: "Stock Market Fundamentals",
-    level: "Basics",
+    title: "Basics of Stock Market",
+    level: "Beginner",
     duration: "4 Weeks",
-    description: "Perfect for beginners who want to start their trading journey. Learn the essential concepts, market structure, and fundamental analysis techniques.",
+    description: "Perfect for beginners who want to start their trading journey. Learn fundamental and technical analysis, market structure, and essential trading concepts.",
     price: "₹6,999",
     enrollLink: "https://rzp.io/rzp/7UZGE0Dg",
     color: "bg-blue-500/10",
-  },
-  {
-    icon: TrendingUp,
-    title: "Technical Analysis Mastery",
-    level: "Intermediate",
-    duration: "4 Weeks",
-    description: "Deep dive into technical analysis, chart patterns, and advanced trading strategies. Price Action Mastery – CPR, EMA, support/resistance, and breakout setups.",
-    price: "₹9,999",
-    enrollLink: "https://rzp.io/rzp/yB1bafTe",
-    color: "bg-green-500/10",
   },
   {
     icon: Target,
