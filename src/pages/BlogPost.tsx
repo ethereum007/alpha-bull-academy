@@ -164,7 +164,7 @@ const BlogPost = () => {
             </header>
 
             <div 
-              className="prose prose-lg max-w-none prose-headings:font-bold prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:pt-8 prose-h2:border-t prose-h2:border-border/50 prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4 prose-p:text-foreground prose-p:leading-relaxed prose-p:mb-6 prose-ul:my-8 prose-li:my-3 prose-strong:text-foreground [&_.lead]:text-xl [&_.lead]:font-medium [&_.lead]:mb-10 [&_.highlight]:bg-primary/10 [&_.highlight]:p-6 [&_.highlight]:rounded-lg [&_.highlight]:border-l-4 [&_.highlight]:border-primary"
+              className="prose prose-lg max-w-none prose-headings:font-bold prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:pt-8 prose-h2:border-t prose-h2:border-border/50 prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4 prose-p:text-foreground prose-p:mb-6 prose-ul:my-8 prose-li:my-3 prose-strong:text-foreground [&_.lead]:text-xl [&_.lead]:font-medium [&_.lead]:mb-10 [&_.highlight]:bg-primary/10 [&_.highlight]:p-6 [&_.highlight]:rounded-lg [&_.highlight]:border-l-4 [&_.highlight]:border-primary [&_p]:leading-[1.5] [&_li]:leading-[1.5] [&_.lead]:leading-[1.5]"
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
 
