@@ -30,34 +30,100 @@ const BlogPost = () => {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": post.title,
-    "description": post.subtitle,
-    "author": { "@type": "Person", "name": post.author },
-    "publisher": { "@type": "Organization", "name": "AlphaBull Trading Academy" },
+    "description": post.excerpt,
+    "image": typeof post.image === 'string' ? post.image : undefined,
+    "author": { 
+      "@type": "Person", 
+      "name": post.author,
+      "url": "https://alphabull.club"
+    },
+    "publisher": { 
+      "@type": "Organization", 
+      "name": "AlphaBull Trading Academy",
+      "url": "https://alphabull.club",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://alphabull.club/favicon.ico"
+      }
+    },
     "datePublished": post.date,
     "dateModified": post.date,
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://alphabull.club/blog/${slug}`
+    },
+    "articleSection": post.category,
+    "inLanguage": "en-IN"
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://alphabull.club"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://alphabull.club/blog"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": post.title,
+        "item": `https://alphabull.club/blog/${slug}`
+      }
+    ]
   };
 
   return (
     <>
       <Helmet>
-        <title>{post.title} | AlphaBull Academy</title>
-        <meta name="description" content={post.subtitle} />
+        <title>{post.title} | AlphaBull Academy - Stock Market Training Hyderabad</title>
+        <meta name="description" content={post.excerpt} />
         <meta name="keywords" content={post.keywords} />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="author" content={post.author} />
         <link rel="canonical" href={`https://alphabull.club/blog/${slug}`} />
-        <meta property="og:title" content={post.title} />
-        <meta property="og:description" content={post.subtitle} />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content={`${post.title} | AlphaBull Academy`} />
+        <meta property="og:description" content={post.excerpt} />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={`https://alphabull.club/blog/${slug}`} />
+        <meta property="og:site_name" content="AlphaBull Trading Academy" />
+        <meta property="og:locale" content="en_IN" />
         <meta property="article:published_time" content={post.date} />
+        <meta property="article:modified_time" content={post.date} />
+        <meta property="article:author" content={post.author} />
+        <meta property="article:section" content={post.category} />
+        <meta property="article:tag" content={post.keywords} />
+        
+        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={post.title} />
-        <meta name="twitter:description" content={post.subtitle} />
+        <meta name="twitter:title" content={`${post.title} | AlphaBull Academy`} />
+        <meta name="twitter:description" content={post.excerpt} />
+        <meta name="twitter:label1" content="Reading time" />
+        <meta name="twitter:data1" content={post.readTime} />
+        <meta name="twitter:label2" content="Written by" />
+        <meta name="twitter:data2" content={post.author} />
+        
+        {/* Additional SEO */}
+        <meta name="geo.region" content="IN-TG" />
+        <meta name="geo.placename" content="Hyderabad" />
+        
+        <script type="application/ld+json">
+          {JSON.stringify(articleSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
       </Helmet>
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-      />
 
       <div className="min-h-screen">
         <Navigation />
