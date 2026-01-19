@@ -53,26 +53,22 @@ export const blogPostsContent: Record<string, BlogPostContent> = {
       
       <p>Most of the times I ask, why the entry? And the answers are astounding:</p>
       
-      <ul>
-        <li>I got the tip from my friend</li>
-        <li>It's a good stock sir, it will go up, let me average it</li>
-        <li>It is available at cheap</li>
-        <li>Some brokerage gave this call yada yada yada…</li>
-      </ul>
+      <p class="mb-4">• I got the tip from my friend</p>
+      <p class="mb-4">• It's a good stock sir, it will go up, let me average it</p>
+      <p class="mb-4">• It is available at cheap</p>
+      <p class="mb-4">• Some brokerage gave this call yada yada yada…</p>
       
       <p>Your entry is not managed by you, but someone else's. In this instance, who will you blame if you make a loss?</p>
       
-      <p><strong>Before even punching a Buy/Sell order on the Screen</strong></p>
+      <p class="mb-8"><strong>Before even punching a Buy/Sell order on the Screen</strong></p>
       
       <p>First thing you need to do is - "What is my Game plan"?</p>
       
-      <ul>
-        <li>Is the stock giving a breakout?</li>
-        <li>Is the stock coming out weekly/monthly consolidation?</li>
-        <li>If I am building a strategy, is the stock meeting my entry conditions?</li>
-        <li>Is the stock above the moving averages for me to take an entry?</li>
-        <li>Is there volume build up from few sessions etc?</li>
-      </ul>
+      <p class="mb-4">• Is the stock giving a breakout?</p>
+      <p class="mb-4">• Is the stock coming out weekly/monthly consolidation?</p>
+      <p class="mb-4">• If I am building a strategy, is the stock meeting my entry conditions?</p>
+      <p class="mb-4">• Is the stock above the moving averages for me to take an entry?</p>
+      <p class="mb-4">• Is there volume build up from few sessions etc?</p>
       
       <p class="mb-8"><strong>Above all,</strong></p>
       
