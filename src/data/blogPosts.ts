@@ -49,20 +49,20 @@ export const blogPostsContent: Record<string, BlogPostContent> = {
 
       <h2 class="mb-8">🎯 1st Mistake — Entering without a Game Plan</h2>
       
-      <p>The number one mistake most of the traders do is entering a stock without a Game Plan.</p>
+      <p class="mb-8">The number one mistake most of the traders do is entering a stock without a Game Plan.</p>
       
-      <p>Most of the times I ask, why the entry? And the answers are astounding:</p>
+      <p class="mb-8">Most of the times I ask, why the entry? And the answers are astounding:</p>
       
       <p class="mb-4">• I got the tip from my friend</p>
       <p class="mb-4">• It's a good stock sir, it will go up, let me average it</p>
       <p class="mb-4">• It is available at cheap</p>
       <p class="mb-4">• Some brokerage gave this call yada yada yada…</p>
       
-      <p>Your entry is not managed by you, but someone else's. In this instance, who will you blame if you make a loss?</p>
+      <p class="mb-8">Your entry is not managed by you, but someone else's. In this instance, who will you blame if you make a loss?</p>
       
       <p class="mb-8"><strong>Before even punching a Buy/Sell order on the Screen</strong></p>
       
-      <p>First thing you need to do is - "What is my Game plan"?</p>
+      <p class="mb-8">First thing you need to do is - "What is my Game plan"?</p>
       
       <p class="mb-4">• Is the stock giving a breakout?</p>
       <p class="mb-4">• Is the stock coming out weekly/monthly consolidation?</p>
