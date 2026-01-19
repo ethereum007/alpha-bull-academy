@@ -31,7 +31,7 @@ const courses = [
     level: "Advanced",
     duration: "4 Weeks",
     description: "Master derivatives trading with advanced options strategies, futures trading, and hedging techniques. For serious traders ready to go professional.",
-    price: "₹14,999",
+    price: "₹18,999",
     enrollLink: "https://wa.me/919032999466",
     color: "bg-purple-500/10",
   },

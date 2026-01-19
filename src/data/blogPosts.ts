@@ -1,5 +1,6 @@
 import tradingWorkspace from "@/assets/blog-trading-workspace.jpg";
 import tradingSuccess from "@/assets/blog-trading-success.jpg";
+import tradingMistakes from "@/assets/blog-trading-mistakes.png";
 
 export interface BlogPostMeta {
   id: string;
@@ -19,6 +20,16 @@ export interface BlogPostContent extends BlogPostMeta {
 }
 
 export const blogPostsMeta: BlogPostMeta[] = [
+  {
+    id: "top-7-mistakes-by-traders",
+    title: "Top 7 Mistakes by Traders",
+    excerpt: "Most traders go through phases of emotion and cycles. Learn about the common mistakes that can derail your trading journey and how to avoid them.",
+    author: "AlphaBull Academy",
+    date: "2025-01-19",
+    readTime: "5 min read",
+    category: "Trading Psychology",
+    image: tradingMistakes,
+  },
   {
     id: "how-to-learn-trading-india-2025",
     title: "How to Learn Trading as a Beginner in India (2025 Guide)",
@@ -801,6 +812,61 @@ export const blogPostsContent: Record<string, BlogPostContent> = {
       </ol>
 
       <p class="highlight">The goal of trading is not to make money—it's to not lose money. Profits are the natural result of proper risk management and consistent execution.</p>
+    `,
+  },
+
+  "top-7-mistakes-by-traders": {
+    id: "top-7-mistakes-by-traders",
+    title: "Top 7 Mistakes by Traders",
+    subtitle: "Trading is Amalgamation of Patience, Risk Management and the Right Game Plan",
+    author: "AlphaBull Academy",
+    date: "2025-01-19",
+    readTime: "5 min read",
+    category: "Trading Psychology",
+    image: tradingMistakes,
+    keywords: "trading mistakes, trading psychology, game plan trading, risk management, beginner trading errors",
+    excerpt: "Most traders go through phases of emotion and cycles. Learn about the common mistakes that can derail your trading journey and how to avoid them.",
+    content: `
+      <p class="lead">"Trading is amalgamation of patience, risk management and the right game plan." Most of the traders go through phases of emotion and cycles. Let me point out few mistakes we all do.</p>
+
+      <h2>1st Mistake: Entering Without a Game Plan</h2>
+      <p>The number one mistake most of the traders do is entering a stock without a Game Plan.</p>
+      
+      <p>Most of the times I ask, why the entry? And the answers are astounding:</p>
+      <ul>
+        <li>I got the tip from my friend</li>
+        <li>It's a good stock sir, it will go up, let me average it</li>
+        <li>It is available at cheap</li>
+        <li>Some brokerage gave this call yada yada yada…</li>
+      </ul>
+      
+      <p>Your entry is not managed by you, but someone else's. In this instance, who will you blame if you make a loss?</p>
+
+      <h2>Before Punching a Buy/Sell Order</h2>
+      <p class="highlight">First thing you need to do is - "What is my Game plan"?</p>
+      
+      <p>Ask yourself these critical questions:</p>
+      <ul>
+        <li>Is the stock giving a breakout?</li>
+        <li>Is the stock coming out weekly/monthly consolidation?</li>
+        <li>If I am building a strategy, is the stock meeting my entry conditions?</li>
+        <li>Is the stock above the moving averages for me to take an entry?</li>
+        <li>Is there volume build up from few sessions etc?</li>
+      </ul>
+
+      <h2>Above All, Define These Three Things:</h2>
+      <ul>
+        <li><strong>What is my entry?</strong> - Know your exact entry point</li>
+        <li><strong>What is my exit?</strong> - Define your target before entering</li>
+        <li><strong>What is the risk positioning?</strong> - Always know your stop loss</li>
+      </ul>
+
+      <p>We will discuss other rookie mistakes in the coming blogs.</p>
+
+      <h2>Share Your Experience</h2>
+      <p>Share one experience you had when you first started trading and what you learned from it or what was your emotion? – Could be just 2-3 lines as well.</p>
+      
+      <p class="highlight">DM us - +91 9032999466 on WhatsApp</p>
     `,
   },
 };
