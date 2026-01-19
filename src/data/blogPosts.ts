@@ -47,7 +47,7 @@ export const blogPostsContent: Record<string, BlogPostContent> = {
       
       <p>Most of the traders go through phases of Emotion and cycles. Let me point out few mistakes we all do.</p>
 
-      <h2>🎯 1st Mistake — Entering without a Game Plan</h2>
+      <h2 class="mb-8">🎯 1st Mistake — Entering without a Game Plan</h2>
       
       <p>The number one mistake most of the traders do is entering a stock without a Game Plan.</p>
       
