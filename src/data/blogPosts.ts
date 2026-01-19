@@ -43,38 +43,50 @@ export const blogPostsContent: Record<string, BlogPostContent> = {
     keywords: "trading mistakes, trading psychology, game plan trading, risk management, beginner trading errors",
     excerpt: "Most traders go through phases of emotion and cycles. Learn about the common mistakes that can derail your trading journey and how to avoid them.",
     content: `
-      <p class="lead">"Trading is amalgamation of patience, risk management and the right game plan." Most of the traders go through phases of emotion and cycles. Let me point out few mistakes we all do.</p>
+      <p class="lead">"Trading is amalgamation of patience, risk management and the right game plan"</p>
+      
+      <p>Most of the traders go through phases of Emotion and cycles. Let me point out few mistakes we all do.</p>
 
-      <h2>🎯 MISTAKE NO 1 — Trading Without a Game Plan</h2>
-      <p>The foremost mistake a trader does is, just trade for fun with no game plan. I've seen traders who wake up every morning, open their trading terminal and trade just randomly till the market closes.</p>
-      <p>Every trading day should have a game plan. And yes, without a trading plan you might be in profits for few days but profits are not consistent this way.</p>
+      <h2>🎯 1st Mistake — Entering without a Game Plan</h2>
+      
+      <p>The number one mistake most of the traders do is entering a stock without a Game Plan.</p>
+      
+      <p>Most of the times I ask, why the entry? And the answers are astounding:</p>
+      
+      <ul>
+        <li>I got the tip from my friend</li>
+        <li>It's a good stock sir, it will go up, let me average it</li>
+        <li>It is available at cheap</li>
+        <li>Some brokerage gave this call yada yada yada…</li>
+      </ul>
+      
+      <p>Your entry is not managed by you, but someone else's. In this instance, who will you blame if you make a loss?</p>
+      
+      <p><strong>Before even punching a Buy/Sell order on the Screen</strong></p>
+      
+      <p>First thing you need to do is - "What is my Game plan"?</p>
+      
+      <ul>
+        <li>Is the stock giving a breakout?</li>
+        <li>Is the stock coming out weekly/monthly consolidation?</li>
+        <li>If I am building a strategy, is the stock meeting my entry conditions?</li>
+        <li>Is the stock above the moving averages for me to take an entry?</li>
+        <li>Is there volume build up from few sessions etc?</li>
+      </ul>
+      
+      <p><strong>Above all,</strong></p>
+      
+      <ul>
+        <li>What is my entry?</li>
+        <li>What is my exit?</li>
+        <li>What is the risk positioning?</li>
+      </ul>
+      
+      <p>We will discuss other rookie mistakes in the coming blogs.</p>
 
-      <h2>📉 MISTAKE NO 2 — Averaging Without Knowledge</h2>
-      <p>Averaging is a strategy where you buy/sell more quantity of the same stock when it has fallen/gone up. Though it's a potent strategy, it should be used only under specific conditions and not every time.</p>
-      <p>Most of the traders are in habit of averaging when the trade starts moving against their position. Remember, proper risk management must be followed when averaging.</p>
-
-      <h2>💧 MISTAKE NO 3 — Trading in Illiquid Stocks</h2>
-      <p>Illiquid stocks are those where the trading volume is very low. These stocks often have wide bid-ask spreads and can move unexpectedly in either direction.</p>
-      <p>Always trade in liquid stocks where there's enough volume to enter and exit positions without significant slippage.</p>
-
-      <h2>🛑 MISTAKE NO 4 — Not Following Stop Loss</h2>
-      <p>This is perhaps the most devastating mistake. Many traders set stop losses but remove them when price approaches, hoping for a reversal.</p>
-      <p>A stop loss is your insurance against unlimited losses. Once set, it should never be moved further away from your entry.</p>
-
-      <h2>⚡ MISTAKE NO 5 — Overtrading</h2>
-      <p>Trading too frequently often leads to poor decision-making and increased transaction costs. Quality of trades matters more than quantity.</p>
-      <p>Wait for high-probability setups that align with your trading plan rather than forcing trades when conditions aren't favorable.</p>
-
-      <h2>😤 MISTAKE NO 6 — Trading With Emotions</h2>
-      <p>Fear and greed are the two emotions that destroy trading accounts. Fear prevents you from taking good trades, while greed keeps you in losing positions hoping for reversals.</p>
-      <p>Develop emotional discipline by following your trading plan mechanically and taking breaks after significant wins or losses.</p>
-
-      <h2>📓 MISTAKE NO 7 — Not Maintaining a Trading Journal</h2>
-      <p>Without tracking your trades, you cannot identify patterns in your behavior or improve your strategy. A trading journal is essential for growth.</p>
-      <p>Record every trade with entry/exit reasons, emotions felt, and lessons learned. Review weekly to identify areas for improvement.</p>
-
-      <h2>🔑 Key Takeaway</h2>
-      <p class="highlight">Trading success comes from discipline, not predictions. Avoid these common mistakes, follow your game plan, and always protect your capital with proper risk management.</p>
+      <h2>📝 Task</h2>
+      
+      <p class="highlight">Share one experience you had when you first started trading and what you learned from it or what was your emotion? – Could be just 2-3 lines as well. DM us on WhatsApp!</p>
     `,
   },
 };
