@@ -8,6 +8,7 @@ import { Hero } from "@/components/Hero";
 import { TrustBadges } from "@/components/TrustBadges";
 // import { LatestNews } from "@/components/LatestNews"; // Hidden for now
 import { Footer } from "@/components/Footer";
+import { Disclaimer } from "@/components/Disclaimer";
 // Lazy load below-the-fold components for better performance
 const About = lazy(() => import("@/components/About").then(m => ({ default: m.About })));
 const Courses = lazy(() => import("@/components/Courses").then(m => ({ default: m.Courses })));
@@ -49,6 +50,7 @@ const Index = () => {
           <Contact />
         </Suspense>
       </main>
+      <Disclaimer />
       <Footer />
     </div>
   );
