@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Helmet } from "react-helmet";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
+import { Disclaimer } from "@/components/Disclaimer";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -522,6 +523,7 @@ const Q3Results = () => {
         </section>
       </main>
       
+      <Disclaimer />
       <Footer />
     </>
   );

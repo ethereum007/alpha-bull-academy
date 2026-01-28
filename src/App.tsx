@@ -10,6 +10,7 @@ import { lazy, Suspense } from "react";
 const Index = lazy(() => import("./pages/Index"));
 const Blog = lazy(() => import("./pages/Blog"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
+const AboutPage = lazy(() => import("./pages/About"));
 const Earnings = lazy(() => import("./pages/Earnings"));
 const Q3Results = lazy(() => import("./pages/Q3Results"));
 // const StockTrading101 = lazy(() => import("./pages/StockTrading101")); // Hidden for now
@@ -34,6 +35,7 @@ const App = () => (
         <Suspense fallback={<PageLoader />}>
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/about" element={<AboutPage />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/earnings" element={<Earnings />} />

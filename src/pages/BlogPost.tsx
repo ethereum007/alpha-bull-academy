@@ -6,6 +6,7 @@ import { Link, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { Button } from "@/components/ui/button";
 import { blogPostsContent } from "@/data/blogPosts";
+import { Disclaimer } from "@/components/Disclaimer";
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -179,6 +180,7 @@ const BlogPost = () => {
             </div>
           </div>
         </article>
+        <Disclaimer />
         <Footer />
       </div>
     </>

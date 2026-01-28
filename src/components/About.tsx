@@ -44,10 +44,10 @@ export const About = () => {
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 font-heading">Why Choose AlphaBull?</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8 leading-relaxed">
-            AlphaBull Trading Academy is dedicated to empowering individuals with the knowledge and skills needed to succeed in Indian stock markets. Our comprehensive courses are designed by professional traders who have navigated the markets successfully for over 6 years.
+            AlphaBull is an online stock market education platform in India. We help beginners and aspiring traders learn stock market concepts, trading strategies, and risk management through structured online courses and educational content.
           </p>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            We believe in practical, hands-on learning combined with strong theoretical foundations. Our students don't just learn strategies—they learn to think like professional traders, manage risk effectively, and build sustainable trading careers.
+          <p className="text-lg text-primary font-medium max-w-3xl mx-auto">
+            We do not provide investment advice or guarantees.
           </p>
         </motion.div>
 

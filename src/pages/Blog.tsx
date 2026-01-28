@@ -1,5 +1,6 @@
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
+import { Disclaimer } from "@/components/Disclaimer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock } from "lucide-react";
@@ -152,6 +153,7 @@ const Blog = () => {
             </div>
           </div>
         </main>
+        <Disclaimer />
         <Footer />
       </div>
     </>

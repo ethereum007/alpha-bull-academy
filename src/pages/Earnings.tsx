@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import { TrendingUp, TrendingDown, Minus, ChevronDown, BarChart3, Calendar, Building2 } from "lucide-react";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
+import { Disclaimer } from "@/components/Disclaimer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { getSectorData, currentSeason, EarningsResult } from "@/data/earningsData";
@@ -231,6 +232,7 @@ const Earnings = () => {
         </section>
       </main>
 
+      <Disclaimer />
       <Footer />
     </>
   );
