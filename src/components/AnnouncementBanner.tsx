@@ -77,7 +77,7 @@ export const AnnouncementBanner = () => {
             <span className="text-sm md:text-base font-medium">
               Classes Starting from{" "}
               <span className="font-bold underline decoration-2 underline-offset-2">
-                January 24th, 2026
+                February 11th, 2026
               </span>
             </span>
             <motion.span
