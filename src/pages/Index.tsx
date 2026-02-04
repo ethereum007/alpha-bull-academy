@@ -3,15 +3,10 @@ import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
 import { TrustBar } from "@/components/TrustBar";
 import { ProblemsSolutions } from "@/components/ProblemsSolutions";
+import { Courses } from "@/components/Courses";
 import { Footer } from "@/components/Footer";
 
 // Lazy load below-the-fold components for better performance
-const About = lazy(() =>
-  import("@/components/About").then((m) => ({ default: m.About }))
-);
-const Courses = lazy(() =>
-  import("@/components/Courses").then((m) => ({ default: m.Courses }))
-);
 const Testimonials = lazy(() =>
   import("@/components/Testimonials").then((m) => ({ default: m.Testimonials }))
 );
@@ -23,25 +18,20 @@ const Contact = lazy(() =>
 );
 
 const SectionLoader = () => (
-  <div className="section-padding flex items-center justify-center">
-    <div className="animate-pulse text-muted-foreground">Loading...</div>
+  <div className="py-16 flex items-center justify-center">
+    <div className="animate-pulse text-[#6B7280]">Loading...</div>
   </div>
 );
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white">
       <Navigation />
       <main>
         <Hero />
         <TrustBar />
         <ProblemsSolutions />
-        <Suspense fallback={<SectionLoader />}>
-          <Courses />
-        </Suspense>
-        <Suspense fallback={<SectionLoader />}>
-          <Courses />
-        </Suspense>
+        <Courses />
         <Suspense fallback={<SectionLoader />}>
           <Testimonials />
         </Suspense>
