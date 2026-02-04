@@ -4,6 +4,7 @@ import { Hero } from "@/components/Hero";
 import { TrustBar } from "@/components/TrustBar";
 import { ProblemsSolutions } from "@/components/ProblemsSolutions";
 import { WhyChooseUs } from "@/components/WhyChooseUs";
+import { HowItWorks } from "@/components/HowItWorks";
 import { Courses } from "@/components/Courses";
 import { Footer } from "@/components/Footer";
 
@@ -33,6 +34,7 @@ const Index = () => {
         <TrustBar />
         <ProblemsSolutions />
         <WhyChooseUs />
+        <HowItWorks />
         <Courses />
         <Suspense fallback={<SectionLoader />}>
           <Testimonials />
