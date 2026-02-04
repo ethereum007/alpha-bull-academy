@@ -36,22 +36,22 @@ export const ProblemsSolutions = () => {
     {
       title: "Read Price, Not Indicators",
       description:
-        "Learn to understand what the market is telling you directly through candlestick patterns, support/resistance, and volume analysis.",
+        "Learn to identify support, resistance, breakouts, and reversals using only candlestick patterns and market structure. No lagging indicators needed.",
     },
     {
       title: "Proven Risk Management",
       description:
-        "Master position sizing, stop-loss placement, and risk-reward ratios that protect your capital while maximizing profitable trades.",
+        "Master position sizing, stop-loss placement, and portfolio management to protect your capital first, profits second. Survive to trade another day.",
     },
     {
       title: "Trading Psychology",
       description:
-        "Develop the mental discipline to stick to your trading plan, manage emotions, and make rational decisions under pressure.",
+        "Develop the mental discipline to stick to your strategy, cut losses quickly, and let winners run. Trade the chart, not your emotions.",
     },
     {
       title: "Real Market Experience",
       description:
-        "Practice with live market sessions, real-time analysis, and hands-on learning that prepares you for actual trading scenarios.",
+        "Learn from 10+ years of trading US & Indian markets—strategies tested through bull runs, crashes, and sideways markets. No theory, only what works.",
     },
   ];
 
@@ -92,10 +92,10 @@ export const ProblemsSolutions = () => {
         </div>
 
         {/* Part 2 - Solutions */}
-        <div className="mt-20 md:mt-24">
+        <div className="mt-20">
           {/* Transition - Center aligned */}
           <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#1F2937] mb-4">
+            <h2 className="text-[28px] md:text-[36px] font-semibold text-[#1F2937] mb-4">
               There's a Better Way: Pure Price Action Trading
             </h2>
             <p className="text-lg text-[#6B7280] max-w-[700px] mx-auto leading-relaxed">
@@ -110,15 +110,15 @@ export const ProblemsSolutions = () => {
             {solutions.map((solution) => (
               <div
                 key={solution.title}
-                className="bg-[#F0FDF4] border border-[#BBF7D0] rounded-xl p-8"
+                className="bg-[#F0FDF4] border border-[#BBF7D0] rounded-xl p-8 transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_8px_16px_rgba(0,0,0,0.1)] cursor-default"
               >
-                <div className="w-8 h-8 rounded-full bg-[#10B981] flex items-center justify-center">
-                  <Check className="w-5 h-5 text-white" />
+                <div className="w-8 h-8 rounded-full bg-[#10B981] flex items-center justify-center mb-4">
+                  <Check className="w-5 h-5 text-white" strokeWidth={3} />
                 </div>
-                <h3 className="text-xl font-bold text-[#1F2937] mt-4">
+                <h3 className="text-xl font-semibold text-[#1F2937] mb-3">
                   {solution.title}
                 </h3>
-                <p className="text-base text-[#6B7280] mt-2 leading-relaxed">
+                <p className="text-base text-[#6B7280] leading-relaxed">
                   {solution.description}
                 </p>
               </div>
@@ -129,7 +129,7 @@ export const ProblemsSolutions = () => {
           <div className="text-center mt-12">
             <Button
               onClick={() => scrollToSection("courses")}
-              className="bg-[#F59E0B] hover:bg-[#D97706] text-white font-semibold text-base md:text-lg px-8 py-4 h-auto rounded-lg transition-all duration-300 hover:scale-105 shadow-[0_4px_12px_rgba(245,158,11,0.4)]"
+              className="w-full sm:w-auto bg-[#F59E0B] hover:bg-[#D97706] text-white font-semibold text-lg px-8 py-4 h-auto rounded-lg transition-all duration-200 hover:scale-105 shadow-[0_4px_12px_rgba(245,158,11,0.4)] hover:shadow-[0_8px_16px_rgba(245,158,11,0.3)]"
             >
               Start Learning Price Action
               <ArrowRight className="w-5 h-5 ml-2" />
