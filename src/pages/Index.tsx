@@ -1,4 +1,5 @@
 import { lazy, Suspense } from "react";
+import { Helmet } from "react-helmet";
 import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
 import { TrustBar } from "@/components/TrustBar";
@@ -32,6 +33,14 @@ const SectionLoader = () => (
 const Index = () => {
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Trade With AlphaBull | Best Online Trading Course India | Price Action Mastery</title>
+        <meta
+          name="description"
+          content="Master price action trading with India's most trusted online course. 10+ years US & Indian market experience, 2000+ traders trained, 90% success rate. Enroll now!"
+        />
+        <link rel="canonical" href="https://tradewithalphabull.com/" />
+      </Helmet>
       <Navigation />
       <main>
         <Hero />
