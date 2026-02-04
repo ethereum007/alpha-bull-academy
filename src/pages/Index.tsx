@@ -3,6 +3,7 @@ import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
 import { TrustBar } from "@/components/TrustBar";
 import { ProblemsSolutions } from "@/components/ProblemsSolutions";
+import { WhyChooseUs } from "@/components/WhyChooseUs";
 import { Courses } from "@/components/Courses";
 import { Footer } from "@/components/Footer";
 
@@ -31,6 +32,7 @@ const Index = () => {
         <Hero />
         <TrustBar />
         <ProblemsSolutions />
+        <WhyChooseUs />
         <Courses />
         <Suspense fallback={<SectionLoader />}>
           <Testimonials />
