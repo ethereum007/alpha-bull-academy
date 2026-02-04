@@ -6,6 +6,9 @@ import { ProblemsSolutions } from "@/components/ProblemsSolutions";
 import { WhyChooseUs } from "@/components/WhyChooseUs";
 import { HowItWorks } from "@/components/HowItWorks";
 import { Courses } from "@/components/Courses";
+import { FreeResources } from "@/components/FreeResources";
+import { Founder } from "@/components/Founder";
+import { FinalCTA } from "@/components/FinalCTA";
 import { Footer } from "@/components/Footer";
 
 // Lazy load below-the-fold components for better performance
@@ -39,12 +42,15 @@ const Index = () => {
         <Suspense fallback={<SectionLoader />}>
           <Testimonials />
         </Suspense>
+        <FreeResources />
         <Suspense fallback={<SectionLoader />}>
           <FAQ />
         </Suspense>
+        <Founder />
         <Suspense fallback={<SectionLoader />}>
           <Contact />
         </Suspense>
+        <FinalCTA />
       </main>
       <Footer />
     </div>
