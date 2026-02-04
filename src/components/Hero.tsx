@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { TrendingUp, Play, CheckCircle } from "lucide-react";
+import { CheckCircle, ArrowRight } from "lucide-react";
 
 export const Hero = () => {
   const scrollToSection = (sectionId: string) => {
@@ -9,101 +9,137 @@ export const Hero = () => {
     }
   };
 
-  const benefits = [
-    "Live Market Training",
-    "Price Action Strategies",
-    "Lifetime Access",
+  const trustSignals = [
+    "2000+ Traders Trained",
+    "90% Success Rate",
+    "10+ Years Experience",
+    "Columbia MBA Founder",
+  ];
+
+  // Placeholder avatar URLs
+  const avatars = [
+    "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
+    "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face",
+    "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face",
+    "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face",
+    "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
   ];
 
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center pt-20 bg-muted"
+      className="relative w-full pt-16 lg:pt-20"
+      style={{
+        background: "linear-gradient(135deg, #1E3A8A 0%, #0F172A 100%)",
+      }}
     >
-      {/* Background Pattern */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/5 to-transparent" />
-        <div className="absolute bottom-0 left-0 w-1/3 h-1/2 bg-gradient-to-tr from-secondary/5 to-transparent" />
-      </div>
+      <div className="max-w-[1280px] mx-auto px-4 lg:px-6 py-16 md:py-24 lg:py-28">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-12 lg:gap-16 items-center">
+          {/* Left Column - Content */}
+          <div className="order-2 lg:order-1">
+            {/* Badge */}
+            <div className="inline-block">
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/30 text-white text-sm font-medium">
+                🏆 India's #1 Price Action Trading Academy
+              </span>
+            </div>
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
-            <TrendingUp className="w-4 h-4" />
-            India's Trusted Trading Academy
-          </div>
+            {/* Main Headline */}
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-[1.2] mt-6">
+              Master Price Action Trading & Build Your Financial Freedom
+            </h1>
 
-          {/* Headline */}
-          <h1 className="text-foreground mb-6 leading-tight">
-            Master <span className="text-primary">Price Action Trading</span> &
-            Build Your Financial Freedom
-          </h1>
+            {/* Subheadline */}
+            <p className="text-base md:text-lg text-white/80 leading-relaxed mt-4 max-w-[600px]">
+              Learn proven trading strategies from 10+ years of US & Indian
+              market experience. Join 2000+ successful traders who achieved 90%
+              success rate with our price action methodology.
+            </p>
 
-          {/* Subheadline */}
-          <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-            Learn proven trading strategies from market experts. Join 3000+
-            successful traders who transformed their financial future with our
-            practical, live-market focused education.
-          </p>
+            {/* Trust Signals */}
+            <div className="flex flex-wrap gap-x-6 gap-y-3 mt-8">
+              {trustSignals.map((signal) => (
+                <div
+                  key={signal}
+                  className="flex items-center gap-2 text-white text-sm font-medium"
+                >
+                  <CheckCircle className="w-5 h-5 text-[#10B981] flex-shrink-0" />
+                  {signal}
+                </div>
+              ))}
+            </div>
 
-          {/* Benefits */}
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
-            {benefits.map((benefit) => (
-              <div
-                key={benefit}
-                className="flex items-center gap-2 text-sm font-medium text-foreground/80"
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 mt-10">
+              <Button
+                onClick={() => scrollToSection("contact")}
+                className="bg-[#F59E0B] hover:bg-[#D97706] text-white font-semibold text-base md:text-lg px-8 py-4 h-auto rounded-lg transition-all duration-300 hover:scale-105 shadow-[0_4px_12px_rgba(245,158,11,0.4)]"
               >
-                <CheckCircle className="w-5 h-5 text-success" />
-                {benefit}
+                Book Free Demo Class
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+              <Button
+                variant="outline"
+                onClick={() => scrollToSection("courses")}
+                className="bg-transparent border-2 border-white text-white hover:bg-white/10 hover:text-white font-semibold text-base md:text-lg px-8 py-4 h-auto rounded-lg transition-all duration-300"
+              >
+                View All Courses
+              </Button>
+            </div>
+
+            {/* Social Proof */}
+            <div className="flex items-center gap-4 mt-8">
+              {/* Overlapping Avatars */}
+              <div className="flex -space-x-2.5">
+                {avatars.map((avatar, index) => (
+                  <img
+                    key={index}
+                    src={avatar}
+                    alt={`Student ${index + 1}`}
+                    className="w-10 h-10 rounded-full border-2 border-white object-cover"
+                    style={{ zIndex: avatars.length - index }}
+                  />
+                ))}
               </div>
-            ))}
+              {/* Text */}
+              <p className="text-sm text-white/80">
+                <span className="font-bold text-white">50+</span> students
+                enrolled this week
+              </p>
+            </div>
           </div>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button
-              size="lg"
-              onClick={() => scrollToSection("contact")}
-              className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold text-lg px-8 h-14"
-            >
-              Start Your Journey
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold text-lg px-8 h-14 gap-2"
-              onClick={() => window.open("https://wa.me/919032999466", "_blank")}
-            >
-              <Play className="w-5 h-5" />
-              Watch Free Demo
-            </Button>
-          </div>
-
-          {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto">
-            <div className="text-center p-4">
-              <div className="text-4xl md:text-5xl font-bold text-primary mb-1">
-                3000+
-              </div>
-              <div className="text-sm text-muted-foreground font-medium">
-                Students Trained
-              </div>
-            </div>
-            <div className="text-center p-4">
-              <div className="text-4xl md:text-5xl font-bold text-success mb-1">
-                98%
-              </div>
-              <div className="text-sm text-muted-foreground font-medium">
-                Success Rate
-              </div>
-            </div>
-            <div className="text-center p-4">
-              <div className="text-4xl md:text-5xl font-bold text-secondary mb-1">
-                5+
-              </div>
-              <div className="text-sm text-muted-foreground font-medium">
-                Years Experience
+          {/* Right Column - Visual */}
+          <div className="order-1 lg:order-2">
+            <div className="relative">
+              <img
+                src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&h=600&fit=crop"
+                alt="Trading education"
+                className="w-full aspect-[4/3] object-cover rounded-2xl shadow-[0_20px_40px_rgba(0,0,0,0.3)]"
+              />
+              {/* Optional: Floating Stats Card */}
+              <div className="absolute -bottom-4 -left-4 lg:-left-8 bg-white rounded-xl p-4 shadow-lg hidden md:block">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-full bg-[#10B981]/10 flex items-center justify-center">
+                    <svg
+                      className="w-6 h-6 text-[#10B981]"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-2xl font-bold text-[#1F2937]">90%</p>
+                    <p className="text-sm text-[#4B5563]">Success Rate</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
