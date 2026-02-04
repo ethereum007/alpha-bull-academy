@@ -9,6 +9,7 @@ import { Courses } from "@/components/Courses";
 import { FreeResources } from "@/components/FreeResources";
 import { Founder } from "@/components/Founder";
 import { FinalCTA } from "@/components/FinalCTA";
+import { FloatingElements } from "@/components/FloatingElements";
 import { Footer } from "@/components/Footer";
 
 // Lazy load below-the-fold components for better performance
@@ -52,6 +53,7 @@ const Index = () => {
         </Suspense>
         <FinalCTA />
       </main>
+      <FloatingElements />
       <Footer />
     </div>
   );
