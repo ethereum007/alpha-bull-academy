@@ -24,7 +24,8 @@ export const Courses = () => {
         "Support & resistance basics",
         "Risk management introduction",
       ],
-      price: "₹6,999",
+      price: "₹9,000",
+      priceColor: "text-[#1E3A8A]",
       buttonText: "Learn More",
       buttonStyle: "outline" as const,
       featured: false,
@@ -35,7 +36,7 @@ export const Courses = () => {
       badgeBg: "bg-gradient-to-r from-[#F59E0B] to-[#D97706]",
       badgeColor: "text-white",
       title: "Price Action Mastery",
-      duration: "5 Months | Live Classes + Mentorship",
+      duration: "3 Months | Live Classes + Mentorship",
       description:
         "Our flagship course. Master pure price action trading without indicators. Proven strategies from 10+ years of real market experience.",
       highlights: [
@@ -45,7 +46,8 @@ export const Courses = () => {
         "6 months mentor support",
         "Telegram community access",
       ],
-      price: "₹24,999",
+      price: "₹25,000",
+      priceColor: "text-[#F59E0B]",
       buttonText: "Enroll Now",
       buttonStyle: "primary" as const,
       featured: true,
@@ -53,9 +55,9 @@ export const Courses = () => {
     },
     {
       badge: "ADVANCED",
-      badgeBg: "bg-[#EDE9FE]",
-      badgeColor: "text-[#6D28D9]",
-      title: "Options & Derivatives Mastery",
+      badgeBg: "bg-[#DDD6FE]",
+      badgeColor: "text-[#6B21A8]",
+      title: "Advanced Trading Strategies",
       duration: "3 Months | Elite Mentorship",
       description:
         "For experienced traders. Advanced price action, options strategies, portfolio management, and 1-on-1 mentorship.",
@@ -66,26 +68,27 @@ export const Courses = () => {
         "1-on-1 mentorship sessions",
         "Lifetime community access",
       ],
-      price: "₹18,999",
+      price: "₹45,000",
+      priceColor: "text-[#6B21A8]",
       buttonText: "Learn More",
-      buttonStyle: "outline" as const,
+      buttonStyle: "purple" as const,
       featured: false,
       link: "https://wa.me/919032999466",
     },
   ];
 
   return (
-    <section id="courses" className="w-full bg-[#F9FAFB] py-16 md:py-24 lg:py-28">
-      <div className="max-w-[1280px] mx-auto px-4 lg:px-6">
+    <section id="courses" className="w-full bg-[#F9FAFB] py-[60px] md:py-[100px]">
+      <div className="max-w-[1280px] mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
           <p className="text-xs font-semibold uppercase tracking-[1.5px] text-[#F59E0B] mb-4">
             Our Courses
           </p>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#1F2937] mb-4">
+          <h2 className="text-[28px] md:text-[36px] font-semibold text-[#1F2937] mb-4">
             Choose Your Trading Journey
           </h2>
-          <p className="text-lg text-[#6B7280] max-w-[600px] mx-auto">
+          <p className="text-lg text-[#6B7280] max-w-[600px] mx-auto leading-relaxed">
             From complete beginner to advanced trader—we have a structured path
             for every level.
           </p>
@@ -96,16 +99,17 @@ export const Courses = () => {
           {courses.map((course) => (
             <div
               key={course.title}
-              className={`relative flex flex-col bg-white rounded-xl p-8 lg:p-10 transition-all duration-300 hover:-translate-y-1 ${
+              className={`relative flex flex-col bg-white rounded-2xl p-8 lg:p-10 transition-all duration-200 hover:-translate-y-1 cursor-pointer ${
                 course.featured
-                  ? "border-[3px] border-[#F59E0B] shadow-[0_8px_24px_rgba(245,158,11,0.2)] lg:scale-105 z-10"
+                  ? "border-[3px] border-[#F59E0B] shadow-[0_12px_28px_rgba(245,158,11,0.25)] lg:scale-105 z-10"
                   : "border-2 border-transparent shadow-[0_4px_12px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.12)]"
               }`}
+              onClick={() => window.open(course.link, "_blank")}
             >
               {/* Badge */}
               <span
-                className={`inline-block self-start px-3 py-1.5 rounded-md text-xs font-bold ${course.badgeBg} ${course.badgeColor} ${
-                  course.featured ? "animate-pulse" : ""
+                className={`inline-block self-start px-3 py-1.5 rounded-md text-xs font-bold uppercase ${course.badgeBg} ${course.badgeColor} ${
+                  course.featured ? "shadow-[0_0_20px_rgba(245,158,11,0.5)] animate-pulse" : ""
                 }`}
               >
                 {course.badge}
@@ -120,7 +124,7 @@ export const Courses = () => {
               <p className="text-sm text-[#6B7280] mt-2">{course.duration}</p>
 
               {/* Description */}
-              <p className="text-base text-[#6B7280] leading-relaxed mt-4">
+              <p className="text-base text-[#4B5563] leading-relaxed mt-4">
                 {course.description}
               </p>
 
@@ -129,7 +133,7 @@ export const Courses = () => {
                 {course.highlights.map((highlight) => (
                   <li
                     key={highlight}
-                    className="flex items-start gap-3 text-sm text-[#4B5563]"
+                    className="flex items-start gap-3 text-[15px] text-[#374151] leading-relaxed"
                   >
                     <Check className="w-5 h-5 text-[#10B981] flex-shrink-0 mt-0.5" />
                     {highlight}
@@ -138,15 +142,30 @@ export const Courses = () => {
               </ul>
 
               {/* Footer */}
-              <div className="mt-8 pt-6 border-t border-gray-100">
-                <div className="flex items-center justify-between gap-4">
-                  <span className="text-3xl font-bold text-[#1E3A8A]">
+              <div className="mt-auto pt-8 border-t border-[#E5E7EB]">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                  <span className={`text-[32px] lg:text-[36px] font-bold ${course.priceColor}`}>
                     {course.price}
                   </span>
                   {course.buttonStyle === "primary" ? (
                     <Button
-                      onClick={() => window.open(course.link, "_blank")}
-                      className="bg-[#F59E0B] hover:bg-[#D97706] text-white font-semibold px-6 py-3 h-auto rounded-lg transition-all duration-300"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        window.open(course.link, "_blank");
+                      }}
+                      className="w-full sm:w-auto bg-[#F59E0B] hover:bg-[#D97706] text-white font-semibold px-7 py-3.5 h-auto rounded-lg transition-all duration-200 hover:-translate-y-0.5 hover:scale-105 shadow-[0_4px_12px_rgba(245,158,11,0.3)] hover:shadow-[0_8px_20px_rgba(245,158,11,0.4)]"
+                    >
+                      {course.buttonText}
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </Button>
+                  ) : course.buttonStyle === "purple" ? (
+                    <Button
+                      variant="outline"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        window.open(course.link, "_blank");
+                      }}
+                      className="w-full sm:w-auto border-2 border-[#6B21A8] text-[#6B21A8] hover:bg-[#DDD6FE] font-semibold px-6 py-3 h-auto rounded-lg transition-all duration-200 hover:-translate-y-0.5"
                     >
                       {course.buttonText}
                       <ArrowRight className="w-4 h-4 ml-2" />
@@ -154,8 +173,11 @@ export const Courses = () => {
                   ) : (
                     <Button
                       variant="outline"
-                      onClick={() => window.open(course.link, "_blank")}
-                      className="border-2 border-[#1E3A8A] text-[#1E3A8A] hover:bg-[#DBEAFE] font-semibold px-6 py-3 h-auto rounded-lg transition-all duration-300"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        window.open(course.link, "_blank");
+                      }}
+                      className="w-full sm:w-auto border-2 border-[#1E3A8A] text-[#1E3A8A] hover:bg-[#DBEAFE] font-semibold px-6 py-3 h-auto rounded-lg transition-all duration-200 hover:-translate-y-0.5"
                     >
                       {course.buttonText}
                       <ArrowRight className="w-4 h-4 ml-2" />
@@ -175,21 +197,11 @@ export const Courses = () => {
           <Button
             variant="outline"
             onClick={() => scrollToSection("contact")}
-            className="border-2 border-[#1E3A8A] text-[#1E3A8A] hover:bg-[#DBEAFE] font-semibold px-6 py-3 h-auto rounded-lg transition-all duration-300"
+            className="border-2 border-[#1E3A8A] text-[#1E3A8A] hover:bg-[#DBEAFE] font-semibold px-7 py-3.5 h-auto rounded-lg transition-all duration-200 hover:-translate-y-0.5"
           >
             Compare All Courses
             <ArrowRight className="w-4 h-4 ml-2" />
           </Button>
-        </div>
-
-        {/* Next Batch Info */}
-        <div className="text-center mt-8">
-          <p className="text-sm text-[#6B7280]">
-            📅 Next batch starts:{" "}
-            <span className="font-semibold text-[#1F2937]">
-              February 11th, 2026
-            </span>
-          </p>
         </div>
       </div>
     </section>
