@@ -2,6 +2,7 @@ import { lazy, Suspense } from "react";
 import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
 import { TrustBar } from "@/components/TrustBar";
+import { ProblemsSolutions } from "@/components/ProblemsSolutions";
 import { Footer } from "@/components/Footer";
 
 // Lazy load below-the-fold components for better performance
@@ -34,8 +35,9 @@ const Index = () => {
       <main>
         <Hero />
         <TrustBar />
+        <ProblemsSolutions />
         <Suspense fallback={<SectionLoader />}>
-          <About />
+          <Courses />
         </Suspense>
         <Suspense fallback={<SectionLoader />}>
           <Courses />
