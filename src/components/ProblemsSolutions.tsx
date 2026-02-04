@@ -13,22 +13,22 @@ export const ProblemsSolutions = () => {
     {
       title: "Following Random Tips",
       description:
-        "Relying on WhatsApp groups, Telegram channels, and social media tips without understanding the logic behind trades leads to inconsistent losses.",
+        "WhatsApp groups, YouTube gurus, and paid tip providers drain your capital with no accountability. You're trading blind without understanding why.",
     },
     {
       title: "Indicator Overload",
       description:
-        "Cluttering charts with RSI, MACD, Bollinger Bands, and more creates confusion. Conflicting signals lead to analysis paralysis and missed opportunities.",
+        "Too many indicators create confusion and analysis paralysis. By the time all your signals align, the opportunity has already passed you by.",
     },
     {
       title: "No Risk Management",
       description:
-        "Trading without stop losses, position sizing, or risk-reward ratios means one bad trade can wipe out weeks of gains.",
+        "One bad trade wipes out weeks of profits because you never learned proper position sizing or stop-loss placement. Hope is not a strategy.",
     },
     {
       title: "Emotional Trading",
       description:
-        "Fear of missing out (FOMO), revenge trading after losses, and greed-driven decisions override logical analysis and destroy accounts.",
+        "Fear and greed control your decisions. You buy high out of FOMO, sell low out of panic, and repeat the same costly mistakes.",
     },
   ];
 
@@ -56,8 +56,8 @@ export const ProblemsSolutions = () => {
   ];
 
   return (
-    <section className="w-full bg-white py-16 md:py-24 lg:py-28">
-      <div className="max-w-[1280px] mx-auto px-4 lg:px-6">
+    <section className="w-full bg-white py-[60px] md:py-[100px]">
+      <div className="max-w-[1280px] mx-auto px-6">
         {/* Part 1 - Problems */}
         <div>
           {/* Section Label */}
@@ -66,7 +66,7 @@ export const ProblemsSolutions = () => {
           </p>
 
           {/* Headline */}
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#1F2937] max-w-[700px] mb-12">
+          <h2 className="text-[28px] md:text-[36px] font-semibold text-[#1F2937] leading-[1.2] max-w-[700px] mb-12">
             Why 90% of Traders Lose Money in the Stock Market
           </h2>
 
@@ -75,15 +75,15 @@ export const ProblemsSolutions = () => {
             {problems.map((problem) => (
               <div
                 key={problem.title}
-                className="bg-[#FEF2F2] border border-[#FECACA] rounded-xl p-8"
+                className="bg-[#FEF2F2] border border-[#FECACA] rounded-xl p-8 transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_8px_16px_rgba(0,0,0,0.1)] cursor-default"
               >
-                <div className="w-8 h-8 rounded-full bg-red-500 flex items-center justify-center">
-                  <X className="w-5 h-5 text-white" />
+                <div className="w-8 h-8 rounded-full bg-red-500 flex items-center justify-center mb-4">
+                  <X className="w-5 h-5 text-white" strokeWidth={3} />
                 </div>
-                <h3 className="text-xl font-bold text-[#1F2937] mt-4">
+                <h3 className="text-xl font-semibold text-[#1F2937] mb-3">
                   {problem.title}
                 </h3>
-                <p className="text-base text-[#6B7280] mt-2 leading-relaxed">
+                <p className="text-base text-[#6B7280] leading-relaxed">
                   {problem.description}
                 </p>
               </div>
