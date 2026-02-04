@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle, ArrowRight } from "lucide-react";
-import heroInstructor from "@/assets/hero-instructor.jpg";
+import heroDalalStreet from "@/assets/hero-dalal-street.jpg";
 
 export const Hero = () => {
   const scrollToSection = (sectionId: string) => {
@@ -114,8 +114,8 @@ export const Hero = () => {
           <div className="order-1 lg:order-2">
             <div className="relative">
               <img
-                src={heroInstructor}
-                alt="Trading education with AlphaBull"
+                src={heroDalalStreet}
+                alt="Dalal Street - Bombay Stock Exchange"
                 className="w-full aspect-[4/3] object-cover rounded-2xl shadow-[0_20px_40px_rgba(0,0,0,0.3)]"
               />
               {/* Optional: Floating Stats Card */}
