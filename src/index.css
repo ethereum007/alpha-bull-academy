@@ -2,111 +2,118 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Trade With AlphaBull - Design System
+   Primary Blue: #1E3A8A (trust, professionalism)
+   Secondary Orange: #F59E0B (action, urgency)
+   Success Green: #10B981 (profit, positive)
+   Background: #FFFFFF and #F9FAFB
+   Text: #1F2937 (dark gray)
+   All colors MUST be HSL.
 */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 @layer base {
   :root {
-    --background: 210 20% 98%;
-    --foreground: 210 30% 12%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 210 30% 12%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 210 30% 12%;
-
-    --primary: 210 100% 20%;
+    /* Primary Blue: #1E3A8A -> HSL: 224 76% 33% */
+    --primary: 224 76% 33%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 210 30% 12%;
+    /* Secondary Orange: #F59E0B -> HSL: 38 92% 50% */
+    --secondary: 38 92% 50%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96%;
-    --muted-foreground: 210 15% 50%;
-
-    --accent: 174 65% 50%;
-    --accent-foreground: 210 30% 12%;
-
-    --success: 150 60% 50%;
+    /* Success Green: #10B981 -> HSL: 160 84% 39% */
+    --success: 160 84% 39%;
     --success-foreground: 0 0% 100%;
 
+    /* Backgrounds */
+    --background: 0 0% 100%;
+    --foreground: 220 14% 17%;
+
+    /* Card - white with subtle shadow */
+    --card: 0 0% 100%;
+    --card-foreground: 220 14% 17%;
+
+    /* Popover */
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 14% 17%;
+
+    /* Muted - Light gray #F9FAFB -> HSL: 210 20% 98% */
+    --muted: 210 20% 98%;
+    --muted-foreground: 220 9% 46%;
+
+    /* Accent - Orange for CTAs */
+    --accent: 38 92% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Destructive */
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 30% 90%;
-    --input: 210 30% 90%;
-    --ring: 210 100% 20%;
+    /* Borders and inputs */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 224 76% 33%;
 
-    --radius: 0.5rem;
-    
-    --gradient-hero: linear-gradient(135deg, hsl(210 20% 98%), hsl(200 30% 95%));
-    --gradient-card: linear-gradient(to bottom right, hsl(0 0% 100% / 0.9), hsl(0 0% 100% / 0.5));
-    --shadow-glow: 0 10px 40px -10px hsl(174 65% 50% / 0.3);
-    --shadow-card: 0 4px 20px hsl(210 30% 12% / 0.08);
+    /* Radius - 12px for cards */
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Custom shadows */
+    --shadow-card: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
+    /* Sidebar (keeping for compatibility) */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 220 14% 17%;
+    --sidebar-primary: 224 76% 33%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 20% 98%;
+    --sidebar-accent-foreground: 220 14% 17%;
     --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 224 76% 33%;
   }
 
   .dark {
-    --background: 210 30% 8%;
-    --foreground: 210 20% 96%;
+    --primary: 224 76% 48%;
+    --primary-foreground: 0 0% 100%;
 
-    --card: 210 25% 12%;
-    --card-foreground: 210 20% 96%;
+    --secondary: 38 92% 50%;
+    --secondary-foreground: 0 0% 100%;
 
-    --popover: 210 25% 12%;
-    --popover-foreground: 210 20% 96%;
-
-    --primary: 174 65% 50%;
-    --primary-foreground: 210 30% 10%;
-
-    --secondary: 210 25% 16%;
-    --secondary-foreground: 210 20% 96%;
-
-    --muted: 210 25% 16%;
-    --muted-foreground: 210 15% 65%;
-
-    --accent: 174 65% 50%;
-    --accent-foreground: 210 30% 10%;
-
-    --success: 150 60% 50%;
+    --success: 160 84% 39%;
     --success-foreground: 0 0% 100%;
+
+    --background: 220 14% 10%;
+    --foreground: 210 20% 98%;
+
+    --card: 220 14% 14%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 220 14% 14%;
+    --popover-foreground: 210 20% 98%;
+
+    --muted: 220 14% 18%;
+    --muted-foreground: 220 9% 65%;
+
+    --accent: 38 92% 50%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 25% 20%;
-    --input: 210 25% 20%;
-    --ring: 174 65% 50%;
-    
-    --gradient-hero: linear-gradient(135deg, hsl(210 30% 8%), hsl(210 35% 15%));
-    --gradient-card: linear-gradient(to bottom right, hsl(210 25% 12% / 0.9), hsl(210 25% 12% / 0.6));
-    --shadow-glow: 0 10px 40px -10px hsl(174 65% 50% / 0.4);
-    --shadow-card: 0 4px 20px hsl(0 0% 0% / 0.3);
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --border: 220 14% 22%;
+    --input: 220 14% 22%;
+    --ring: 224 76% 48%;
+
+    --sidebar-background: 220 14% 10%;
+    --sidebar-foreground: 210 20% 98%;
+    --sidebar-primary: 224 76% 48%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 220 14% 18%;
+    --sidebar-accent-foreground: 210 20% 98%;
+    --sidebar-border: 220 14% 22%;
+    --sidebar-ring: 224 76% 48%;
   }
 }
 
@@ -116,47 +123,55 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
   }
-  
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Sora', 'Inter', system-ui, -apple-system, sans-serif;
-    font-weight: 700;
-    letter-spacing: -0.02em;
+
+  /* Typography */
+  h1 {
+    @apply text-3xl md:text-5xl font-bold tracking-tight;
+    font-family: 'Inter', system-ui, sans-serif;
   }
-  
-  .lead {
-    @apply text-xl text-muted-foreground mb-8 leading-relaxed;
+
+  h2 {
+    @apply text-2xl md:text-4xl font-semibold tracking-tight;
+    font-family: 'Inter', system-ui, sans-serif;
   }
-  
-  .highlight {
-    @apply bg-accent/10 border-l-4 border-accent px-6 py-4 my-6 rounded-r-md;
+
+  h3 {
+    @apply text-xl md:text-2xl font-semibold;
+    font-family: 'Inter', system-ui, sans-serif;
   }
-  
-  .timeline {
-    @apply space-y-6 my-8;
+
+  h4, h5, h6 {
+    @apply font-semibold;
+    font-family: 'Inter', system-ui, sans-serif;
   }
-  
-  .timeline-item {
-    @apply bg-card border border-border rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow;
-  }
-  
-  .timeline-item h3 {
-    @apply text-xl font-bold mb-2 text-primary;
-  }
-  
-  .timeline-item p {
-    @apply text-muted-foreground;
-  }
-  
-  .blog-image-wrapper {
-    @apply my-12 rounded-xl overflow-hidden shadow-lg;
-  }
-  
-  .blog-image {
-    @apply w-full h-auto;
+
+  p {
+    @apply text-base md:text-lg;
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@layer utilities {
+  /* Card styling with specified shadow */
+  .card-shadow {
+    box-shadow: var(--shadow-card);
+  }
+
+  /* Smooth transitions */
+  .transition-smooth {
+    transition: all 300ms ease-in-out;
+  }
+
+  /* Section spacing */
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  /* Container with consistent padding */
+  .container-padding {
+    @apply px-4 md:px-6 lg:px-8;
+  }
+}
