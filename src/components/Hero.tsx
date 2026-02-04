@@ -116,7 +116,7 @@ export const Hero = () => {
               <img
                 src={heroInstructor}
                 alt="AlphaBull Trading Instructor"
-                className="w-full aspect-[4/3] object-cover object-top rounded-2xl shadow-[0_20px_40px_rgba(0,0,0,0.3)]"
+                className="w-full h-auto object-contain rounded-2xl shadow-[0_20px_40px_rgba(0,0,0,0.3)]"
               />
               {/* Optional: Floating Stats Card */}
               <div className="absolute -bottom-4 -left-4 lg:-left-8 bg-white rounded-xl p-4 shadow-lg hidden md:block">
