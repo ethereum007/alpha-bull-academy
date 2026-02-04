@@ -7,4 +7,4 @@ Allow: /
 # Disallow: /private/
 
 # Sitemap location
-Sitemap: https://alphabull.club/sitemap.xml
+Sitemap: https://tradewithalphabull.com/sitemap.xml
