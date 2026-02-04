@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle, ArrowRight } from "lucide-react";
+import heroInstructor from "@/assets/hero-instructor.jpg";
 
 export const Hero = () => {
   const scrollToSection = (sectionId: string) => {
@@ -16,13 +17,13 @@ export const Hero = () => {
     "Columbia MBA Founder",
   ];
 
-  // Placeholder avatar URLs
+  // Indian avatar placeholder URLs
   const avatars = [
+    "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop&crop=face",
+    "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=100&h=100&fit=crop&crop=face",
     "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
-    "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face",
-    "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face",
-    "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face",
-    "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
+    "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop&crop=face",
+    "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=100&h=100&fit=crop&crop=face",
   ];
 
   return (
@@ -113,8 +114,8 @@ export const Hero = () => {
           <div className="order-1 lg:order-2">
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&h=600&fit=crop"
-                alt="Trading education"
+                src={heroInstructor}
+                alt="Trading education with AlphaBull"
                 className="w-full aspect-[4/3] object-cover rounded-2xl shadow-[0_20px_40px_rgba(0,0,0,0.3)]"
               />
               {/* Optional: Floating Stats Card */}
