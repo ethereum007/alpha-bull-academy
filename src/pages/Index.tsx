@@ -1,4 +1,5 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
@@ -31,6 +32,22 @@ const SectionLoader = () => (
 );
 
 const Index = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace("#", "");
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          const navHeight = 80;
+          const pos = element.getBoundingClientRect().top + window.scrollY - navHeight;
+          window.scrollTo({ top: pos, behavior: "smooth" });
+        }
+      }, 300);
+    }
+  }, [location.hash]);
+
   return (
     <div className="min-h-screen bg-white">
       <Helmet>

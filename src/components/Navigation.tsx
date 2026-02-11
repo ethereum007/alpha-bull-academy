@@ -30,10 +30,16 @@ export const Navigation = () => {
   }, [isOpen]);
 
   const scrollToSection = (sectionId: string) => {
+    setIsOpen(false);
+    if (location.pathname !== "/") {
+      window.location.href = `/#${sectionId}`;
+      return;
+    }
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setIsOpen(false);
+      const navHeight = 80;
+      const elementPosition = element.getBoundingClientRect().top + window.scrollY - navHeight;
+      window.scrollTo({ top: elementPosition, behavior: "smooth" });
     }
   };
 
