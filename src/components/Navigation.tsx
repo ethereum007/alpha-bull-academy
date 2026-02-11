@@ -42,7 +42,7 @@ export const Navigation = () => {
     { label: "Learn", href: "/blog" },
     { label: "Success Stories", action: () => scrollToSection("testimonials") },
     { label: "Pricing", action: () => scrollToSection("courses") },
-    { label: "Free Resources", href: "/blog" },
+    { label: "Blog", href: "/blog" },
   ];
 
   const isActiveLink = (href?: string) => {
