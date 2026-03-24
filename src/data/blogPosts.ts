@@ -42,6 +42,16 @@ export const blogPostsMeta: BlogPostMeta[] = [
     category: "Mistakes Traders Make",
     image: systemHoppingCover,
   },
+  {
+    id: "stock-market-holidays-2026-india",
+    title: "Stock Market Holidays 2026 — Complete NSE & BSE Calendar",
+    excerpt: "Plan your trades around every market holiday in 2026. Full list of NSE, BSE & MCX trading holidays, long weekends, and settlement holidays for Indian traders.",
+    author: "AlphaBull Academy",
+    date: "2026-03-24",
+    readTime: "4 min read",
+    category: "Market Info",
+    image: marketHolidays2026,
+  },
 ];
 
 export const blogPostsContent: Record<string, BlogPostContent> = {
