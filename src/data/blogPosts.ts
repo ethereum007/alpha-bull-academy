@@ -254,4 +254,138 @@ export const blogPostsContent: Record<string, BlogPostContent> = {
       <p class="highlight">Write down the ONE system you'll commit to for the next 90 days. Share it with us on WhatsApp — we'll hold you accountable! DM us at +91 90329 99466</p>
     `,
   },
+  "stock-market-holidays-2026-india": {
+    id: "stock-market-holidays-2026-india",
+    title: "Stock Market Holidays 2026 — Complete NSE & BSE Calendar",
+    subtitle: "Plan Your Trades Around Every Holiday — Don't Get Caught Off Guard",
+    author: "AlphaBull Academy",
+    date: "2026-03-24",
+    readTime: "4 min read",
+    category: "Market Info",
+    image: marketHolidays2026,
+    keywords: "stock market holidays 2026, NSE holidays 2026, BSE holidays 2026, MCX holidays, Indian stock market calendar, trading holidays India, market closed dates 2026",
+    excerpt: "Plan your trades around every market holiday in 2026. Full list of NSE, BSE & MCX trading holidays, long weekends, and settlement holidays for Indian traders.",
+    content: `
+      <p class="lead">"Failing to plan is planning to fail." — Know your market holidays before placing a single trade.</p>
+
+      <p class="mb-8">Whether you're a swing trader holding positions over weekends or an intraday scalper, knowing when the markets are closed is <strong>non-negotiable.</strong> Open positions during unexpected holidays can lead to gap-ups, gap-downs, and unnecessary risk.</p>
+
+      <p class="mb-8">Here's the <strong>complete list of stock market holidays for 2026</strong> across NSE, BSE, and MCX — so you can plan your trades like a pro.</p>
+
+      <h2 class="mb-8">📅 NSE & BSE Trading Holidays 2026</h2>
+
+      <div class="overflow-x-auto mb-8">
+        <table class="w-full border-collapse text-left">
+          <thead>
+            <tr class="bg-gray-100">
+              <th class="border border-gray-300 px-4 py-3 font-semibold">Date</th>
+              <th class="border border-gray-300 px-4 py-3 font-semibold">Day</th>
+              <th class="border border-gray-300 px-4 py-3 font-semibold">Holiday</th>
+              <th class="border border-gray-300 px-4 py-3 font-semibold">Note</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="border border-gray-300 px-4 py-2">15 Jan</td><td class="border border-gray-300 px-4 py-2">Thursday</td><td class="border border-gray-300 px-4 py-2">Municipal Corporation Elections (Maharashtra)</td><td class="border border-gray-300 px-4 py-2">NSE & BSE</td></tr>
+            <tr class="bg-amber-50"><td class="border border-gray-300 px-4 py-2">26 Jan</td><td class="border border-gray-300 px-4 py-2">Monday</td><td class="border border-gray-300 px-4 py-2">Republic Day</td><td class="border border-gray-300 px-4 py-2">🏖️ Long Weekend</td></tr>
+            <tr><td class="border border-gray-300 px-4 py-2">03 Mar</td><td class="border border-gray-300 px-4 py-2">Tuesday</td><td class="border border-gray-300 px-4 py-2">Holi</td><td class="border border-gray-300 px-4 py-2">NSE & BSE</td></tr>
+            <tr><td class="border border-gray-300 px-4 py-2">26 Mar</td><td class="border border-gray-300 px-4 py-2">Thursday</td><td class="border border-gray-300 px-4 py-2">Shri Ram Navami</td><td class="border border-gray-300 px-4 py-2">NSE & BSE</td></tr>
+            <tr><td class="border border-gray-300 px-4 py-2">31 Mar</td><td class="border border-gray-300 px-4 py-2">Tuesday</td><td class="border border-gray-300 px-4 py-2">Shri Mahavir Jayanti</td><td class="border border-gray-300 px-4 py-2">NSE & BSE</td></tr>
+            <tr class="bg-amber-50"><td class="border border-gray-300 px-4 py-2">03 Apr</td><td class="border border-gray-300 px-4 py-2">Friday</td><td class="border border-gray-300 px-4 py-2">Good Friday</td><td class="border border-gray-300 px-4 py-2">🏖️ Long Weekend</td></tr>
+            <tr><td class="border border-gray-300 px-4 py-2">14 Apr</td><td class="border border-gray-300 px-4 py-2">Tuesday</td><td class="border border-gray-300 px-4 py-2">Dr. Baba Saheb Ambedkar Jayanti</td><td class="border border-gray-300 px-4 py-2">NSE & BSE</td></tr>
+            <tr class="bg-amber-50"><td class="border border-gray-300 px-4 py-2">01 May</td><td class="border border-gray-300 px-4 py-2">Friday</td><td class="border border-gray-300 px-4 py-2">Maharashtra Day</td><td class="border border-gray-300 px-4 py-2">🏖️ Long Weekend</td></tr>
+            <tr><td class="border border-gray-300 px-4 py-2">28 May</td><td class="border border-gray-300 px-4 py-2">Thursday</td><td class="border border-gray-300 px-4 py-2">Bakri Eid</td><td class="border border-gray-300 px-4 py-2">NSE & BSE</td></tr>
+            <tr class="bg-amber-50"><td class="border border-gray-300 px-4 py-2">26 Jun</td><td class="border border-gray-300 px-4 py-2">Friday</td><td class="border border-gray-300 px-4 py-2">Moharram</td><td class="border border-gray-300 px-4 py-2">🏖️ Long Weekend</td></tr>
+            <tr class="bg-amber-50"><td class="border border-gray-300 px-4 py-2">14 Sep</td><td class="border border-gray-300 px-4 py-2">Monday</td><td class="border border-gray-300 px-4 py-2">Ganesh Chaturthi</td><td class="border border-gray-300 px-4 py-2">🏖️ Long Weekend</td></tr>
+            <tr class="bg-amber-50"><td class="border border-gray-300 px-4 py-2">02 Oct</td><td class="border border-gray-300 px-4 py-2">Friday</td><td class="border border-gray-300 px-4 py-2">Mahatma Gandhi Jayanti</td><td class="border border-gray-300 px-4 py-2">🏖️ Long Weekend</td></tr>
+            <tr><td class="border border-gray-300 px-4 py-2">20 Oct</td><td class="border border-gray-300 px-4 py-2">Tuesday</td><td class="border border-gray-300 px-4 py-2">Dussehra</td><td class="border border-gray-300 px-4 py-2">NSE & BSE</td></tr>
+            <tr><td class="border border-gray-300 px-4 py-2">10 Nov</td><td class="border border-gray-300 px-4 py-2">Tuesday</td><td class="border border-gray-300 px-4 py-2">Diwali — Balipratipada</td><td class="border border-gray-300 px-4 py-2">NSE & BSE</td></tr>
+            <tr><td class="border border-gray-300 px-4 py-2">24 Nov</td><td class="border border-gray-300 px-4 py-2">Tuesday</td><td class="border border-gray-300 px-4 py-2">Prakash Gurpurb Sri Guru Nanak Dev</td><td class="border border-gray-300 px-4 py-2">NSE & BSE</td></tr>
+            <tr class="bg-amber-50"><td class="border border-gray-300 px-4 py-2">25 Dec</td><td class="border border-gray-300 px-4 py-2">Friday</td><td class="border border-gray-300 px-4 py-2">Christmas</td><td class="border border-gray-300 px-4 py-2">🏖️ Long Weekend</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="mb-8">🏖️ Long Weekends in 2026 — Plan Your Trades!</h2>
+
+      <p class="mb-8">Smart traders use long weekends strategically. Here are <strong>7 long weekends</strong> in 2026:</p>
+
+      <p class="mb-4">• <strong>26 Jan (Mon)</strong> — Republic Day → Sat-Sun-Mon off</p>
+      <p class="mb-4">• <strong>03 Apr (Fri)</strong> — Good Friday → Fri-Sat-Sun off</p>
+      <p class="mb-4">• <strong>01 May (Fri)</strong> — Maharashtra Day → Fri-Sat-Sun off</p>
+      <p class="mb-4">• <strong>26 Jun (Fri)</strong> — Moharram → Fri-Sat-Sun off</p>
+      <p class="mb-4">• <strong>14 Sep (Mon)</strong> — Ganesh Chaturthi → Sat-Sun-Mon off</p>
+      <p class="mb-4">• <strong>02 Oct (Fri)</strong> — Gandhi Jayanti → Fri-Sat-Sun off</p>
+      <p class="mb-8">• <strong>25 Dec (Fri)</strong> — Christmas → Fri-Sat-Sun off</p>
+
+      <p class="mb-8"><strong>Pro Tip:</strong> Avoid holding high-risk positions over long weekends. Global markets may move while Indian markets are shut, leading to unexpected gaps on Monday/Tuesday.</p>
+
+      <h2 class="mb-8">🏦 Settlement Holidays 2026</h2>
+
+      <p class="mb-8">These dates affect trade settlement but the market remains open for trading:</p>
+
+      <div class="overflow-x-auto mb-8">
+        <table class="w-full border-collapse text-left">
+          <thead>
+            <tr class="bg-gray-100">
+              <th class="border border-gray-300 px-4 py-3 font-semibold">Date</th>
+              <th class="border border-gray-300 px-4 py-3 font-semibold">Day</th>
+              <th class="border border-gray-300 px-4 py-3 font-semibold">Holiday</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="border border-gray-300 px-4 py-2">19 Feb</td><td class="border border-gray-300 px-4 py-2">Thursday</td><td class="border border-gray-300 px-4 py-2">Chhatrapati Shivaji Maharaj Jayanti</td></tr>
+            <tr><td class="border border-gray-300 px-4 py-2">19 Mar</td><td class="border border-gray-300 px-4 py-2">Thursday</td><td class="border border-gray-300 px-4 py-2">Gudhi Padwa</td></tr>
+            <tr><td class="border border-gray-300 px-4 py-2">01 Apr</td><td class="border border-gray-300 px-4 py-2">Wednesday</td><td class="border border-gray-300 px-4 py-2">Annual Bank Closing</td></tr>
+            <tr><td class="border border-gray-300 px-4 py-2">26 Aug</td><td class="border border-gray-300 px-4 py-2">Wednesday</td><td class="border border-gray-300 px-4 py-2">Id-E-Milad</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="mb-8">⚡ MCX-Specific Holidays 2026</h2>
+
+      <p class="mb-8">If you trade commodities on MCX, note these additional closures:</p>
+
+      <div class="overflow-x-auto mb-8">
+        <table class="w-full border-collapse text-left">
+          <thead>
+            <tr class="bg-gray-100">
+              <th class="border border-gray-300 px-4 py-3 font-semibold">Date</th>
+              <th class="border border-gray-300 px-4 py-3 font-semibold">Day</th>
+              <th class="border border-gray-300 px-4 py-3 font-semibold">Holiday</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="border border-gray-300 px-4 py-2">26 Jan</td><td class="border border-gray-300 px-4 py-2">Monday</td><td class="border border-gray-300 px-4 py-2">Republic Day</td></tr>
+            <tr><td class="border border-gray-300 px-4 py-2">03 Apr</td><td class="border border-gray-300 px-4 py-2">Friday</td><td class="border border-gray-300 px-4 py-2">Good Friday</td></tr>
+            <tr><td class="border border-gray-300 px-4 py-2">15 Aug</td><td class="border border-gray-300 px-4 py-2">Saturday</td><td class="border border-gray-300 px-4 py-2">Independence Day</td></tr>
+            <tr><td class="border border-gray-300 px-4 py-2">02 Oct</td><td class="border border-gray-300 px-4 py-2">Friday</td><td class="border border-gray-300 px-4 py-2">Mahatma Gandhi Jayanti</td></tr>
+            <tr><td class="border border-gray-300 px-4 py-2">08 Nov</td><td class="border border-gray-300 px-4 py-2">Sunday</td><td class="border border-gray-300 px-4 py-2">Diwali — Laxmi Pujan (Muhurat Trading)</td></tr>
+            <tr><td class="border border-gray-300 px-4 py-2">25 Dec</td><td class="border border-gray-300 px-4 py-2">Friday</td><td class="border border-gray-300 px-4 py-2">Christmas</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="mb-8">🎆 Holidays Falling on Weekends (No Extra Day Off!)</h2>
+
+      <p class="mb-8">These holidays fall on Saturday or Sunday, so markets wouldn't have been open anyway:</p>
+
+      <p class="mb-4">• <strong>15 Feb (Sun)</strong> — Maha Shivaratri</p>
+      <p class="mb-4">• <strong>21 Mar (Sat)</strong> — Eid-Ul-Fitr (Ramzan Eid)</p>
+      <p class="mb-4">• <strong>15 Aug (Sat)</strong> — Independence Day</p>
+      <p class="mb-8">• <strong>08 Nov (Sun)</strong> — Diwali — Laxmi Pujan (Muhurat Trading Session)</p>
+
+      <h2 class="mb-8">🧠 How Traders Should Use This Calendar</h2>
+
+      <p class="mb-4">• <strong>Swing Traders:</strong> Square off or hedge positions before long weekends to avoid gap risk</p>
+      <p class="mb-4">• <strong>Options Traders:</strong> Be aware of theta decay over holidays — time passes but the market doesn't move</p>
+      <p class="mb-4">• <strong>Intraday Traders:</strong> Pre-holiday sessions often have low volume — avoid overtrading</p>
+      <p class="mb-8">• <strong>Investors:</strong> Use holidays to review your portfolio, journal, and plan your next moves</p>
+
+      <p class="mb-8"><strong>Bookmark this page</strong> and check back before every holiday. Planning around market closures is a small habit that separates disciplined traders from the rest.</p>
+
+      <h2>📝 Your Action Step</h2>
+
+      <p class="highlight">Save this calendar to your phone. Set reminders for the day before each holiday so you can manage your open positions. Share this with your trading friends on WhatsApp!</p>
+    `,
+  },
 };
