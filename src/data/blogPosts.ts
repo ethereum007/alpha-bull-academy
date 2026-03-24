@@ -2,6 +2,7 @@ import tradingMistakes from "@/assets/blog-trading-mistakes.png";
 import systemHopping from "@/assets/blog-system-hopping.png";
 import systemHoppingCover from "@/assets/blog-system-hopping-cover.png";
 import systemHoppingInline from "@/assets/blog-system-hopping-inline.png";
+import marketHolidays2026 from "@/assets/blog-market-holidays-2026.jpg";
 
 export interface BlogPostMeta {
   id: string;
