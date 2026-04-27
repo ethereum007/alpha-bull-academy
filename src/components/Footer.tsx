@@ -120,11 +120,11 @@ export const Footer = () => {
               </li>
               <li>
                 <a
-                  href="mailto:contact@alphabull.club"
+                  href="mailto:contact@alphabullacademy.com"
                   className="flex items-center gap-3 text-primary-foreground/80 hover:text-primary-foreground text-sm transition-smooth"
                 >
                   <Mail className="w-4 h-4 flex-shrink-0" />
-                  contact@alphabull.club
+                  contact@alphabullacademy.com
                 </a>
               </li>
               <li className="flex items-start gap-3 text-primary-foreground/80 text-sm">
