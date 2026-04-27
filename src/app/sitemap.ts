@@ -43,6 +43,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.95,
     },
+    {
+      url: `${BASE_URL}/trading-classes-vijayawada`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/trading-classes-visakhapatnam`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
   ];
 
   const blogRoutes: MetadataRoute.Sitemap = blogPostsMeta.map((post) => ({

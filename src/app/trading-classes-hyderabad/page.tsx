@@ -370,6 +370,9 @@ export default function TradingClassesHyderabadPage() {
                   cohorts via live Zoom — same instructor, same recordings,
                   same private community.
                 </p>
+                <p className="text-muted-foreground max-w-2xl mx-auto mt-4">
+                  Dedicated pages: <Link className="text-primary underline" href="/trading-classes-vijayawada">Trading classes in Vijayawada</Link> · <Link className="text-primary underline" href="/trading-classes-visakhapatnam">Trading classes in Visakhapatnam</Link>
+                </p>
               </div>
             </div>
           </section>
