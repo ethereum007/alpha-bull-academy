@@ -7,4 +7,4 @@ Allow: /
 # Disallow: /private/
 
 # Sitemap location
-Sitemap: https://tradewithalphabull.com/sitemap.xml
+Sitemap: https://alphabullacademy.com/sitemap.xml

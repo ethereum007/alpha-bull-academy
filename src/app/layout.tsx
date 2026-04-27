@@ -4,7 +4,7 @@ import "./globals.css";
 import { Providers } from "./providers";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://tradewithalphabull.com"),
+  metadataBase: new URL("https://alphabullacademy.com"),
   title: {
     default:
       "Share Market Classes Near Me | Best Trading Courses in Hyderabad 2026 | AlphaBull Academy",
@@ -26,14 +26,14 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
-  alternates: { canonical: "https://tradewithalphabull.com/" },
+  alternates: { canonical: "https://alphabullacademy.com/" },
   openGraph: {
     type: "website",
-    url: "https://tradewithalphabull.com/",
+    url: "https://alphabullacademy.com/",
     title: "Top Trading Courses in Hyderabad | AlphaBull Trading Academy",
     description:
       "Best trading courses in Hyderabad. Join AlphaBull for stock market training, technical analysis & options trading. 3000+ students trained. Expert mentorship!",
-    images: ["https://tradewithalphabull.com/og-image.jpg"],
+    images: ["https://alphabullacademy.com/og-image.jpg"],
     locale: "en_IN",
     siteName: "AlphaBull Trading Academy",
   },
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     title: "Top Trading Courses in Hyderabad | AlphaBull Trading Academy",
     description:
       "Best trading courses in Hyderabad. Stock market training, technical analysis & options trading. 3000+ students trained!",
-    images: ["https://tradewithalphabull.com/og-image.jpg"],
+    images: ["https://alphabullacademy.com/og-image.jpg"],
   },
   other: {
     "geo.region": "IN-TG",
@@ -56,7 +56,7 @@ const structuredData = [
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "@id": "https://tradewithalphabull.com/#localbusiness",
+    "@id": "https://alphabullacademy.com/#localbusiness",
     name: "AlphaBull Trading Academy",
     alternateName: [
       "AlphaBull Stock Market Training Hyderabad",
@@ -64,10 +64,10 @@ const structuredData = [
     ],
     description:
       "Looking for share market classes near me? AlphaBull is Hyderabad's top trading academy offering stock market training, technical analysis, options trading, and intraday trading courses. Expert mentorship by Kiran Dutta.",
-    url: "https://tradewithalphabull.com",
-    logo: "https://tradewithalphabull.com/logo.png",
-    image: "https://tradewithalphabull.com/og-image.jpg",
-    email: "contact@alphabull.club",
+    url: "https://alphabullacademy.com",
+    logo: "https://alphabullacademy.com/logo.png",
+    image: "https://alphabullacademy.com/og-image.jpg",
+    email: "contact@alphabullacademy.com",
     telephone: "+91-9032999466",
     priceRange: "₹6,999 - ₹14,999",
     address: {
@@ -124,8 +124,8 @@ const structuredData = [
     name: "AlphaBull Trading Academy Hyderabad",
     description:
       "Premier stock market trading institute in Hyderabad offering courses in technical analysis, options trading, and intraday strategies",
-    url: "https://tradewithalphabull.com",
-    logo: "https://tradewithalphabull.com/logo.png",
+    url: "https://alphabullacademy.com",
+    logo: "https://alphabullacademy.com/logo.png",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Hyderabad",

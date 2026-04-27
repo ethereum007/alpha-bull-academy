@@ -16,19 +16,19 @@ export const metadata: Metadata = {
   keywords:
     "trading blog India, stock market blog, technical analysis guide, trading strategies, beginner trading guide, investment tips, options trading India, share market learning, Hyderabad trading academy",
   authors: [{ name: "AlphaBull Trading Academy" }],
-  alternates: { canonical: "https://alphabull.club/blog" },
+  alternates: { canonical: "https://alphabullacademy.com/blog" },
   openGraph: {
     title:
       "Trading Blog - Expert Stock Market Insights | AlphaBull Academy",
     description:
       "Learn stock market trading with expert guides on technical analysis, price action, options trading & investment strategies for Indian traders.",
     type: "website",
-    url: "https://alphabull.club/blog",
+    url: "https://alphabullacademy.com/blog",
     siteName: "AlphaBull Trading Academy",
     locale: "en_IN",
     images: [
       {
-        url: "https://alphabull.club/og-blog.jpg",
+        url: "https://alphabullacademy.com/og-blog.jpg",
         width: 1200,
         height: 630,
         alt: "AlphaBull Trading Academy Blog - Expert Trading Insights",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     title: "Trading Blog - Expert Market Insights | AlphaBull Academy",
     description:
       "Learn stock market trading with expert guides, technical analysis strategies, and investment tips for Indian traders.",
-    images: ["https://alphabull.club/og-blog.jpg"],
+    images: ["https://alphabullacademy.com/og-blog.jpg"],
   },
 };
 
@@ -50,15 +50,15 @@ const blogSchema = {
   name: "AlphaBull Trading Academy Blog",
   description:
     "Expert insights on stock market trading, technical analysis, and investment strategies for Indian traders",
-  url: "https://alphabull.club/blog",
+  url: "https://alphabullacademy.com/blog",
   inLanguage: "en-IN",
   publisher: {
     "@type": "Organization",
     name: "AlphaBull Trading Academy",
-    url: "https://alphabull.club",
+    url: "https://alphabullacademy.com",
     logo: {
       "@type": "ImageObject",
-      url: "https://alphabull.club/favicon.ico",
+      url: "https://alphabullacademy.com/favicon.ico",
     },
   },
   blogPost: blogPostsMeta.map((post) => ({
@@ -67,7 +67,7 @@ const blogSchema = {
     description: post.excerpt,
     datePublished: post.date,
     author: { "@type": "Person", name: post.author },
-    url: `https://alphabull.club/blog/${post.id}`,
+    url: `https://alphabullacademy.com/blog/${post.id}`,
   })),
 };
 
@@ -75,8 +75,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://alphabull.club" },
-    { "@type": "ListItem", position: 2, name: "Blog", item: "https://alphabull.club/blog" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://alphabullacademy.com" },
+    { "@type": "ListItem", position: 2, name: "Blog", item: "https://alphabullacademy.com/blog" },
   ],
 };
 
