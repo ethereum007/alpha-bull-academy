@@ -28,7 +28,7 @@ export const Footer = () => {
   const socialLinks = [
     { icon: Linkedin, href: "https://www.linkedin.com/in/kirandutta", label: "LinkedIn" },
     { icon: Instagram, href: "https://www.instagram.com/alphabull_club/", label: "Instagram" },
-    { icon: Send, href: "https://t.me/alpha_bull", label: "Telegram" },
+    { icon: Send, href: "https://t.me/alpharadar_in", label: "Telegram" },
   ];
 
   return (
