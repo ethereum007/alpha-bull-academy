@@ -14,7 +14,7 @@ export const Founder = () => {
           <div className="text-center md:text-left">
             <img
               src={heroInstructor}
-              alt="Skill - Founder of AlphaBull Trading Academy"
+              alt="Kiran Dutta — Founder of AlphaBull Trading Academy, Hyderabad's leading stock market mentor"
               className="w-full max-w-[500px] mx-auto md:mx-0 rounded-2xl shadow-[0_12px_32px_rgba(0,0,0,0.15)] object-cover"
             />
 

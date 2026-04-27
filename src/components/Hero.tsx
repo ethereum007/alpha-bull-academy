@@ -44,20 +44,23 @@ export const Hero = () => {
             {/* Badge */}
             <div className="inline-block">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/30 text-white text-sm font-medium">
-                🏆 India's #1 Price Action Trading Academy
+                🏆 Hyderabad's #1 Trading Academy · Serving Telangana &amp; Andhra Pradesh
               </span>
             </div>
 
             {/* Main Headline */}
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-[1.2] mt-6">
-              Master Price Action Trading & Build Your Financial Freedom
+              Trading Classes in Hyderabad — Master Price Action &amp; Build Your Financial Freedom
             </h1>
 
             {/* Subheadline */}
             <p className="text-base md:text-lg text-white/80 leading-relaxed mt-4 max-w-[600px]">
-              Learn proven trading strategies from 10+ years of US & Indian
-              market experience. Join 2000+ successful traders who achieved 90%
-              success rate with our price action methodology.
+              South India's most trusted stock market training academy.
+              Classroom in Ameerpet, Madhapur, Gachibowli — plus online cohorts
+              for Vijayawada, Visakhapatnam &amp; the rest of Andhra Pradesh and
+              Telangana. Learn proven price action strategies from Columbia MBA
+              &amp; Wall Street alum Kiran Dutta. 3000+ traders trained, 98%
+              success rate.
             </p>
 
             {/* Trust Signals */}
@@ -118,7 +121,7 @@ export const Hero = () => {
             <div className="relative">
               <img
                 src={heroInstructor}
-                alt="AlphaBull Trading Instructor"
+                alt="Kiran Dutta — Founder of AlphaBull Trading Academy, leading a stock market trading class in Hyderabad"
                 className="w-full h-auto object-contain rounded-2xl shadow-[0_20px_40px_rgba(0,0,0,0.3)]"
               />
               {/* Optional: Floating Stats Card */}

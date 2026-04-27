@@ -7,13 +7,13 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://alphabullacademy.com"),
   title: {
     default:
-      "Share Market Classes Near Me | Best Trading Courses in Hyderabad 2026 | AlphaBull Academy",
-    template: "%s | AlphaBull Trading Academy",
+      "Trading Classes in Hyderabad | #1 Stock Market Training Academy Telangana & AP | AlphaBull",
+    template: "%s | AlphaBull Trading Academy Hyderabad",
   },
   description:
-    "Looking for share market classes near me? AlphaBull is Hyderabad's #1 stock market training academy! Join 3000+ successful traders. Stock market courses from ₹6,999. Learn technical analysis, options trading & intraday strategies. Expert mentorship. Classes in Ameerpet, Madhapur, Gachibowli. Enroll today!",
+    "Looking for trading classes in Hyderabad? AlphaBull is the #1 stock market training academy serving Hyderabad, Secunderabad, Vijayawada, Visakhapatnam & all of Telangana and Andhra Pradesh. 3000+ traders trained. Courses from ₹6,999. Technical analysis, options & intraday strategies taught by Columbia MBA & Wall Street alum Kiran Dutta. Classes in Ameerpet, Madhapur, Gachibowli + online for South India. Book a free demo today.",
   keywords:
-    "share market classes near me, trading courses hyderabad, share market classes hyderabad, best trading courses in hyderabad, stock market training hyderabad, trading academy hyderabad, technical analysis course hyderabad, options trading course hyderabad, intraday trading hyderabad, AlphaBull academy hyderabad, price action trading hyderabad, candlestick patterns course",
+    "trading classes in hyderabad, trading classes hyderabad, share market classes near me, share market classes hyderabad, stock market training hyderabad, trading academy hyderabad, best trading courses hyderabad, technical analysis course hyderabad, options trading course hyderabad, intraday trading hyderabad, trading institute hyderabad, share market course ameerpet, trading classes madhapur, stock market coaching gachibowli, share market classes vijayawada, trading classes visakhapatnam, stock market course vizag, trading classes andhra pradesh, telangana stock market training, AlphaBull academy hyderabad, price action trading hyderabad, candlestick patterns course, NISM trading mentor, kiran dutta trading mentor",
   authors: [{ name: "AlphaBull Trading Academy - Hyderabad" }],
   robots: {
     index: true,
@@ -85,7 +85,15 @@ const structuredData = [
     },
     areaServed: [
       { "@type": "City", name: "Hyderabad" },
+      { "@type": "City", name: "Secunderabad" },
+      { "@type": "City", name: "Vijayawada" },
+      { "@type": "City", name: "Visakhapatnam" },
+      { "@type": "City", name: "Guntur" },
+      { "@type": "City", name: "Tirupati" },
+      { "@type": "City", name: "Warangal" },
       { "@type": "State", name: "Telangana" },
+      { "@type": "State", name: "Andhra Pradesh" },
+      { "@type": "Country", name: "India" },
     ],
     sameAs: [
       "https://www.linkedin.com/in/kirandutta",
@@ -142,6 +150,17 @@ const structuredData = [
       "HITEC City",
       "Banjara Hills",
       "Jubilee Hills",
+      "Kondapur",
+      "Begumpet",
+      "Vijayawada",
+      "Visakhapatnam",
+      "Guntur",
+      "Tirupati",
+      "Warangal",
+      "Karimnagar",
+      "Nizamabad",
+      "Telangana",
+      "Andhra Pradesh",
     ],
     hasCredential: "3000+ Traders Trained",
     knowsAbout: [
@@ -153,6 +172,193 @@ const structuredData = [
       "Candlestick Patterns",
       "Nifty Trading",
       "Bank Nifty",
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "AlphaBull Trading Academy",
+    alternateName: "AlphaBull Academy",
+    url: "https://alphabullacademy.com",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: "https://alphabullacademy.com/blog?q={search_term_string}",
+      },
+      "query-input": "required name=search_term_string",
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Top Trading Courses in Hyderabad",
+    description:
+      "Best stock market and trading courses in Hyderabad offered by AlphaBull Trading Academy",
+    numberOfItems: 3,
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        item: {
+          "@type": "Course",
+          name: "Stock Market Fundamentals Course Hyderabad",
+          description:
+            "Best beginner trading course in Hyderabad. Master stock market basics, fundamental analysis, and investment strategies.",
+          provider: {
+            "@type": "Organization",
+            name: "AlphaBull Trading Academy",
+            sameAs: "https://alphabullacademy.com",
+          },
+          offers: {
+            "@type": "Offer",
+            price: "6999",
+            priceCurrency: "INR",
+            availability: "https://schema.org/InStock",
+            url: "https://rzp.io/rzp/7UZGE0Dg",
+            category: "Education",
+          },
+          hasCourseInstance: {
+            "@type": "CourseInstance",
+            courseMode: "Blended",
+            courseWorkload: "PT4W",
+            instructor: { "@type": "Person", name: "Kiran Dutta" },
+            location: { "@type": "Place", name: "Hyderabad, India" },
+          },
+        },
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        item: {
+          "@type": "Course",
+          name: "Technical Analysis Mastery Course Hyderabad",
+          description:
+            "Top technical analysis course in Hyderabad. Chart patterns, price action, CPR, EMA, support/resistance, and breakout trading strategies.",
+          provider: {
+            "@type": "Organization",
+            name: "AlphaBull Trading Academy",
+            sameAs: "https://alphabullacademy.com",
+          },
+          offers: {
+            "@type": "Offer",
+            price: "9999",
+            priceCurrency: "INR",
+            availability: "https://schema.org/InStock",
+            url: "https://rzp.io/rzp/yB1bafTe",
+            category: "Education",
+          },
+          hasCourseInstance: {
+            "@type": "CourseInstance",
+            courseMode: "Blended",
+            courseWorkload: "PT4W",
+            instructor: { "@type": "Person", name: "Kiran Dutta" },
+            location: { "@type": "Place", name: "Hyderabad, India" },
+          },
+        },
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        item: {
+          "@type": "Course",
+          name: "Options & Derivatives Trading Course Hyderabad",
+          description:
+            "Advanced options trading course in Hyderabad. Master derivatives, futures trading, hedging techniques, and professional trading strategies.",
+          provider: {
+            "@type": "Organization",
+            name: "AlphaBull Trading Academy",
+            sameAs: "https://alphabullacademy.com",
+          },
+          offers: {
+            "@type": "Offer",
+            price: "14999",
+            priceCurrency: "INR",
+            availability: "https://schema.org/InStock",
+            url: "https://wa.me/919032999466",
+            category: "Education",
+          },
+          hasCourseInstance: {
+            "@type": "CourseInstance",
+            courseMode: "Blended",
+            courseWorkload: "PT4W",
+            instructor: { "@type": "Person", name: "Kiran Dutta" },
+            location: { "@type": "Place", name: "Hyderabad, India" },
+          },
+        },
+      },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Where can I find the best trading classes in Hyderabad?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "AlphaBull Trading Academy is Hyderabad's #1 stock market training institute. We offer classes accessible from Ameerpet, Madhapur, Gachibowli, HITEC City, Kukatpally, Secunderabad, Banjara Hills, Jubilee Hills, Kondapur and Begumpet — plus online classes for students across Telangana, Andhra Pradesh and the rest of South India. Courses start at ₹6,999. Call +91-9032999466 to book a free demo.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Do you offer share market classes for students in Vijayawada or Visakhapatnam?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. AlphaBull serves the entire Andhra Pradesh and Telangana market. Our online live cohort programs are popular with students from Vijayawada, Visakhapatnam, Guntur, Tirupati, Warangal, Karimnagar and Nizamabad. You get the same Columbia MBA / Wall Street trained mentorship as our Hyderabad classroom students.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What are the best trading courses in Hyderabad?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "AlphaBull Trading Academy offers three flagship courses: Stock Market Fundamentals (₹6,999), Technical Analysis Mastery (₹9,999), and Options & Derivatives Trading (₹14,999). With 3000+ students trained and 98% success rate, we are Hyderabad's premier trading education provider.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How much do share market classes cost in Hyderabad?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Share market classes at AlphaBull Academy Hyderabad range from ₹6,999 for beginners to ₹14,999 for advanced options trading. All courses include lifetime mentorship support and practical trading strategies.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Who is the best trading mentor in Hyderabad?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Kiran Dutta, founder of AlphaBull Trading Academy, is one of Hyderabad's top trading mentors. He is a Columbia University MBA, has worked on Wall Street, holds the NISM SEBI RA certification, and has trained 3000+ students with a 98% success rate.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Do you offer online share market classes?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. AlphaBull Trading Academy offers both online and offline share market classes. Our online courses provide live sessions, recorded videos, and 24/7 mentor support — perfect for students searching for share market classes near me from anywhere in India, especially across Hyderabad, Telangana and Andhra Pradesh.",
+        },
+      },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://alphabullacademy.com/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Trading Classes Hyderabad",
+        item: "https://alphabullacademy.com/trading-classes-hyderabad",
+      },
     ],
   },
 ];
