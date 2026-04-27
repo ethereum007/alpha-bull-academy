@@ -1,6 +1,6 @@
+"use client";
+
 import { lazy, Suspense, useEffect } from "react";
-import { useLocation } from "react-router-dom";
-import { Helmet } from "react-helmet";
 import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
 import { TrustBar } from "@/components/TrustBar";
@@ -14,7 +14,6 @@ import { FinalCTA } from "@/components/FinalCTA";
 import { FloatingElements } from "@/components/FloatingElements";
 import { Footer } from "@/components/Footer";
 
-// Lazy load below-the-fold components for better performance
 const Testimonials = lazy(() =>
   import("@/components/Testimonials").then((m) => ({ default: m.Testimonials }))
 );
@@ -31,33 +30,25 @@ const SectionLoader = () => (
   </div>
 );
 
-const Index = () => {
-  const location = useLocation();
-
+export default function HomeClient() {
   useEffect(() => {
-    if (location.hash) {
-      const id = location.hash.replace("#", "");
+    if (typeof window === "undefined") return;
+    if (window.location.hash) {
+      const id = window.location.hash.replace("#", "");
       setTimeout(() => {
         const element = document.getElementById(id);
         if (element) {
           const navHeight = 80;
-          const pos = element.getBoundingClientRect().top + window.scrollY - navHeight;
+          const pos =
+            element.getBoundingClientRect().top + window.scrollY - navHeight;
           window.scrollTo({ top: pos, behavior: "smooth" });
         }
       }, 300);
     }
-  }, [location.hash]);
+  }, []);
 
   return (
     <div className="min-h-screen bg-white">
-      <Helmet>
-        <title>Trade With AlphaBull | Best Online Trading Course India | Price Action Mastery</title>
-        <meta
-          name="description"
-          content="Master price action trading with India's most trusted online course. 10+ years US & Indian market experience, 2000+ traders trained, 90% success rate. Enroll now!"
-        />
-        <link rel="canonical" href="https://tradewithalphabull.com/" />
-      </Helmet>
       <Navigation />
       <main>
         <Hero />
@@ -83,6 +74,4 @@ const Index = () => {
       <Footer />
     </div>
   );
-};
-
-export default Index;
+}

@@ -1,3 +1,5 @@
+"use client";
+
 import { TrendingUp, FileText } from "lucide-react";
 
 const updates = [

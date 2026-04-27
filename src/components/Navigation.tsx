@@ -1,12 +1,15 @@
+"use client";
+
 import { useState, useEffect } from "react";
 import { Menu, X, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link, useLocation } from "react-router-dom";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
-  const location = useLocation();
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,7 +34,7 @@ export const Navigation = () => {
 
   const scrollToSection = (sectionId: string) => {
     setIsOpen(false);
-    if (location.pathname !== "/") {
+    if (pathname !== "/") {
       window.location.href = `/#${sectionId}`;
       return;
     }
@@ -53,7 +56,7 @@ export const Navigation = () => {
 
   const isActiveLink = (href?: string) => {
     if (!href) return false;
-    return location.pathname === href;
+    return pathname === href;
   };
 
   return (
@@ -68,7 +71,7 @@ export const Navigation = () => {
         <div className="max-w-[1280px] mx-auto px-4 lg:px-6">
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-2 flex-shrink-0">
+            <Link href="/" className="flex items-center gap-2 flex-shrink-0">
               <TrendingUp className="w-5 h-5 lg:w-6 lg:h-6 text-primary" />
               <span className="text-xl lg:text-2xl font-bold text-primary">
                 Trade With <span className="text-secondary">AlphaBull</span>
@@ -81,7 +84,7 @@ export const Navigation = () => {
                 link.href ? (
                   <Link
                     key={link.label}
-                    to={link.href}
+                    href={link.href}
                     className={`text-base font-medium transition-all duration-300 relative
                       ${
                         isActiveLink(link.href)
@@ -160,7 +163,7 @@ export const Navigation = () => {
             link.href ? (
               <Link
                 key={link.label}
-                to={link.href}
+                href={link.href}
                 onClick={() => setIsOpen(false)}
                 className={`py-4 text-lg font-medium border-b border-gray-100 transition-colors ${
                   isActiveLink(link.href)

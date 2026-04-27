@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect } from 'react';
 
 const GA_MEASUREMENT_ID = 'G-GC2MQ6V2N1';

@@ -1,6 +1,9 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import heroInstructor from "@/assets/hero-instructor.jpeg";
+
+const heroInstructor = "/assets/hero-instructor.jpeg";
 
 export const Founder = () => {
   return (

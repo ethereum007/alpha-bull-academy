@@ -1,11 +1,13 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { TrendingUp, ChevronRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 export const Q3ResultsScroller = () => {
   return (
-    <Link 
-      to="/q3-results"
+    <Link
+      href="/q3-results"
       className="fixed top-[200px] left-0 right-0 z-30 block bg-primary/10 border-b border-primary/30 py-3 overflow-hidden cursor-pointer hover:bg-primary/20 transition-colors"
     >
       <div className="flex items-center justify-center">

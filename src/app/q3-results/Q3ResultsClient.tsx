@@ -1,5 +1,6 @@
+"use client";
+
 import { useState } from "react";
-import { Helmet } from "react-helmet";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Disclaimer } from "@/components/Disclaimer";
@@ -60,7 +61,7 @@ interface SectorData {
   companies: CompanyResult[];
 }
 
-const Q3Results = () => {
+export default function Q3ResultsClient() {
   const [navOpen, setNavOpen] = useState(false);
   const [openSectors, setOpenSectors] = useState<string[]>(["Information Technology", "Wealth Management", "Banking", "Insurance"]);
 
@@ -254,12 +255,6 @@ const Q3Results = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Q3 Results FY26 - IT Sector Earnings Analysis | AlphaBull</title>
-        <meta name="description" content="Comprehensive Q3 FY26 earnings analysis covering Tata Elxsi financial performance, revenue growth, margin expansion, segment performance, deal wins, and management outlook." />
-        <meta name="keywords" content="Tata Elxsi Q3 FY26 results, Tata Elxsi earnings, IT sector Q3 results, Tata Elxsi financial performance" />
-      </Helmet>
-      
       <Navigation />
       
       <main className="min-h-screen bg-background pt-20">
@@ -529,4 +524,3 @@ const Q3Results = () => {
   );
 };
 
-export default Q3Results;

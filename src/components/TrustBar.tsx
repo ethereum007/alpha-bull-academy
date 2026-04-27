@@ -1,3 +1,5 @@
+"use client";
+
 export const TrustBar = () => {
   const partners = [
     { name: "NSE Certified" },

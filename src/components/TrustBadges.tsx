@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { Award, Shield, Users, TrendingUp, BookOpen, Star } from "lucide-react";
 import { Card } from "@/components/ui/card";

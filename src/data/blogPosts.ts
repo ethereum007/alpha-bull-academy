@@ -1,8 +1,8 @@
-import tradingMistakes from "@/assets/blog-trading-mistakes.png";
-import systemHopping from "@/assets/blog-system-hopping.png";
-import systemHoppingCover from "@/assets/blog-system-hopping-cover.png";
-import systemHoppingInline from "@/assets/blog-system-hopping-inline.png";
-import marketHolidays2026 from "@/assets/blog-market-holidays-2026.jpg";
+const tradingMistakes = "/assets/blog-trading-mistakes.png";
+const systemHopping = "/assets/blog-system-hopping.png";
+const systemHoppingCover = "/assets/blog-system-hopping-cover.png";
+const systemHoppingInline = "/assets/blog-system-hopping-inline.png";
+const marketHolidays2026 = "/assets/blog-market-holidays-2026.jpg";
 
 export interface BlogPostMeta {
   id: string;

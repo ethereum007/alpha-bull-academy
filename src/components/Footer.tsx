@@ -1,4 +1,6 @@
-import { Link } from "react-router-dom";
+"use client";
+
+import Link from "next/link";
 import { MapPin, Phone, Mail, Linkedin, Instagram, Send } from "lucide-react";
 
 export const Footer = () => {
@@ -66,7 +68,7 @@ export const Footer = () => {
                 <li key={link.label}>
                   {link.href ? (
                     <Link
-                      to={link.href}
+                      href={link.href}
                       className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition-smooth"
                     >
                       {link.label}

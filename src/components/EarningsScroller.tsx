@@ -1,6 +1,8 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { TrendingUp, TrendingDown, Minus } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { earningsData, currentSeason } from "@/data/earningsData";
 
 const VerdictIcon = ({ verdict }: { verdict: 'beat' | 'miss' | 'inline' }) => {
@@ -20,8 +22,8 @@ export const EarningsScroller = () => {
   const scrollItems = [...earningsData, ...earningsData];
 
   return (
-    <Link 
-      to="/earnings"
+    <Link
+      href="/earnings"
       className="fixed top-[160px] left-0 right-0 z-30 block bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20 border-y border-primary/30 py-2 overflow-hidden cursor-pointer hover:from-primary/30 hover:via-accent/30 hover:to-primary/30 transition-colors"
     >
       <div className="flex items-center">
