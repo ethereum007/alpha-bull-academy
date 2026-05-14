@@ -141,19 +141,25 @@ export const Footer = () => {
             <p className="text-primary-foreground/70">
               © {new Date().getFullYear()} Trade With AlphaBull. All rights reserved.
             </p>
-            <div className="flex gap-6">
-              <a
-                href="#"
+            <div className="flex flex-wrap gap-6 justify-center">
+              <Link
+                href="/privacy-policy"
                 className="text-primary-foreground/70 hover:text-primary-foreground transition-smooth"
               >
                 Privacy Policy
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                href="/terms-of-service"
                 className="text-primary-foreground/70 hover:text-primary-foreground transition-smooth"
               >
                 Terms of Service
-              </a>
+              </Link>
+              <Link
+                href="/refund-policy"
+                className="text-primary-foreground/70 hover:text-primary-foreground transition-smooth"
+              >
+                Refund Policy
+              </Link>
             </div>
           </div>
         </div>
