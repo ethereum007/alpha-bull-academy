@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { ArrowRight } from "lucide-react";
 
@@ -39,7 +39,7 @@ export const HowItWorks = () => {
       number: "4",
       title: "Trade With Confidence",
       description:
-        "Start live trading with proven strategies. Get ongoing support from community and mentors. Build consistent profits.",
+        "Move from demo practice to live-market decisions with risk controls, journaling, and ongoing mentor support.",
       linkText: null,
       linkAction: null,
     },
@@ -54,7 +54,7 @@ export const HowItWorks = () => {
             How It Works
           </h2>
           <p className="text-lg text-[#6B7280]">
-            From enrollment to profitable trading in 4 simple steps.
+            From enrollment to structured market practice in 4 simple steps.
           </p>
         </div>
 

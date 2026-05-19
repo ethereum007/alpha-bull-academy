@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check } from "lucide-react";
@@ -12,9 +12,9 @@ export const FinalCTA = () => {
   };
 
   const trustItems = [
-    "14-day money-back guarantee",
-    "90% success rate",
+    "14-day refund policy",
     "2000+ traders trained",
+    "Risk-first learning",
   ];
 
   return (
@@ -39,8 +39,8 @@ export const FinalCTA = () => {
 
         {/* Subheadline */}
         <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-10">
-          Join 2000+ successful traders. Start with a free demo class—zero
-          commitment, zero risk.
+          Join 2000+ serious learners. Start with a free demo class—zero
+          commitment, clear expectations.
         </p>
 
         {/* CTA Buttons */}
@@ -63,7 +63,7 @@ export const FinalCTA = () => {
 
         {/* Urgency Text */}
         <p className="text-base font-semibold text-[#FDE68A] mb-6">
-          ⏰ Next batch starts in 7 days. Only 15 seats left.
+          Next batch starts on June 5th, 2026. Limited seats available.
         </p>
 
         {/* Trust Reinforcement */}

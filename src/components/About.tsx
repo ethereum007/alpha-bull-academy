@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { TrendingUp, Users, Award, Target } from "lucide-react";
 import { motion } from "framer-motion";
@@ -6,8 +6,8 @@ import { Card } from "@/components/ui/card";
 
 const stats = [
   { icon: TrendingUp, label: "Years Experience", value: "6+" },
-  { icon: Users, label: "Students", value: "3000+" },
-  { icon: Award, label: "Success Rate", value: "98%" },
+  { icon: Users, label: "Students", value: "2000+" },
+  { icon: Award, label: "Strategies", value: "13+" },
 ];
 
 const benefits = [
@@ -111,7 +111,7 @@ export const About = () => {
           <Card className="p-8">
             <h3 className="text-2xl font-bold mb-4 font-heading">Meet Your Instructor</h3>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Kiran is a trader for over a decade in US & Indian markets having trained more than 3000+ students. Kiran is an alum of Columbia University and has worked at Wall Street as well. He has also cleared the NISM SEBI RA exam. With 13+ proven trading strategies and a 98% success rate, Kiran brings world-class expertise to help you master the markets.
+              Kiran is a trader for over a decade in US & Indian markets having trained more than 2000 students. Kiran is an alum of Columbia University and has worked at Wall Street as well. He has also cleared the NISM SEBI RA exam. His programs focus on 13+ practical trading frameworks, risk management, and live chart review.
             </p>
           </Card>
         </motion.div>

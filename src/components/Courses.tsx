@@ -26,7 +26,7 @@ export const Courses = () => {
         "Support & resistance basics",
         "Risk management introduction",
       ],
-      price: "₹8,999",
+      price: "Rs. 8,999",
       priceColor: "text-[#1E3A8A]",
       buttonText: "Learn More",
       buttonStyle: "outline" as const,
@@ -48,7 +48,7 @@ export const Courses = () => {
         "6 months mentor support",
         "Telegram community access",
       ],
-      price: "₹24,999",
+      price: "Rs. 24,999",
       priceColor: "text-[#F59E0B]",
       buttonText: "Enroll Now",
       buttonStyle: "primary" as const,
@@ -70,7 +70,7 @@ export const Courses = () => {
         "1-on-1 mentorship sessions",
         "Lifetime community access",
       ],
-      price: "₹44,999",
+      price: "Rs. 44,999",
       priceColor: "text-[#6B21A8]",
       buttonText: "Learn More",
       buttonStyle: "purple" as const,
@@ -91,7 +91,7 @@ export const Courses = () => {
             Choose Your Trading Journey
           </h2>
           <p className="text-lg text-[#6B7280] max-w-[600px] mx-auto leading-relaxed">
-            From complete beginner to advanced trader—we have a structured path
+            From complete beginner to advanced trader, we have a structured path
             for every level.
           </p>
         </div>

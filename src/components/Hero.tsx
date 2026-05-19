@@ -1,7 +1,7 @@
-"use client";
+﻿"use client";
 
 import { Button } from "@/components/ui/button";
-import { CheckCircle, ArrowRight } from "lucide-react";
+import { CheckCircle, ArrowRight, TrendingUp } from "lucide-react";
 
 const heroInstructor = "/assets/hero-instructor.jpeg";
 
@@ -15,18 +15,17 @@ export const Hero = () => {
 
   const trustSignals = [
     "2000+ Traders Trained",
-    "90% Success Rate",
+    "Risk-First Training",
     "10+ Years Experience",
     "Columbia MBA Founder",
   ];
 
-  // Indian avatar placeholder URLs
-  const avatars = [
-    "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop&crop=face",
-    "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=100&h=100&fit=crop&crop=face",
-    "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
-    "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop&crop=face",
-    "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=100&h=100&fit=crop&crop=face",
+  const studentAvatars = [
+    { initials: "RK", city: "Hyderabad", color: "from-[#F97316] to-[#F59E0B]" },
+    { initials: "PS", city: "Vijayawada", color: "from-[#0F766E] to-[#14B8A6]" },
+    { initials: "AR", city: "Vizag", color: "from-[#1D4ED8] to-[#38BDF8]" },
+    { initials: "SM", city: "Guntur", color: "from-[#BE123C] to-[#FB7185]" },
+    { initials: "VM", city: "Bengaluru", color: "from-[#6D28D9] to-[#A78BFA]" },
   ];
 
   return (
@@ -44,23 +43,23 @@ export const Hero = () => {
             {/* Badge */}
             <div className="inline-block">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/30 text-white text-sm font-medium">
-                🏆 Hyderabad's #1 Trading Academy · Serving Telangana &amp; Andhra Pradesh
+                <TrendingUp className="w-4 h-4 text-[#10B981]" />
+                Live Online Trading Academy · Serving India
               </span>
             </div>
 
             {/* Main Headline */}
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-[1.2] mt-6">
-              Trading Classes in Hyderabad — Master Price Action &amp; Build Your Financial Freedom
+              Online Trading Courses for Price Action &amp; Stock Market Training
             </h1>
 
             {/* Subheadline */}
             <p className="text-base md:text-lg text-white/80 leading-relaxed mt-4 max-w-[600px]">
-              South India's most trusted stock market training academy.
-              Classroom in Ameerpet, Madhapur, Gachibowli — plus online cohorts
-              for Vijayawada, Visakhapatnam &amp; the rest of Andhra Pradesh and
-              Telangana. Learn proven price action strategies from Columbia MBA
-              &amp; Wall Street alum Kiran Dutta. 3000+ traders trained, 98%
-              success rate.
+              Learn price action, technical analysis, risk management, and
+              options trading through live online cohorts. AlphaBull Trading
+              Academy serves students across Hyderabad, Telangana, Andhra
+              Pradesh, and the rest of India with structured mentorship from
+              Columbia MBA &amp; Wall Street alum Kiran Dutta.
             </p>
 
             {/* Trust Signals */}
@@ -98,14 +97,18 @@ export const Hero = () => {
             <div className="flex items-center gap-4 mt-8">
               {/* Overlapping Avatars */}
               <div className="flex -space-x-2.5">
-                {avatars.map((avatar, index) => (
-                  <img
-                    key={index}
-                    src={avatar}
-                    alt={`Student ${index + 1}`}
-                    className="w-10 h-10 rounded-full border-2 border-white object-cover"
-                    style={{ zIndex: avatars.length - index }}
-                  />
+                {studentAvatars.map((avatar, index) => (
+                  <div
+                    key={avatar.initials}
+                    aria-label={`AlphaBull student from ${avatar.city}`}
+                    className={`w-10 h-10 rounded-full border-2 border-white bg-gradient-to-br ${avatar.color} flex items-center justify-center shadow-sm`}
+                    style={{ zIndex: studentAvatars.length - index }}
+                    title={`Student from ${avatar.city}`}
+                  >
+                    <span className="text-xs font-bold text-white">
+                      {avatar.initials}
+                    </span>
+                  </div>
                 ))}
               </div>
               {/* Text */}
@@ -121,7 +124,7 @@ export const Hero = () => {
             <div className="relative">
               <img
                 src={heroInstructor}
-                alt="Kiran Dutta — Founder of AlphaBull Trading Academy, leading a stock market trading class in Hyderabad"
+                alt="Kiran Dutta, founder of AlphaBull Trading Academy, teaching an online stock market course"
                 className="w-full h-auto object-contain rounded-2xl shadow-[0_20px_40px_rgba(0,0,0,0.3)]"
               />
               {/* Optional: Floating Stats Card */}
@@ -143,8 +146,8 @@ export const Hero = () => {
                     </svg>
                   </div>
                   <div>
-                    <p className="text-2xl font-bold text-[#1F2937]">90%</p>
-                    <p className="text-sm text-[#4B5563]">Success Rate</p>
+                    <p className="text-2xl font-bold text-[#1F2937]">Live</p>
+                    <p className="text-sm text-[#4B5563]">Chart Training</p>
                   </div>
                 </div>
               </div>

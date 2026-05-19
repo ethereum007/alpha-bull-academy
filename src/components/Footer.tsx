@@ -15,7 +15,7 @@ export const Footer = () => {
     { label: "Home", action: () => scrollToSection("home") },
     { label: "About", href: "/about" },
     { label: "Courses", action: () => scrollToSection("courses") },
-    { label: "Testimonials", action: () => scrollToSection("testimonials") },
+    { label: "Student Reviews", href: "/student-reviews" },
     { label: "Contact", action: () => scrollToSection("contact") },
   ];
 
@@ -139,7 +139,7 @@ export const Footer = () => {
         <div className="border-t border-primary-foreground/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
             <p className="text-primary-foreground/70">
-              © {new Date().getFullYear()} Trade With AlphaBull. All rights reserved.
+              Â© {new Date().getFullYear()} Trade With AlphaBull. All rights reserved.
             </p>
             <div className="flex flex-wrap gap-6 justify-center">
               <Link

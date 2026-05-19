@@ -58,7 +58,7 @@ const blogSchema = {
     url: "https://alphabullacademy.com",
     logo: {
       "@type": "ImageObject",
-      url: "https://alphabullacademy.com/favicon.ico",
+      url: "https://alphabullacademy.com/logo.png",
     },
   },
   blogPost: blogPostsMeta.map((post) => ({

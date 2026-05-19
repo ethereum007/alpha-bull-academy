@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
@@ -67,13 +67,14 @@ export const Founder = () => {
             <p className="text-base text-[#4B5563] leading-relaxed mb-5">
               That's why we focus on pure price action—the only trading method
               that stands the test of time. Over 2000 traders have now learned
-              this methodology and are trading profitably.
+              this methodology through structured lessons, live chart reviews,
+              and risk-management practice.
             </p>
 
             <p className="text-base text-[#4B5563] leading-relaxed mb-8">
               I'm not here to sell you false dreams. I'm here to teach you a
-              real skill that can generate real income—if you're willing to put
-              in the work.
+              real skill with discipline and risk controls—if you're willing to
+              put in the work.
             </p>
 
             <Button

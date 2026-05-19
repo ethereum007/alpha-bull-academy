@@ -2,6 +2,7 @@
 
 import { lazy, Suspense, useEffect } from "react";
 import { Navigation } from "@/components/Navigation";
+import { AnnouncementBanner } from "@/components/AnnouncementBanner";
 import { Hero } from "@/components/Hero";
 import { TrustBar } from "@/components/TrustBar";
 import { ProblemsSolutions } from "@/components/ProblemsSolutions";
@@ -51,6 +52,7 @@ export default function HomeClient() {
     <div className="min-h-screen bg-white">
       <Navigation />
       <main>
+        <AnnouncementBanner />
         <Hero />
         <TrustBar />
         <ProblemsSolutions />

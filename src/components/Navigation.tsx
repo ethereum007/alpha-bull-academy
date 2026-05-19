@@ -47,10 +47,10 @@ export const Navigation = () => {
   };
 
   const navLinks = [
-    { label: "Courses", action: () => scrollToSection("courses") },
+    { label: "Courses", href: "/#courses", sectionId: "courses" },
     { label: "Learn", href: "/blog" },
-    { label: "Success Stories", action: () => scrollToSection("testimonials") },
-    { label: "Pricing", action: () => scrollToSection("courses") },
+    { label: "Success Stories", href: "/student-reviews" },
+    { label: "Pricing", href: "/#courses", sectionId: "courses" },
     { label: "Blog", href: "/blog" },
   ];
 
@@ -80,31 +80,27 @@ export const Navigation = () => {
 
             {/* Desktop Center Navigation */}
             <div className="hidden lg:flex items-center gap-8">
-              {navLinks.map((link) =>
-                link.href ? (
-                  <Link
-                    key={link.label}
-                    href={link.href}
-                    className={`text-base font-medium transition-all duration-300 relative
-                      ${
-                        isActiveLink(link.href)
-                          ? "text-primary after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-0.5 after:bg-primary"
-                          : "text-[#4B5563] hover:text-primary"
-                      }
-                    `}
-                  >
-                    {link.label}
-                  </Link>
-                ) : (
-                  <button
-                    key={link.label}
-                    onClick={link.action}
-                    className="text-base font-medium text-[#4B5563] hover:text-primary transition-all duration-300"
-                  >
-                    {link.label}
-                  </button>
-                )
-              )}
+              {navLinks.map((link) => (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  onClick={(event) => {
+                    if (link.sectionId && pathname === "/") {
+                      event.preventDefault();
+                      scrollToSection(link.sectionId);
+                    }
+                  }}
+                  className={`text-base font-medium transition-all duration-300 relative
+                    ${
+                      isActiveLink(link.href)
+                        ? "text-primary after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-0.5 after:bg-primary"
+                        : "text-[#4B5563] hover:text-primary"
+                    }
+                  `}
+                >
+                  {link.label}
+                </Link>
+              ))}
             </div>
 
             {/* Desktop Right Side */}
@@ -159,30 +155,27 @@ export const Navigation = () => {
 
         {/* Mobile Menu Links */}
         <div className="flex flex-col px-6">
-          {navLinks.map((link) =>
-            link.href ? (
-              <Link
-                key={link.label}
-                href={link.href}
-                onClick={() => setIsOpen(false)}
-                className={`py-4 text-lg font-medium border-b border-gray-100 transition-colors ${
-                  isActiveLink(link.href)
-                    ? "text-primary"
-                    : "text-[#4B5563] hover:text-primary"
-                }`}
-              >
-                {link.label}
-              </Link>
-            ) : (
-              <button
-                key={link.label}
-                onClick={link.action}
-                className="py-4 text-left text-lg font-medium text-[#4B5563] hover:text-primary border-b border-gray-100 transition-colors"
-              >
-                {link.label}
-              </button>
-            )
-          )}
+          {navLinks.map((link) => (
+            <Link
+              key={link.label}
+              href={link.href}
+              onClick={(event) => {
+                if (link.sectionId && pathname === "/") {
+                  event.preventDefault();
+                  scrollToSection(link.sectionId);
+                  return;
+                }
+                setIsOpen(false);
+              }}
+              className={`py-4 text-lg font-medium border-b border-gray-100 transition-colors ${
+                isActiveLink(link.href)
+                  ? "text-primary"
+                  : "text-[#4B5563] hover:text-primary"
+              }`}
+            >
+              {link.label}
+            </Link>
+          ))}
 
           {/* Login Link */}
           <button className="py-4 text-left text-lg font-medium text-[#4B5563] hover:text-primary border-b border-gray-100 transition-colors">

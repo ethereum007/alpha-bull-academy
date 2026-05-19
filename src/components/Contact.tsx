@@ -9,6 +9,7 @@ import { useState, useRef } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
+import { GOOGLE_REVIEW_URL } from "@/lib/reviews";
 
 const HCAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY || "";
 
@@ -197,7 +198,7 @@ export const Contact = () => {
                 <div>
                   <h4 className="font-semibold text-lg mb-1">WhatsApp</h4>
                   <p className="text-muted-foreground mb-2">+91 90329 99466</p>
-                  <p className="text-sm text-green-600 font-medium">Click to chat instantly →</p>
+                  <p className="text-sm text-green-600 font-medium">Click to chat instantly â†’</p>
                 </div>
               </div>
             </Card>
@@ -243,7 +244,7 @@ export const Contact = () => {
                 <div>
                   <h4 className="font-semibold text-lg mb-1">Instagram</h4>
                   <p className="text-muted-foreground mb-2">@alphabull_club</p>
-                  <p className="text-sm text-pink-600 font-medium">Follow for daily insights →</p>
+                  <p className="text-sm text-pink-600 font-medium">Follow for daily insights â†’</p>
                 </div>
               </div>
             </Card>
@@ -256,12 +257,12 @@ export const Contact = () => {
                 <div>
                   <h4 className="font-semibold text-lg mb-1">Telegram</h4>
                   <p className="text-muted-foreground mb-2">Join our community</p>
-                  <p className="text-sm text-blue-600 font-medium">Get live updates & signals →</p>
+                  <p className="text-sm text-blue-600 font-medium">Get live updates & signals â†’</p>
                 </div>
               </div>
             </Card>
 
-            <Card className="p-6 hover:shadow-lg transition-shadow cursor-pointer" onClick={() => window.open('https://share.google/m50PyVkPpNTRpXUVC', '_blank')}>
+            <Card className="p-6 hover:shadow-lg transition-shadow cursor-pointer" onClick={() => window.open(GOOGLE_REVIEW_URL, '_blank')}>
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-lg bg-yellow-500/10 flex items-center justify-center flex-shrink-0">
                   <Star className="w-6 h-6 text-yellow-600" />
@@ -269,7 +270,7 @@ export const Contact = () => {
                 <div>
                   <h4 className="font-semibold text-lg mb-1">Google Reviews</h4>
                   <p className="text-muted-foreground mb-2">See what our students say</p>
-                  <p className="text-sm text-yellow-600 font-medium">Read reviews & rate us →</p>
+                  <p className="text-sm text-yellow-600 font-medium">Read reviews & rate us â†’</p>
                 </div>
               </div>
             </Card>

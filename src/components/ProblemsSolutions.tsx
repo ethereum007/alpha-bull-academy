@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { Button } from "@/components/ui/button";
 import { X, Check, ArrowRight } from "lucide-react";
@@ -69,7 +69,7 @@ export const ProblemsSolutions = () => {
 
           {/* Headline */}
           <h2 className="text-[28px] md:text-[36px] font-semibold text-[#1F2937] leading-[1.2] max-w-[700px] mb-12">
-            Why 90% of Traders Lose Money in the Stock Market
+            Why Many New Traders Lose Money in the Stock Market
           </h2>
 
           {/* Problem Cards Grid */}

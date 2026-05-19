@@ -39,7 +39,7 @@ const faqs = [
   },
   {
     question: "When does the next batch start?",
-    answer: "New batches start every month. Contact us on WhatsApp at +91 90329 99466 to know the exact start date of the upcoming batch or to reserve your spot."
+    answer: "The next batch starts on June 5th, 2026. Contact us on WhatsApp at +91 90329 99466 or use the contact form to reserve your spot."
   },
   {
     question: "Can I enroll in multiple courses together?",

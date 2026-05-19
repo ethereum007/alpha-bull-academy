@@ -87,8 +87,8 @@ export default function TermsOfServicePage() {
                 person.
               </li>
               <li>
-                We may run live online cohorts, recorded modules, classroom
-                batches, or hybrid formats. Specific course pages describe what
+                We may run live online cohorts, recorded modules, announced
+                workshops, or other online-first formats. Specific course pages describe what
                 is included.
               </li>
               <li>

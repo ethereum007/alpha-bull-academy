@@ -23,23 +23,25 @@ export const metadata: Metadata = {
   title:
     "Trading Classes in Visakhapatnam (Vizag) — Live Online Stock Market Course | AlphaBull Academy",
   description:
-    "Looking for trading classes in Visakhapatnam? AlphaBull Academy's live online stock market courses are trusted by Vizag traders from Dwaraka Nagar, MVP Colony, Madhurawada and Gajuwaka. Same Columbia MBA / Wall Street mentor as Hyderabad. Courses from ₹6,999. Free demo available.",
+    "Looking for trading classes in Visakhapatnam? AlphaBull Academy's live online stock market courses are trusted by Vizag traders from Dwaraka Nagar, MVP Colony, Madhurawada and Gajuwaka. Same Columbia MBA / Wall Street mentor as Hyderabad. Courses from ₹8,999. Free demo available.",
   keywords:
     "trading classes in visakhapatnam, trading classes vizag, share market classes vizag, share market classes visakhapatnam, stock market course vizag, online trading course andhra pradesh, trading classes dwaraka nagar, share market classes MVP colony, share market institute madhurawada, stock market training gajuwaka, technical analysis visakhapatnam, options trading vizag, intraday trading visakhapatnam, vizag trading academy, andhra pradesh stock market mentor, AP share market course",
   alternates: { canonical: "https://alphabullacademy.com/trading-classes-visakhapatnam" },
   openGraph: {
     title: "Trading Classes in Visakhapatnam — AlphaBull Academy",
     description:
-      "Live online stock market training for Vizag from Hyderabad's #1 trading academy. 3000+ students trained.",
+      "Live online stock market training for Vizag from AlphaBull Academy. 2000+ students trained.",
     url: "https://alphabullacademy.com/trading-classes-visakhapatnam",
     type: "website",
     siteName: "AlphaBull Trading Academy",
     locale: "en_IN",
+    images: ["https://alphabullacademy.com/og-image.jpg"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Trading Classes in Visakhapatnam — AlphaBull Academy",
-    description: "Live online trading course for Vizag. 3000+ students trained.",
+    description: "Live online trading course for Vizag. 2000+ students trained.",
+    images: ["https://alphabullacademy.com/og-image.jpg"],
   },
 };
 
@@ -63,15 +65,15 @@ const localities = [
 const courses = [
   {
     name: "Stock Market Fundamentals",
-    price: "₹6,999",
+    price: "₹8,999",
     duration: "4 weeks · Online",
     summary:
-      "Beginner-friendly trading course delivered live online. Built for Vizag students new to the markets — equity basics, terminology, and your first profitable trade by week 4.",
+      "Beginner-friendly trading course delivered live online. Built for Vizag students new to the markets — equity basics, terminology, and your first structured practice trade by week 4.",
     href: "https://rzp.io/rzp/7UZGE0Dg",
   },
   {
     name: "Technical Analysis Mastery",
-    price: "₹9,999",
+    price: "₹24,999",
     duration: "4 weeks · Online",
     summary:
       "Vizag's most-requested technical analysis course. Price action, candlestick patterns, support/resistance, CPR, EMA, and breakout setups — taught live with evening batches.",
@@ -79,7 +81,7 @@ const courses = [
   },
   {
     name: "Options & Derivatives",
-    price: "₹14,999",
+    price: "₹44,999",
     duration: "4 weeks · Online",
     summary:
       "Advanced options & futures trading for serious Vizag traders. Strategies, hedging, position sizing, and live trade reviews. Perfect for working IT and shipping professionals.",
@@ -91,7 +93,7 @@ const reasons = [
   {
     icon: Video,
     title: "100% live online",
-    text: "No travel, no traffic. Same instructor, same content, same private community as our Hyderabad classroom batches. All sessions recorded.",
+    text: "No travel, no traffic. Same instructor, same content, same private community as the main AlphaBull cohort. All sessions recorded.",
   },
   {
     icon: GraduationCap,
@@ -113,7 +115,7 @@ const reasons = [
 const faqs = [
   {
     q: "Are these trading classes available offline in Visakhapatnam?",
-    a: "Currently we run live online cohorts for Visakhapatnam students — same instructor (Kiran Dutta — Columbia MBA, Wall Street alum), same content, same private community as our Hyderabad classroom. We periodically host weekend bootcamps in Vizag for advanced students; ask on WhatsApp for the next date.",
+    a: "Currently we run live online cohorts for Visakhapatnam students with the same instructor (Kiran Dutta, Columbia MBA and Wall Street alum), same content, and same private community as the main AlphaBull cohort. We may run announced weekend workshops in Vizag later; ask on WhatsApp for the next date.",
   },
   {
     q: "I work at the Rushikonda IT SEZ. Can I attend?",
@@ -129,7 +131,7 @@ const faqs = [
   },
   {
     q: "What is the fee structure?",
-    a: "Stock Market Fundamentals: ₹6,999. Technical Analysis Mastery: ₹9,999. Options & Derivatives: ₹14,999. All include lifetime mentorship in our private trader community.",
+    a: "Stock Market Fundamentals: ₹8,999. Technical Analysis Mastery: ₹24,999. Options & Derivatives: ₹44,999. All include lifetime mentorship in our private trader community.",
   },
   {
     q: "I'm in Anakapalle, Bheemunipatnam, or Pendurthi. Can I join?",
@@ -140,21 +142,14 @@ const faqs = [
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
-  name: "AlphaBull Trading Academy — Trading Classes Visakhapatnam",
+  name: "AlphaBull Trading Academy - Online Trading Classes Visakhapatnam",
   url: "https://alphabullacademy.com/trading-classes-visakhapatnam",
-  logo: "https://alphabullacademy.com/favicon.ico",
+  logo: "https://alphabullacademy.com/logo.png",
   email: "contact@alphabullacademy.com",
   telephone: "+91-9032999466",
-  priceRange: "₹6,999 – ₹14,999",
+  priceRange: "₹8,999 – ₹44,999",
   description:
     "Live online stock market and trading classes for students in Visakhapatnam (Vizag) and the rest of north coastal Andhra Pradesh.",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Visakhapatnam",
-    addressRegion: "Andhra Pradesh",
-    addressCountry: "IN",
-  },
-  geo: { "@type": "GeoCoordinates", latitude: 17.6868, longitude: 83.2185 },
   areaServed: localities.concat([
     "Visakhapatnam",
     "Vizag",
@@ -173,12 +168,6 @@ const localBusinessSchema = {
       price: c.price.replace("₹", "").replace(",", ""),
       priceCurrency: "INR",
     })),
-  },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "500",
-    bestRating: "5",
   },
 };
 
@@ -224,10 +213,10 @@ export default function TradingClassesVisakhapatnamPage() {
                 Live Online · Visakhapatnam · Coastal Andhra
               </Badge>
               <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-6">
-                Trading Classes in Visakhapatnam — Live Online from Hyderabad's #1 Mentor
+                Trading Classes in Visakhapatnam — Live Online with an Experienced Mentor
               </h1>
               <p className="text-lg md:text-xl text-white/85 max-w-3xl mb-8 leading-relaxed">
-                AlphaBull Academy delivers Hyderabad's most-trusted trading mentorship straight to Vizag — live online cohorts for students in Dwaraka Nagar, MVP Colony, Madhurawada, Gajuwaka, Rushikonda IT SEZ and beyond. 3000+ alumni. 98% success rate. Same Columbia MBA / Wall Street instructor as our flagship Hyderabad classroom.
+                AlphaBull Academy delivers structured trading mentorship straight to Vizag through live online cohorts for students in Dwaraka Nagar, MVP Colony, Madhurawada, Gajuwaka, Rushikonda IT SEZ and beyond. 2000+ alumni. Learn from Columbia MBA and Wall Street alum Kiran Dutta.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a href="https://wa.me/919032999466" target="_blank" rel="noopener noreferrer">

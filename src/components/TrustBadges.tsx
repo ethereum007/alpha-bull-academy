@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { Award, Shield, Users, TrendingUp, BookOpen, Star } from "lucide-react";
@@ -19,14 +19,14 @@ const badges = [
   },
   {
     icon: Users,
-    title: "3000+ Students",
+    title: "2000+ Students",
     description: "Trained across India with proven results",
     color: "text-green-500"
   },
   {
     icon: TrendingUp,
-    title: "98% Success Rate",
-    description: "Students achieving profitable trading",
+    title: "Risk-First Training",
+    description: "Practical setups, review habits, and capital protection",
     color: "text-orange-500"
   },
   {

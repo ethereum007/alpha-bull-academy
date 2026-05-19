@@ -23,23 +23,25 @@ export const metadata: Metadata = {
   title:
     "Trading Classes in Vijayawada — Live Online Stock Market Course | AlphaBull Academy",
   description:
-    "Looking for trading classes in Vijayawada? AlphaBull Academy delivers live, online stock market training to Vijayawada students — same Columbia MBA / Wall Street mentor who trains Hyderabad's #1 cohort. Courses from ₹6,999. NSE BSE certified content. Book a free demo today.",
+    "Looking for trading classes in Vijayawada? AlphaBull Academy delivers live online stock market training to Vijayawada students with a Columbia MBA / Wall Street mentor. Courses from ₹8,999. Book a free demo today.",
   keywords:
     "trading classes in vijayawada, trading classes vijayawada, share market classes vijayawada, stock market course vijayawada, online trading course andhra pradesh, share market classes benz circle, trading classes patamata, share market institute vijayawada, stock market training MG road vijayawada, technical analysis vijayawada, options trading andhra pradesh, intraday trading vijayawada, krishna district share market course, AP stock market mentor, vijayawada trading academy",
   alternates: { canonical: "https://alphabullacademy.com/trading-classes-vijayawada" },
   openGraph: {
     title: "Trading Classes in Vijayawada — AlphaBull Academy",
     description:
-      "Live online stock market training for Vijayawada from Hyderabad's #1 trading academy. 3000+ students trained.",
+      "Live online stock market training for Vijayawada from AlphaBull Academy. 2000+ students trained.",
     url: "https://alphabullacademy.com/trading-classes-vijayawada",
     type: "website",
     siteName: "AlphaBull Trading Academy",
     locale: "en_IN",
+    images: ["https://alphabullacademy.com/og-image.jpg"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Trading Classes in Vijayawada — AlphaBull Academy",
-    description: "Live online trading course for Vijayawada. 3000+ students trained.",
+    description: "Live online trading course for Vijayawada. 2000+ students trained.",
+    images: ["https://alphabullacademy.com/og-image.jpg"],
   },
 };
 
@@ -63,15 +65,15 @@ const localities = [
 const courses = [
   {
     name: "Stock Market Fundamentals",
-    price: "₹6,999",
+    price: "₹8,999",
     duration: "4 weeks · Online",
     summary:
-      "Beginner-friendly trading course delivered live online. Perfect for Vijayawada students new to the markets — learn equity basics, terminology, and place your first trade by week 4.",
+      "Beginner-friendly trading course delivered live online. Perfect for Vijayawada students new to the markets — learn equity basics, terminology, and place your first structured practice trade by week 4.",
     href: "https://rzp.io/rzp/7UZGE0Dg",
   },
   {
     name: "Technical Analysis Mastery",
-    price: "₹9,999",
+    price: "₹24,999",
     duration: "4 weeks · Online",
     summary:
       "Andhra's most-requested technical analysis course. Price action, candlestick patterns, support/resistance, CPR, EMA, and breakout setups — all taught live with Vijayawada batch timings.",
@@ -79,7 +81,7 @@ const courses = [
   },
   {
     name: "Options & Derivatives",
-    price: "₹14,999",
+    price: "₹44,999",
     duration: "4 weeks · Online",
     summary:
       "Advanced options & futures trading for serious AP traders. Strategies, hedging, position sizing, and live trade reviews. Recordings available for working professionals.",
@@ -91,7 +93,7 @@ const reasons = [
   {
     icon: Video,
     title: "100% live online",
-    text: "No need to travel. Same instructor, same content, same private Telegram community as our Hyderabad classroom batches. All sessions recorded.",
+    text: "No need to travel. Same instructor, same content, same private Telegram community as the main AlphaBull cohort. All sessions recorded.",
   },
   {
     icon: GraduationCap,
@@ -113,7 +115,7 @@ const reasons = [
 const faqs = [
   {
     q: "Are these trading classes available offline in Vijayawada?",
-    a: "Currently we run live online cohorts for Vijayawada students. The advantage: you get the exact same content, instructor (Kiran Dutta — Columbia MBA, Wall Street alum), and community as our Hyderabad classroom batches — without the 4-hour commute. We do periodically run weekend bootcamps in Vijayawada for advanced students; ask on WhatsApp for the next date.",
+    a: "Currently we run live online cohorts for Vijayawada students. The advantage: you get the exact same content, instructor (Kiran Dutta, Columbia MBA and Wall Street alum), and community as the main AlphaBull cohort without travel. We may run announced weekend workshops in Vijayawada later; ask on WhatsApp for the next date.",
   },
   {
     q: "What's the language of instruction?",
@@ -129,32 +131,25 @@ const faqs = [
   },
   {
     q: "What is the fee structure?",
-    a: "Stock Market Fundamentals: ₹6,999. Technical Analysis Mastery: ₹9,999. Options & Derivatives: ₹14,999. All include lifetime mentorship. No hidden costs.",
+    a: "Stock Market Fundamentals: ₹8,999. Technical Analysis Mastery: ₹24,999. Options & Derivatives: ₹44,999. All include lifetime mentorship. No hidden costs.",
   },
   {
     q: "Do you offer placements?",
-    a: "We are a trading education academy, not a recruiting firm. Our goal is to make you a profitable independent trader. That said, our alumni network has placed students at brokerage desks, prop firms, and family offices through warm introductions.",
+    a: "We are a trading education academy, not a recruiting firm. Our goal is to help you become a disciplined independent trader. That said, our alumni network has placed students at brokerage desks, prop firms, and family offices through warm introductions.",
   },
 ];
 
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
-  name: "AlphaBull Trading Academy — Trading Classes Vijayawada",
+  name: "AlphaBull Trading Academy - Online Trading Classes Vijayawada",
   url: "https://alphabullacademy.com/trading-classes-vijayawada",
-  logo: "https://alphabullacademy.com/favicon.ico",
+  logo: "https://alphabullacademy.com/logo.png",
   email: "contact@alphabullacademy.com",
   telephone: "+91-9032999466",
-  priceRange: "₹6,999 – ₹14,999",
+  priceRange: "₹8,999 – ₹44,999",
   description:
     "Live online stock market and trading classes for students in Vijayawada and the Krishna / Guntur districts of Andhra Pradesh.",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Vijayawada",
-    addressRegion: "Andhra Pradesh",
-    addressCountry: "IN",
-  },
-  geo: { "@type": "GeoCoordinates", latitude: 16.5062, longitude: 80.648 },
   areaServed: localities.concat([
     "Vijayawada",
     "Guntur",
@@ -171,12 +166,6 @@ const localBusinessSchema = {
       price: c.price.replace("₹", "").replace(",", ""),
       priceCurrency: "INR",
     })),
-  },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "500",
-    bestRating: "5",
   },
 };
 
@@ -222,10 +211,10 @@ export default function TradingClassesVijayawadaPage() {
                 Live Online · Vijayawada · Krishna · Guntur
               </Badge>
               <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-6">
-                Trading Classes in Vijayawada — Live Online from Hyderabad's #1 Mentor
+                Trading Classes in Vijayawada — Live Online with an Experienced Mentor
               </h1>
               <p className="text-lg md:text-xl text-white/85 max-w-3xl mb-8 leading-relaxed">
-                AlphaBull Academy brings Hyderabad's most-trusted trading mentorship straight to Vijayawada — through live online cohorts that students from Benz Circle, Patamata, MG Road, Tadepalli and Mangalagiri rely on for serious market education. 3000+ alumni. 98% success rate. Same Columbia MBA / Wall Street instructor as our flagship Hyderabad classroom.
+                AlphaBull Academy brings structured trading mentorship straight to Vijayawada through live online cohorts that students from Benz Circle, Patamata, MG Road, Tadepalli and Mangalagiri rely on for serious market education. 2000+ alumni. Learn from Columbia MBA and Wall Street alum Kiran Dutta.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a href="https://wa.me/919032999466" target="_blank" rel="noopener noreferrer">
