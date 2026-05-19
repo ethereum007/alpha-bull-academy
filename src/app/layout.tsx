@@ -15,6 +15,11 @@ export const metadata: Metadata = {
   keywords:
     "online trading courses india, online stock market course, stock market course for beginners, trading classes in hyderabad online, share market classes hyderabad online, technical analysis course online, options trading course online, intraday trading course, price action trading course, share market classes vijayawada online, trading classes visakhapatnam online, stock market course andhra pradesh, telangana stock market training online, AlphaBull academy, AlphaBull trading academy, kiran dutta trading mentor",
   authors: [{ name: "AlphaBull Trading Academy" }],
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/logo.png",
+  },
   robots: {
     index: true,
     follow: true,
