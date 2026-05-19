@@ -6,7 +6,7 @@ import { Disclaimer } from "@/components/Disclaimer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { GOOGLE_REVIEW_URL, reviewSummary, studentReviews } from "@/lib/reviews";
+import { reviewSummary, studentReviews } from "@/lib/reviews";
 import {
   ArrowRight,
   BookOpenCheck,
@@ -21,7 +21,7 @@ import {
 export const metadata: Metadata = {
   title: "AlphaBull Student Reviews | Trading Course Testimonials",
   description:
-    "Read AlphaBull Trading Academy student reviews, learning outcomes, and Google review links before joining an online stock market course in India.",
+    "Read AlphaBull Trading Academy student reviews and learning outcomes before joining an online stock market course in India.",
   keywords:
     "AlphaBull reviews, AlphaBull Trading Academy reviews, student reviews trading course, stock market course reviews India, online trading course testimonials",
   alternates: { canonical: "https://www.alphabullacademy.com/student-reviews" },
@@ -65,7 +65,7 @@ const proofPoints = [
 const faqs = [
   {
     q: "Are AlphaBull reviews from real students?",
-    a: "This page highlights student feedback and learning outcomes shared with AlphaBull. You can also open the linked Google Reviews profile to read public Google feedback.",
+    a: "This page highlights student feedback and learning outcomes shared with AlphaBull. Since the Google Business Profile is not currently public, we are using this page as the main review and testimonial hub.",
   },
   {
     q: "What do students like most about AlphaBull?",
@@ -90,7 +90,6 @@ const reviewSchema = {
   telephone: "+91-9032999466",
   sameAs: [
     "https://www.alphabullacademy.com",
-    GOOGLE_REVIEW_URL,
     "https://www.linkedin.com/in/kirandutta",
     "https://www.instagram.com/alphabull_club/",
   ],
@@ -172,12 +171,12 @@ export default function StudentReviewsPage() {
                       Book Free Demo
                     </Button>
                   </a>
-                  <a href={GOOGLE_REVIEW_URL} target="_blank" rel="noopener noreferrer">
+                  <Link href="#student-feedback">
                     <Button size="lg" variant="outline" className="h-auto border-2 border-white bg-transparent px-8 py-4 text-base font-semibold text-white hover:bg-white/10 hover:text-white">
-                      Read Google Reviews
+                      Read Student Reviews
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </Button>
-                  </a>
+                  </Link>
                 </div>
               </div>
 
@@ -221,7 +220,7 @@ export default function StudentReviewsPage() {
             </div>
           </section>
 
-          <section className="py-16 md:py-24">
+          <section id="student-feedback" className="py-16 md:py-24">
             <div className="container mx-auto max-w-6xl px-4">
               <div className="mb-12 text-center">
                 <p className="mb-3 text-xs font-semibold uppercase tracking-[1.5px] text-[#F59E0B]">
@@ -284,9 +283,9 @@ export default function StudentReviewsPage() {
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </Link>
-                  <a href={GOOGLE_REVIEW_URL} target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/919032999466" target="_blank" rel="noopener noreferrer">
                     <Button variant="outline" className="h-auto px-6 py-3">
-                      Open Google Reviews
+                      Ask for Student References
                     </Button>
                   </a>
                 </div>

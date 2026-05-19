@@ -1,4 +1,4 @@
-export const GOOGLE_REVIEW_URL = "https://share.google/m50PyVkPpNTRpXUVC";
+export const STUDENT_REVIEW_URL = "/student-reviews";
 
 export const studentReviews = [
   {

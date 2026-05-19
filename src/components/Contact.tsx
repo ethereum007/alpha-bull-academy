@@ -9,7 +9,7 @@ import { useState, useRef } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
-import { GOOGLE_REVIEW_URL } from "@/lib/reviews";
+import { STUDENT_REVIEW_URL } from "@/lib/reviews";
 
 const HCAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY || "";
 
@@ -262,15 +262,15 @@ export const Contact = () => {
               </div>
             </Card>
 
-            <Card className="p-6 hover:shadow-lg transition-shadow cursor-pointer" onClick={() => window.open(GOOGLE_REVIEW_URL, '_blank')}>
+            <Card className="p-6 hover:shadow-lg transition-shadow cursor-pointer" onClick={() => window.location.href = STUDENT_REVIEW_URL}>
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-lg bg-yellow-500/10 flex items-center justify-center flex-shrink-0">
                   <Star className="w-6 h-6 text-yellow-600" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-lg mb-1">Google Reviews</h4>
-                  <p className="text-muted-foreground mb-2">See what our students say</p>
-                  <p className="text-sm text-yellow-600 font-medium">Read reviews & rate us Ã¢â€ â€™</p>
+                  <h4 className="font-semibold text-lg mb-1">Student Reviews</h4>
+                  <p className="text-muted-foreground mb-2">See what our learners say</p>
+                  <p className="text-sm text-yellow-600 font-medium">Read AlphaBull reviews →</p>
                 </div>
               </div>
             </Card>
