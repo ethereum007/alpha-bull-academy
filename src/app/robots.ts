@@ -1,4 +1,4 @@
-import type { MetadataRoute } from "next";
+﻿import type { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -7,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: "Googlebot", allow: "/" },
       { userAgent: "Bingbot", allow: "/" },
     ],
-    sitemap: "https://alphabullacademy.com/sitemap.xml",
-    host: "https://alphabullacademy.com",
+    sitemap: "https://www.alphabullacademy.com/sitemap.xml",
+    host: "https://www.alphabullacademy.com",
   };
 }

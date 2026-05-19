@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Navigation } from "@/components/Navigation";
@@ -26,12 +26,12 @@ export async function generateMetadata(
     description: post.excerpt,
     keywords: post.keywords,
     authors: [{ name: post.author }],
-    alternates: { canonical: `https://alphabullacademy.com/blog/${params.slug}` },
+    alternates: { canonical: `https://www.alphabullacademy.com/blog/${params.slug}` },
     openGraph: {
       title: `${post.title} | AlphaBull Academy`,
       description: post.excerpt,
       type: "article",
-      url: `https://alphabullacademy.com/blog/${params.slug}`,
+      url: `https://www.alphabullacademy.com/blog/${params.slug}`,
       siteName: "AlphaBull Trading Academy",
       locale: "en_IN",
       publishedTime: post.date,
@@ -60,22 +60,22 @@ export default function BlogPostPage({ params }: { params: Params }) {
     author: {
       "@type": "Person",
       name: post.author,
-      url: "https://alphabullacademy.com",
+      url: "https://www.alphabullacademy.com",
     },
     publisher: {
       "@type": "Organization",
       name: "AlphaBull Trading Academy",
-      url: "https://alphabullacademy.com",
+      url: "https://www.alphabullacademy.com",
       logo: {
         "@type": "ImageObject",
-        url: "https://alphabullacademy.com/logo.png",
+        url: "https://www.alphabullacademy.com/logo.png",
       },
     },
     datePublished: post.date,
     dateModified: post.date,
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://alphabullacademy.com/blog/${params.slug}`,
+      "@id": `https://www.alphabullacademy.com/blog/${params.slug}`,
     },
     articleSection: post.category,
     inLanguage: "en-IN",
@@ -85,13 +85,13 @@ export default function BlogPostPage({ params }: { params: Params }) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://alphabullacademy.com" },
-      { "@type": "ListItem", position: 2, name: "Blog", item: "https://alphabullacademy.com/blog" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.alphabullacademy.com" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.alphabullacademy.com/blog" },
       {
         "@type": "ListItem",
         position: 3,
         name: post.title,
-        item: `https://alphabullacademy.com/blog/${params.slug}`,
+        item: `https://www.alphabullacademy.com/blog/${params.slug}`,
       },
     ],
   };

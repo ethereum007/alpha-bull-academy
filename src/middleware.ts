@@ -1,13 +1,13 @@
-import { NextResponse, type NextRequest } from "next/server";
+﻿import { NextResponse, type NextRequest } from "next/server";
 
-const CANONICAL_HOST = "alphabullacademy.com";
+const CANONICAL_HOST = "www.alphabullacademy.com";
 const VERCEL_PREVIEW_HOST = "alpha-bull-academy.vercel.app";
 
 export function middleware(request: NextRequest) {
   const host = request.headers.get("host")?.toLowerCase();
 
   if (
-    host === "www.alphabullacademy.com" ||
+    host === "alphabullacademy.com" ||
     host === "alphabull.club" ||
     host === "www.alphabull.club" ||
     host === VERCEL_PREVIEW_HOST

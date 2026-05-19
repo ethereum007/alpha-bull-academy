@@ -1,7 +1,7 @@
-import type { MetadataRoute } from "next";
+﻿import type { MetadataRoute } from "next";
 import { blogPostsMeta } from "@/data/blogPosts";
 
-const BASE_URL = "https://alphabullacademy.com";
+const BASE_URL = "https://www.alphabullacademy.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();

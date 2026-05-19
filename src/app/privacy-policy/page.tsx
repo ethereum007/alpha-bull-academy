@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
     "How AlphaBull Trading Academy collects, uses, stores, and protects your personal information. Compliant with India's Digital Personal Data Protection Act 2023 and the IT Act 2000.",
-  alternates: { canonical: "https://alphabullacademy.com/privacy-policy" },
+  alternates: { canonical: "https://www.alphabullacademy.com/privacy-policy" },
   robots: { index: true, follow: true },
 };
 
@@ -35,7 +35,7 @@ export default function PrivacyPolicyPage() {
               alphabullacademy.com (the &quot;Site&quot;). This Privacy Policy
               explains what personal information we collect, why we collect it,
               how we use and store it, and the rights you have over your data
-              under Indian law — particularly the{" "}
+              under Indian law â€” particularly the{" "}
               <strong>Digital Personal Data Protection Act, 2023 (DPDP Act)</strong>{" "}
               and the{" "}
               <strong>Information Technology Act, 2000</strong> with associated
@@ -60,7 +60,7 @@ export default function PrivacyPolicyPage() {
               </li>
               <li>
                 <strong>Course enrolments:</strong> name, email, mobile, billing
-                details (handled directly by Razorpay — see Section 5).
+                details (handled directly by Razorpay â€” see Section 5).
               </li>
               <li>
                 <strong>Communications:</strong> any messages you send via
@@ -77,7 +77,7 @@ export default function PrivacyPolicyPage() {
               </li>
               <li>
                 <strong>Server logs:</strong> via Vercel (our hosting provider)
-                — IP address, user agent, and request timestamps for security
+                â€” IP address, user agent, and request timestamps for security
                 and rate-limiting.
               </li>
               <li>
@@ -123,31 +123,31 @@ export default function PrivacyPolicyPage() {
             </p>
             <ul>
               <li>
-                <strong>Vercel</strong> — Site hosting (USA, with Indian
+                <strong>Vercel</strong> â€” Site hosting (USA, with Indian
                 edge nodes).
               </li>
               <li>
-                <strong>Supabase</strong> — backend database for contact-form
+                <strong>Supabase</strong> â€” backend database for contact-form
                 data (Singapore region).
               </li>
               <li>
-                <strong>Resend</strong> — transactional email delivery (USA).
+                <strong>Resend</strong> â€” transactional email delivery (USA).
               </li>
               <li>
-                <strong>Razorpay</strong> — course payment processing (India).
+                <strong>Razorpay</strong> â€” course payment processing (India).
                 Razorpay handles all card and UPI data directly; AlphaBull never
                 sees or stores it.
               </li>
               <li>
                 <strong>Google (Analytics, Tag Manager, Search Console,
-                Fonts)</strong> — analytics and infrastructure.
+                Fonts)</strong> â€” analytics and infrastructure.
               </li>
               <li>
-                <strong>hCaptcha (Intuition Machines, Inc.)</strong> — spam
+                <strong>hCaptcha (Intuition Machines, Inc.)</strong> â€” spam
                 prevention.
               </li>
               <li>
-                <strong>Ahrefs</strong> — aggregate visitor analytics.
+                <strong>Ahrefs</strong> â€” aggregate visitor analytics.
               </li>
             </ul>
             <p>
@@ -173,7 +173,7 @@ export default function PrivacyPolicyPage() {
               We use HTTPS across the entire Site (TLS via Vercel), restrict
               access to personal data to authorised personnel only, and rely on
               SOC-2 / ISO-27001 certified processors (Vercel, Supabase, Google,
-              Razorpay). No system is perfectly secure — please reach us at{" "}
+              Razorpay). No system is perfectly secure â€” please reach us at{" "}
               <a href="mailto:contact@alphabullacademy.com">
                 contact@alphabullacademy.com
               </a>{" "}
@@ -214,7 +214,7 @@ export default function PrivacyPolicyPage() {
             <h2>10. Cookies</h2>
             <p>
               We use cookies for analytics, performance, and preserving your
-              session. You can disable cookies in your browser settings — some
+              session. You can disable cookies in your browser settings â€” some
               parts of the Site (especially the contact form) may not work
               without them.
             </p>
@@ -260,7 +260,7 @@ export default function PrivacyPolicyPage() {
               </li>
             </ul>
             <p>
-              Working hours: Monday–Saturday, 09:00–20:00 IST.
+              Working hours: Mondayâ€“Saturday, 09:00â€“20:00 IST.
             </p>
 
             <h2>14. Contact</h2>

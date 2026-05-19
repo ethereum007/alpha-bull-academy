@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
@@ -24,15 +24,15 @@ export const metadata: Metadata = {
     "Read AlphaBull Trading Academy student reviews, learning outcomes, and Google review links before joining an online stock market course in India.",
   keywords:
     "AlphaBull reviews, AlphaBull Trading Academy reviews, student reviews trading course, stock market course reviews India, online trading course testimonials",
-  alternates: { canonical: "https://alphabullacademy.com/student-reviews" },
+  alternates: { canonical: "https://www.alphabullacademy.com/student-reviews" },
   openGraph: {
     title: "AlphaBull Student Reviews | Trading Course Testimonials",
     description:
       "Real student feedback from AlphaBull learners on price action, risk management, live sessions, and mentorship.",
-    url: "https://alphabullacademy.com/student-reviews",
+    url: "https://www.alphabullacademy.com/student-reviews",
     type: "website",
     siteName: "AlphaBull Trading Academy",
-    images: ["https://alphabullacademy.com/og-image.jpg"],
+    images: ["https://www.alphabullacademy.com/og-image.jpg"],
     locale: "en_IN",
   },
   twitter: {
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     title: "AlphaBull Student Reviews | Trading Course Testimonials",
     description:
       "Read student reviews and learning outcomes before joining AlphaBull's online trading courses.",
-    images: ["https://alphabullacademy.com/og-image.jpg"],
+    images: ["https://www.alphabullacademy.com/og-image.jpg"],
   },
 };
 
@@ -80,16 +80,16 @@ const faqs = [
 const reviewSchema = {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
-  "@id": "https://alphabullacademy.com/#organization",
+  "@id": "https://www.alphabullacademy.com/#organization",
   name: "AlphaBull Trading Academy",
   alternateName: ["AlphaBull Academy", "Trade With AlphaBull"],
-  url: "https://alphabullacademy.com/student-reviews",
-  logo: "https://alphabullacademy.com/logo.png",
-  image: "https://alphabullacademy.com/og-image.jpg",
+  url: "https://www.alphabullacademy.com/student-reviews",
+  logo: "https://www.alphabullacademy.com/logo.png",
+  image: "https://www.alphabullacademy.com/og-image.jpg",
   email: "contact@alphabullacademy.com",
   telephone: "+91-9032999466",
   sameAs: [
-    "https://alphabullacademy.com",
+    "https://www.alphabullacademy.com",
     GOOGLE_REVIEW_URL,
     "https://www.linkedin.com/in/kirandutta",
     "https://www.instagram.com/alphabull_club/",
@@ -131,12 +131,12 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://alphabullacademy.com/" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.alphabullacademy.com/" },
     {
       "@type": "ListItem",
       position: 2,
       name: "Student Reviews",
-      item: "https://alphabullacademy.com/student-reviews",
+      item: "https://www.alphabullacademy.com/student-reviews",
     },
   ],
 };

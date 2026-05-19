@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { MapPin, Phone, Mail, Linkedin, Instagram, Send } from "lucide-react";
@@ -139,7 +139,7 @@ export const Footer = () => {
         <div className="border-t border-primary-foreground/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
             <p className="text-primary-foreground/70">
-              Â© {new Date().getFullYear()} Trade With AlphaBull. All rights reserved.
+              Ã‚Â© {new Date().getFullYear()} Trade With AlphaBull. All rights reserved.
             </p>
             <div className="flex flex-wrap gap-6 justify-center">
               <Link

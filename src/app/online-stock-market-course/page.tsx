@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
@@ -14,15 +14,15 @@ export const metadata: Metadata = {
     "Join AlphaBull's online stock market course for beginners and aspiring traders in India. Learn technical analysis, price action, options basics, and risk management through live online mentorship.",
   keywords:
     "online stock market course, online trading course india, stock market course for beginners, technical analysis course online, price action trading course, options trading course online, share market course online",
-  alternates: { canonical: "https://alphabullacademy.com/online-stock-market-course" },
+  alternates: { canonical: "https://www.alphabullacademy.com/online-stock-market-course" },
   openGraph: {
     title: "Online Stock Market Course in India | AlphaBull Trading Academy",
     description:
       "Live online stock market course covering price action, technical analysis, options basics, and risk management.",
-    url: "https://alphabullacademy.com/online-stock-market-course",
+    url: "https://www.alphabullacademy.com/online-stock-market-course",
     type: "website",
     siteName: "AlphaBull Trading Academy",
-    images: ["https://alphabullacademy.com/og-image.jpg"],
+    images: ["https://www.alphabullacademy.com/og-image.jpg"],
     locale: "en_IN",
   },
 };
@@ -65,7 +65,7 @@ const courseSchema = {
     "@type": "Organization",
     name: "AlphaBull Trading Academy",
     legalName: "Nipun Teach Up Private Limited",
-    sameAs: "https://alphabullacademy.com",
+    sameAs: "https://www.alphabullacademy.com",
   },
   offers: {
     "@type": "Offer",

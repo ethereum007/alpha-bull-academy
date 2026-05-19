@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
@@ -21,27 +21,27 @@ import {
 
 export const metadata: Metadata = {
   title:
-    "Trading Classes in Visakhapatnam (Vizag) — Live Online Stock Market Course | AlphaBull Academy",
+    "Trading Classes in Visakhapatnam (Vizag) â€” Live Online Stock Market Course | AlphaBull Academy",
   description:
-    "Looking for trading classes in Visakhapatnam? AlphaBull Academy's live online stock market courses are trusted by Vizag traders from Dwaraka Nagar, MVP Colony, Madhurawada and Gajuwaka. Same Columbia MBA / Wall Street mentor as Hyderabad. Courses from ₹8,999. Free demo available.",
+    "Looking for trading classes in Visakhapatnam? AlphaBull Academy's live online stock market courses are trusted by Vizag traders from Dwaraka Nagar, MVP Colony, Madhurawada and Gajuwaka. Same Columbia MBA / Wall Street mentor as Hyderabad. Courses from â‚¹8,999. Free demo available.",
   keywords:
     "trading classes in visakhapatnam, trading classes vizag, share market classes vizag, share market classes visakhapatnam, stock market course vizag, online trading course andhra pradesh, trading classes dwaraka nagar, share market classes MVP colony, share market institute madhurawada, stock market training gajuwaka, technical analysis visakhapatnam, options trading vizag, intraday trading visakhapatnam, vizag trading academy, andhra pradesh stock market mentor, AP share market course",
-  alternates: { canonical: "https://alphabullacademy.com/trading-classes-visakhapatnam" },
+  alternates: { canonical: "https://www.alphabullacademy.com/trading-classes-visakhapatnam" },
   openGraph: {
-    title: "Trading Classes in Visakhapatnam — AlphaBull Academy",
+    title: "Trading Classes in Visakhapatnam â€” AlphaBull Academy",
     description:
       "Live online stock market training for Vizag from AlphaBull Academy. 2000+ students trained.",
-    url: "https://alphabullacademy.com/trading-classes-visakhapatnam",
+    url: "https://www.alphabullacademy.com/trading-classes-visakhapatnam",
     type: "website",
     siteName: "AlphaBull Trading Academy",
     locale: "en_IN",
-    images: ["https://alphabullacademy.com/og-image.jpg"],
+    images: ["https://www.alphabullacademy.com/og-image.jpg"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Trading Classes in Visakhapatnam — AlphaBull Academy",
+    title: "Trading Classes in Visakhapatnam â€” AlphaBull Academy",
     description: "Live online trading course for Vizag. 2000+ students trained.",
-    images: ["https://alphabullacademy.com/og-image.jpg"],
+    images: ["https://www.alphabullacademy.com/og-image.jpg"],
   },
 };
 
@@ -65,24 +65,24 @@ const localities = [
 const courses = [
   {
     name: "Stock Market Fundamentals",
-    price: "₹8,999",
-    duration: "4 weeks · Online",
+    price: "â‚¹8,999",
+    duration: "4 weeks Â· Online",
     summary:
-      "Beginner-friendly trading course delivered live online. Built for Vizag students new to the markets — equity basics, terminology, and your first structured practice trade by week 4.",
+      "Beginner-friendly trading course delivered live online. Built for Vizag students new to the markets â€” equity basics, terminology, and your first structured practice trade by week 4.",
     href: "https://rzp.io/rzp/7UZGE0Dg",
   },
   {
     name: "Technical Analysis Mastery",
-    price: "₹24,999",
-    duration: "4 weeks · Online",
+    price: "â‚¹24,999",
+    duration: "4 weeks Â· Online",
     summary:
-      "Vizag's most-requested technical analysis course. Price action, candlestick patterns, support/resistance, CPR, EMA, and breakout setups — taught live with evening batches.",
+      "Vizag's most-requested technical analysis course. Price action, candlestick patterns, support/resistance, CPR, EMA, and breakout setups â€” taught live with evening batches.",
     href: "https://rzp.io/rzp/yB1bafTe",
   },
   {
     name: "Options & Derivatives",
-    price: "₹44,999",
-    duration: "4 weeks · Online",
+    price: "â‚¹44,999",
+    duration: "4 weeks Â· Online",
     summary:
       "Advanced options & futures trading for serious Vizag traders. Strategies, hedging, position sizing, and live trade reviews. Perfect for working IT and shipping professionals.",
     href: "https://wa.me/919032999466",
@@ -98,7 +98,7 @@ const reasons = [
   {
     icon: GraduationCap,
     title: "Columbia MBA / Wall Street mentor",
-    text: "Kiran Dutta brings Columbia MBA pedigree and US trading desk experience to Vizag — a level of mentorship no other AP institute can match.",
+    text: "Kiran Dutta brings Columbia MBA pedigree and US trading desk experience to Vizag â€” a level of mentorship no other AP institute can match.",
   },
   {
     icon: Globe,
@@ -119,7 +119,7 @@ const faqs = [
   },
   {
     q: "I work at the Rushikonda IT SEZ. Can I attend?",
-    a: "Absolutely — many of our Vizag students are IT professionals from Rushikonda, Madhurawada, and Kommadi. Our weekend morning and weekday evening (7–9 PM) batches are designed precisely for working professionals.",
+    a: "Absolutely â€” many of our Vizag students are IT professionals from Rushikonda, Madhurawada, and Kommadi. Our weekend morning and weekday evening (7â€“9 PM) batches are designed precisely for working professionals.",
   },
   {
     q: "How are classes delivered?",
@@ -131,7 +131,7 @@ const faqs = [
   },
   {
     q: "What is the fee structure?",
-    a: "Stock Market Fundamentals: ₹8,999. Technical Analysis Mastery: ₹24,999. Options & Derivatives: ₹44,999. All include lifetime mentorship in our private trader community.",
+    a: "Stock Market Fundamentals: â‚¹8,999. Technical Analysis Mastery: â‚¹24,999. Options & Derivatives: â‚¹44,999. All include lifetime mentorship in our private trader community.",
   },
   {
     q: "I'm in Anakapalle, Bheemunipatnam, or Pendurthi. Can I join?",
@@ -143,11 +143,11 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
   name: "AlphaBull Trading Academy - Online Trading Classes Visakhapatnam",
-  url: "https://alphabullacademy.com/trading-classes-visakhapatnam",
-  logo: "https://alphabullacademy.com/logo.png",
+  url: "https://www.alphabullacademy.com/trading-classes-visakhapatnam",
+  logo: "https://www.alphabullacademy.com/logo.png",
   email: "contact@alphabullacademy.com",
   telephone: "+91-9032999466",
-  priceRange: "₹8,999 – ₹44,999",
+  priceRange: "â‚¹8,999 â€“ â‚¹44,999",
   description:
     "Live online stock market and trading classes for students in Visakhapatnam (Vizag) and the rest of north coastal Andhra Pradesh.",
   areaServed: localities.concat([
@@ -165,7 +165,7 @@ const localBusinessSchema = {
       "@type": "Offer",
       position: i + 1,
       itemOffered: { "@type": "Course", name: c.name, description: c.summary },
-      price: c.price.replace("₹", "").replace(",", ""),
+      price: c.price.replace("â‚¹", "").replace(",", ""),
       priceCurrency: "INR",
     })),
   },
@@ -185,12 +185,12 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://alphabullacademy.com/" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.alphabullacademy.com/" },
     {
       "@type": "ListItem",
       position: 2,
       name: "Trading Classes Visakhapatnam",
-      item: "https://alphabullacademy.com/trading-classes-visakhapatnam",
+      item: "https://www.alphabullacademy.com/trading-classes-visakhapatnam",
     },
   ],
 };
@@ -210,10 +210,10 @@ export default function TradingClassesVisakhapatnamPage() {
             <div className="container mx-auto px-4 max-w-5xl">
               <Badge className="mb-4 bg-white/15 text-white border-white/20">
                 <Anchor className="w-3 h-3 mr-1" />
-                Live Online · Visakhapatnam · Coastal Andhra
+                Live Online Â· Visakhapatnam Â· Coastal Andhra
               </Badge>
               <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-6">
-                Trading Classes in Visakhapatnam — Live Online with an Experienced Mentor
+                Trading Classes in Visakhapatnam â€” Live Online with an Experienced Mentor
               </h1>
               <p className="text-lg md:text-xl text-white/85 max-w-3xl mb-8 leading-relaxed">
                 AlphaBull Academy delivers structured trading mentorship straight to Vizag through live online cohorts for students in Dwaraka Nagar, MVP Colony, Madhurawada, Gajuwaka, Rushikonda IT SEZ and beyond. 2000+ alumni. Learn from Columbia MBA and Wall Street alum Kiran Dutta.
@@ -241,7 +241,7 @@ export default function TradingClassesVisakhapatnamPage() {
                 Why Vizag Traders Choose AlphaBull
               </h2>
               <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
-                Visakhapatnam has many local coaching centres — but very few that are taught by mentors with US trading desk experience. That's where AlphaBull stands apart.
+                Visakhapatnam has many local coaching centres â€” but very few that are taught by mentors with US trading desk experience. That's where AlphaBull stands apart.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {reasons.map((r) => (
@@ -267,7 +267,7 @@ export default function TradingClassesVisakhapatnamPage() {
                 Trading Courses for Visakhapatnam Students
               </h2>
               <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
-                Three structured paths — beginner to options pro. All delivered live online with recordings, mentor calls, and a private community.
+                Three structured paths â€” beginner to options pro. All delivered live online with recordings, mentor calls, and a private community.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {courses.map((c) => (
@@ -275,7 +275,7 @@ export default function TradingClassesVisakhapatnamPage() {
                     <h3 className="text-xl font-bold mb-2">{c.name}</h3>
                     <div className="flex items-baseline gap-2 mb-3">
                       <span className="text-3xl font-bold text-primary">{c.price}</span>
-                      <span className="text-sm text-muted-foreground">· {c.duration}</span>
+                      <span className="text-sm text-muted-foreground">Â· {c.duration}</span>
                     </div>
                     <p className="text-muted-foreground mb-6 flex-1">{c.summary}</p>
                     <a href={c.href} target="_blank" rel="noopener noreferrer">
@@ -313,7 +313,7 @@ export default function TradingClassesVisakhapatnamPage() {
               <div className="mt-12 text-center">
                 <h3 className="text-2xl font-semibold mb-3">Also serving the rest of South India</h3>
                 <p className="text-muted-foreground max-w-2xl mx-auto">
-                  Vizag students train alongside peers from Vijayawada, Tirupati, Hyderabad, and Guntur in the same live cohorts. <Link className="text-primary underline" href="/trading-classes-hyderabad">See our Hyderabad page</Link> · <Link className="text-primary underline" href="/trading-classes-vijayawada">See our Vijayawada page</Link>.
+                  Vizag students train alongside peers from Vijayawada, Tirupati, Hyderabad, and Guntur in the same live cohorts. <Link className="text-primary underline" href="/trading-classes-hyderabad">See our Hyderabad page</Link> Â· <Link className="text-primary underline" href="/trading-classes-vijayawada">See our Vijayawada page</Link>.
                 </p>
               </div>
             </div>
@@ -322,7 +322,7 @@ export default function TradingClassesVisakhapatnamPage() {
           <section className="bg-muted/30 py-16 md:py-24">
             <div className="container mx-auto px-4 max-w-4xl">
               <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center">
-                Frequently Asked Questions — Visakhapatnam
+                Frequently Asked Questions â€” Visakhapatnam
               </h2>
               <div className="space-y-6">
                 {faqs.map((f) => (
@@ -341,7 +341,7 @@ export default function TradingClassesVisakhapatnamPage() {
                 Ready to Trade Like a Pro? Book Your Free Demo
               </h2>
               <p className="text-white/80 mb-8 max-w-2xl mx-auto text-lg">
-                See exactly how Kiran teaches, ask any question, and get a personalised roadmap for your trading journey — no commitment, just a 60-minute Zoom call.
+                See exactly how Kiran teaches, ask any question, and get a personalised roadmap for your trading journey â€” no commitment, just a 60-minute Zoom call.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="https://wa.me/919032999466" target="_blank" rel="noopener noreferrer">

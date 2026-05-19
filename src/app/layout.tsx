@@ -1,10 +1,10 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
 import { Providers } from "./providers";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://alphabullacademy.com"),
+  metadataBase: new URL("https://www.alphabullacademy.com"),
   title: {
     default:
       "Online Trading Courses in India | Stock Market Training | AlphaBull",
@@ -31,14 +31,14 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
-  alternates: { canonical: "https://alphabullacademy.com/" },
+  alternates: { canonical: "https://www.alphabullacademy.com/" },
   openGraph: {
     type: "website",
-    url: "https://alphabullacademy.com/",
+    url: "https://www.alphabullacademy.com/",
     title: "Online Trading Courses in India | AlphaBull Trading Academy",
     description:
       "Live online stock market training with price action, technical analysis, options trading, mentorship, and free demo classes.",
-    images: ["https://alphabullacademy.com/og-image.jpg"],
+    images: ["https://www.alphabullacademy.com/og-image.jpg"],
     locale: "en_IN",
     siteName: "AlphaBull Trading Academy",
   },
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     title: "Online Trading Courses in India | AlphaBull Trading Academy",
     description:
       "Live online stock market training with price action, technical analysis, options trading, mentorship, and free demo classes.",
-    images: ["https://alphabullacademy.com/og-image.jpg"],
+    images: ["https://www.alphabullacademy.com/og-image.jpg"],
   },
 };
 
@@ -55,18 +55,18 @@ const structuredData = [
   {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
-    "@id": "https://alphabullacademy.com/#organization",
+    "@id": "https://www.alphabullacademy.com/#organization",
     name: "AlphaBull Trading Academy",
     alternateName: ["AlphaBull Academy", "Trade With AlphaBull"],
     legalName: "Nipun Teach Up Private Limited",
     description:
       "AlphaBull Trading Academy is an online stock market education brand operated by Nipun Teach Up Private Limited. It offers live online courses in price action, technical analysis, options trading, and risk management.",
-    url: "https://alphabullacademy.com",
-    logo: "https://alphabullacademy.com/logo.png",
-    image: "https://alphabullacademy.com/og-image.jpg",
+    url: "https://www.alphabullacademy.com",
+    logo: "https://www.alphabullacademy.com/logo.png",
+    image: "https://www.alphabullacademy.com/og-image.jpg",
     email: "contact@alphabullacademy.com",
     telephone: "+91-9032999466",
-    priceRange: "₹8,999 - ₹44,999",
+    priceRange: "â‚¹8,999 - â‚¹44,999",
     areaServed: [
       { "@type": "State", name: "Telangana" },
       { "@type": "State", name: "Andhra Pradesh" },
@@ -98,12 +98,12 @@ const structuredData = [
     "@type": "WebSite",
     name: "AlphaBull Trading Academy",
     alternateName: "AlphaBull Academy",
-    url: "https://alphabullacademy.com",
+    url: "https://www.alphabullacademy.com",
     potentialAction: {
       "@type": "SearchAction",
       target: {
         "@type": "EntryPoint",
-        urlTemplate: "https://alphabullacademy.com/blog?q={search_term_string}",
+        urlTemplate: "https://www.alphabullacademy.com/blog?q={search_term_string}",
       },
       "query-input": "required name=search_term_string",
     },
@@ -127,7 +127,7 @@ const structuredData = [
           provider: {
             "@type": "Organization",
             name: "AlphaBull Trading Academy",
-            sameAs: "https://alphabullacademy.com",
+            sameAs: "https://www.alphabullacademy.com",
           },
           offers: {
             "@type": "Offer",
@@ -156,7 +156,7 @@ const structuredData = [
           provider: {
             "@type": "Organization",
             name: "AlphaBull Trading Academy",
-            sameAs: "https://alphabullacademy.com",
+            sameAs: "https://www.alphabullacademy.com",
           },
           offers: {
             "@type": "Offer",
@@ -185,7 +185,7 @@ const structuredData = [
           provider: {
             "@type": "Organization",
             name: "AlphaBull Trading Academy",
-            sameAs: "https://alphabullacademy.com",
+            sameAs: "https://www.alphabullacademy.com",
           },
           offers: {
             "@type": "Offer",
@@ -214,7 +214,7 @@ const structuredData = [
         name: "Where can I find the best trading classes in Hyderabad?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "AlphaBull Trading Academy offers live online stock market training for students in Hyderabad, Telangana, Andhra Pradesh, and the rest of India. Courses start at ₹8,999. Call +91-9032999466 to book a free demo.",
+          text: "AlphaBull Trading Academy offers live online stock market training for students in Hyderabad, Telangana, Andhra Pradesh, and the rest of India. Courses start at â‚¹8,999. Call +91-9032999466 to book a free demo.",
         },
       },
       {
@@ -230,7 +230,7 @@ const structuredData = [
         name: "What are the best trading courses in Hyderabad?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "AlphaBull Trading Academy offers three flagship online courses: Technical Analysis Pro (₹8,999), Price Action Mastery (₹24,999), and Advanced Trading Strategies (₹44,999). Courses include live sessions, recordings, community support, and practical risk-management training.",
+          text: "AlphaBull Trading Academy offers three flagship online courses: Technical Analysis Pro (â‚¹8,999), Price Action Mastery (â‚¹24,999), and Advanced Trading Strategies (â‚¹44,999). Courses include live sessions, recordings, community support, and practical risk-management training.",
         },
       },
       {
@@ -238,7 +238,7 @@ const structuredData = [
         name: "How much do share market classes cost in Hyderabad?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Online share market classes at AlphaBull Academy range from ₹8,999 for beginner training to ₹44,999 for advanced mentorship. Each course explains its inclusions before enrollment.",
+          text: "Online share market classes at AlphaBull Academy range from â‚¹8,999 for beginner training to â‚¹44,999 for advanced mentorship. Each course explains its inclusions before enrollment.",
         },
       },
       {

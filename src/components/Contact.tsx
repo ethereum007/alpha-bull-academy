@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -198,7 +198,7 @@ export const Contact = () => {
                 <div>
                   <h4 className="font-semibold text-lg mb-1">WhatsApp</h4>
                   <p className="text-muted-foreground mb-2">+91 90329 99466</p>
-                  <p className="text-sm text-green-600 font-medium">Click to chat instantly â†’</p>
+                  <p className="text-sm text-green-600 font-medium">Click to chat instantly Ã¢â€ â€™</p>
                 </div>
               </div>
             </Card>
@@ -244,7 +244,7 @@ export const Contact = () => {
                 <div>
                   <h4 className="font-semibold text-lg mb-1">Instagram</h4>
                   <p className="text-muted-foreground mb-2">@alphabull_club</p>
-                  <p className="text-sm text-pink-600 font-medium">Follow for daily insights â†’</p>
+                  <p className="text-sm text-pink-600 font-medium">Follow for daily insights Ã¢â€ â€™</p>
                 </div>
               </div>
             </Card>
@@ -257,7 +257,7 @@ export const Contact = () => {
                 <div>
                   <h4 className="font-semibold text-lg mb-1">Telegram</h4>
                   <p className="text-muted-foreground mb-2">Join our community</p>
-                  <p className="text-sm text-blue-600 font-medium">Get live updates & signals â†’</p>
+                  <p className="text-sm text-blue-600 font-medium">Get live updates & signals Ã¢â€ â€™</p>
                 </div>
               </div>
             </Card>
@@ -270,7 +270,7 @@ export const Contact = () => {
                 <div>
                   <h4 className="font-semibold text-lg mb-1">Google Reviews</h4>
                   <p className="text-muted-foreground mb-2">See what our students say</p>
-                  <p className="text-sm text-yellow-600 font-medium">Read reviews & rate us â†’</p>
+                  <p className="text-sm text-yellow-600 font-medium">Read reviews & rate us Ã¢â€ â€™</p>
                 </div>
               </div>
             </Card>

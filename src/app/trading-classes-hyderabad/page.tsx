@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
@@ -21,26 +21,26 @@ export const metadata: Metadata = {
   title:
     "Online Trading Classes in Hyderabad | Stock Market Training | AlphaBull Academy",
   description:
-    "Looking for trading classes in Hyderabad? AlphaBull Academy offers live online stock market training for Hyderabad, Telangana & Andhra Pradesh students. 2000+ students trained. Courses from ₹8,999. Free demo available.",
+    "Looking for trading classes in Hyderabad? AlphaBull Academy offers live online stock market training for Hyderabad, Telangana & Andhra Pradesh students. 2000+ students trained. Courses from â‚¹8,999. Free demo available.",
   keywords:
     "trading classes in hyderabad, trading classes hyderabad, share market classes hyderabad, stock market classes hyderabad, share market classes near me, best trading institute hyderabad, technical analysis course hyderabad, options trading course hyderabad, intraday trading hyderabad, share market training ameerpet, trading classes madhapur, trading institute gachibowli, share market classes secunderabad, stock market course HITEC city, trading classes kukatpally, share market training begumpet, kondapur stock market training, banjara hills trading classes, jubilee hills share market course",
-  alternates: { canonical: "https://alphabullacademy.com/trading-classes-hyderabad" },
+  alternates: { canonical: "https://www.alphabullacademy.com/trading-classes-hyderabad" },
   openGraph: {
     title: "Online Trading Classes in Hyderabad - AlphaBull Academy",
     description:
       "Stock market training in Hyderabad with price action, technical analysis, options trading, and live mentorship. 2000+ students trained.",
-    url: "https://alphabullacademy.com/trading-classes-hyderabad",
+    url: "https://www.alphabullacademy.com/trading-classes-hyderabad",
     type: "website",
     siteName: "AlphaBull Trading Academy",
     locale: "en_IN",
-    images: ["https://alphabullacademy.com/og-image.jpg"],
+    images: ["https://www.alphabullacademy.com/og-image.jpg"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Online Trading Classes in Hyderabad - AlphaBull Academy",
     description:
       "Stock market training in Hyderabad with price action, technical analysis, options trading, and live mentorship.",
-    images: ["https://alphabullacademy.com/og-image.jpg"],
+    images: ["https://www.alphabullacademy.com/og-image.jpg"],
   },
 };
 
@@ -66,7 +66,7 @@ const localityList = [
 const courses = [
   {
     name: "Stock Market Fundamentals",
-    price: "₹8,999",
+    price: "â‚¹8,999",
     duration: "4 weeks",
     summary:
       "Best beginner online trading course for Hyderabad students, covering equities, terminology, charts, and your first structured practice trade.",
@@ -74,7 +74,7 @@ const courses = [
   },
   {
     name: "Technical Analysis Mastery",
-    price: "₹24,999",
+    price: "â‚¹24,999",
     duration: "4 weeks",
     summary:
       "A practical online technical analysis course for Hyderabad students. Price action, candlestick patterns, support/resistance, CPR, EMA, and breakout setups.",
@@ -82,10 +82,10 @@ const courses = [
   },
   {
     name: "Options & Derivatives",
-    price: "₹44,999",
+    price: "â‚¹44,999",
     duration: "4 weeks",
     summary:
-      "Advanced options & futures trading — strategies, hedging, position sizing, and live trade reviews. Ideal for working professionals in Hyderabad.",
+      "Advanced options & futures trading â€” strategies, hedging, position sizing, and live trade reviews. Ideal for working professionals in Hyderabad.",
     href: "https://wa.me/919032999466",
   },
 ];
@@ -120,11 +120,11 @@ const faqs = [
   },
   {
     q: "What is the fee structure for AlphaBull's trading classes?",
-    a: "Stock Market Fundamentals starts at ₹8,999, Technical Analysis Mastery is ₹24,999, and the advanced Options & Derivatives course is ₹44,999. All courses include lifetime mentorship in our private trader community.",
+    a: "Stock Market Fundamentals starts at â‚¹8,999, Technical Analysis Mastery is â‚¹24,999, and the advanced Options & Derivatives course is â‚¹44,999. All courses include lifetime mentorship in our private trader community.",
   },
   {
     q: "Are there share market classes near me in Hyderabad for beginners?",
-    a: "Yes — our Stock Market Fundamentals program is built specifically for absolute beginners. No prior knowledge required. We start from how an order book works and end with you placing live trades by week 4.",
+    a: "Yes â€” our Stock Market Fundamentals program is built specifically for absolute beginners. No prior knowledge required. We start from how an order book works and end with you placing live trades by week 4.",
   },
   {
     q: "Can working professionals attend?",
@@ -144,11 +144,11 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
   name: "AlphaBull Trading Academy - Online Trading Classes Hyderabad",
-  url: "https://alphabullacademy.com/trading-classes-hyderabad",
-  logo: "https://alphabullacademy.com/logo.png",
+  url: "https://www.alphabullacademy.com/trading-classes-hyderabad",
+  logo: "https://www.alphabullacademy.com/logo.png",
   email: "contact@alphabullacademy.com",
   telephone: "+91-9032999466",
-  priceRange: "₹8,999 – ₹44,999",
+  priceRange: "â‚¹8,999 â€“ â‚¹44,999",
   description:
     "Live online stock market training academy offering trading classes for beginners, intermediate, and advanced students in Hyderabad, Telangana and Andhra Pradesh.",
   areaServed: localityList.concat([
@@ -167,7 +167,7 @@ const localBusinessSchema = {
       "@type": "Offer",
       position: i + 1,
       itemOffered: { "@type": "Course", name: c.name, description: c.summary },
-      price: c.price.replace("₹", "").replace(",", ""),
+      price: c.price.replace("â‚¹", "").replace(",", ""),
       priceCurrency: "INR",
     })),
   },
@@ -187,12 +187,12 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://alphabullacademy.com/" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.alphabullacademy.com/" },
     {
       "@type": "ListItem",
       position: 2,
       name: "Trading Classes Hyderabad",
-      item: "https://alphabullacademy.com/trading-classes-hyderabad",
+      item: "https://www.alphabullacademy.com/trading-classes-hyderabad",
     },
   ],
 };
@@ -221,7 +221,7 @@ export default function TradingClassesHyderabadPage() {
           <section className="bg-gradient-to-br from-[#1E3A8A] to-[#0F172A] text-white py-16 md:py-24">
             <div className="container mx-auto px-4 max-w-5xl">
               <Badge className="mb-4 bg-white/15 text-white border-white/20">
-                Hyderabad · Telangana · Andhra Pradesh
+                Hyderabad Â· Telangana Â· Andhra Pradesh
               </Badge>
               <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-6">
                 Online Trading Classes in Hyderabad - Learn from an Experienced Stock
@@ -306,7 +306,7 @@ export default function TradingClassesHyderabadPage() {
                         {c.price}
                       </span>
                       <span className="text-sm text-muted-foreground">
-                        · {c.duration}
+                        Â· {c.duration}
                       </span>
                     </div>
                     <p className="text-muted-foreground mb-6 flex-1">{c.summary}</p>
@@ -359,7 +359,7 @@ export default function TradingClassesHyderabadPage() {
                   same private community.
                 </p>
                 <p className="text-muted-foreground max-w-2xl mx-auto mt-4">
-                  Dedicated pages: <Link className="text-primary underline" href="/trading-classes-vijayawada">Trading classes in Vijayawada</Link> · <Link className="text-primary underline" href="/trading-classes-visakhapatnam">Trading classes in Visakhapatnam</Link>
+                  Dedicated pages: <Link className="text-primary underline" href="/trading-classes-vijayawada">Trading classes in Vijayawada</Link> Â· <Link className="text-primary underline" href="/trading-classes-visakhapatnam">Trading classes in Visakhapatnam</Link>
                 </p>
               </div>
             </div>

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
@@ -6,8 +6,8 @@ import { Footer } from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Terms of Service",
   description:
-    "Terms governing use of AlphaBull Trading Academy's website, courses, and community. Educational content only — not investment advice.",
-  alternates: { canonical: "https://alphabullacademy.com/terms-of-service" },
+    "Terms governing use of AlphaBull Trading Academy's website, courses, and community. Educational content only â€” not investment advice.",
+  alternates: { canonical: "https://www.alphabullacademy.com/terms-of-service" },
   robots: { index: true, follow: true },
 };
 
@@ -39,7 +39,7 @@ export default function TermsOfServicePage() {
               read them carefully.
             </p>
 
-            <h2>1. Educational purpose only — important disclaimer</h2>
+            <h2>1. Educational purpose only â€” important disclaimer</h2>
             <p>
               <strong>
                 AlphaBull is a stock market education business. We do not
@@ -107,9 +107,9 @@ export default function TermsOfServicePage() {
 
             <h2>5. Intellectual property</h2>
             <p>
-              All course materials — including videos, slides, written content,
+              All course materials â€” including videos, slides, written content,
               templates, charts, and proprietary methodologies (such as the
-              AlphaBull price-action framework) — are owned by AlphaBull or
+              AlphaBull price-action framework) â€” are owned by AlphaBull or
               licensed to us. You receive a personal, non-exclusive,
               non-transferable, revocable licence to access and use them solely
               for your individual learning.

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import AboutClient from "./AboutClient";
 
 export const metadata: Metadata = {
@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     "AlphaBull is an online stock market education platform in India. Learn stock market concepts, trading strategies, and risk management through structured online courses.",
   keywords:
     "stock market education India, trading courses, learn trading, stock market training Hyderabad",
-  alternates: { canonical: "https://alphabullacademy.com/about" },
+  alternates: { canonical: "https://www.alphabullacademy.com/about" },
 };
 
 export default function AboutPage() {

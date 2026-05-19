@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Refund Policy",
   description:
     "Refund policy for AlphaBull Trading Academy courses. Clear timelines and eligibility for full refunds.",
-  alternates: { canonical: "https://alphabullacademy.com/refund-policy" },
+  alternates: { canonical: "https://www.alphabullacademy.com/refund-policy" },
   robots: { index: true, follow: true },
 };
 
@@ -36,12 +36,12 @@ export default function RefundPolicyPage() {
 
             <h2>1. Free demo class</h2>
             <p>
-              The free demo class is exactly that — free. There is nothing to
+              The free demo class is exactly that â€” free. There is nothing to
               refund. Attend the demo first to make sure the course is right
               for you before paying.
             </p>
 
-            <h2>2. Standard refund window — 7 days from enrolment, before
+            <h2>2. Standard refund window â€” 7 days from enrolment, before
               session 3</h2>
             <p>
               You may request a full refund of your course fee if{" "}
@@ -66,8 +66,8 @@ export default function RefundPolicyPage() {
             <h2>3. After session 3 or after 7 days</h2>
             <p>
               Once you have attended your third live session{" "}
-              <strong>or</strong> 7 days have passed since payment — whichever
-              is earlier — refunds are no longer available, because by that
+              <strong>or</strong> 7 days have passed since payment â€” whichever
+              is earlier â€” refunds are no longer available, because by that
               point you have access to a substantial portion of the course
               materials and proprietary content.
             </p>
@@ -83,7 +83,7 @@ export default function RefundPolicyPage() {
               <li>
                 <strong>Course cancelled by AlphaBull:</strong> in the unlikely
                 event we cancel a cohort before it begins, you receive a full
-                refund automatically — no request needed.
+                refund automatically â€” no request needed.
               </li>
               <li>
                 <strong>Bundles and promotional pricing:</strong> if you bought
@@ -108,7 +108,7 @@ export default function RefundPolicyPage() {
             <h2>6. How to request a refund</h2>
             <p>Email us with the following:</p>
             <ul>
-              <li>Subject line: <em>Refund request — [your name]</em></li>
+              <li>Subject line: <em>Refund request â€” [your name]</em></li>
               <li>Course you enrolled in</li>
               <li>Date of payment</li>
               <li>Razorpay transaction ID (or screenshot of the receipt)</li>
@@ -127,7 +127,7 @@ export default function RefundPolicyPage() {
             <p>
               Eligible refunds are initiated within{" "}
               <strong>5 business days</strong> of approval. Razorpay typically
-              credits the original payment method within 5–10 additional
+              credits the original payment method within 5â€“10 additional
               business days, depending on your bank.
             </p>
 

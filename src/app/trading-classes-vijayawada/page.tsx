@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
@@ -21,27 +21,27 @@ import {
 
 export const metadata: Metadata = {
   title:
-    "Trading Classes in Vijayawada — Live Online Stock Market Course | AlphaBull Academy",
+    "Trading Classes in Vijayawada â€” Live Online Stock Market Course | AlphaBull Academy",
   description:
-    "Looking for trading classes in Vijayawada? AlphaBull Academy delivers live online stock market training to Vijayawada students with a Columbia MBA / Wall Street mentor. Courses from ₹8,999. Book a free demo today.",
+    "Looking for trading classes in Vijayawada? AlphaBull Academy delivers live online stock market training to Vijayawada students with a Columbia MBA / Wall Street mentor. Courses from â‚¹8,999. Book a free demo today.",
   keywords:
     "trading classes in vijayawada, trading classes vijayawada, share market classes vijayawada, stock market course vijayawada, online trading course andhra pradesh, share market classes benz circle, trading classes patamata, share market institute vijayawada, stock market training MG road vijayawada, technical analysis vijayawada, options trading andhra pradesh, intraday trading vijayawada, krishna district share market course, AP stock market mentor, vijayawada trading academy",
-  alternates: { canonical: "https://alphabullacademy.com/trading-classes-vijayawada" },
+  alternates: { canonical: "https://www.alphabullacademy.com/trading-classes-vijayawada" },
   openGraph: {
-    title: "Trading Classes in Vijayawada — AlphaBull Academy",
+    title: "Trading Classes in Vijayawada â€” AlphaBull Academy",
     description:
       "Live online stock market training for Vijayawada from AlphaBull Academy. 2000+ students trained.",
-    url: "https://alphabullacademy.com/trading-classes-vijayawada",
+    url: "https://www.alphabullacademy.com/trading-classes-vijayawada",
     type: "website",
     siteName: "AlphaBull Trading Academy",
     locale: "en_IN",
-    images: ["https://alphabullacademy.com/og-image.jpg"],
+    images: ["https://www.alphabullacademy.com/og-image.jpg"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Trading Classes in Vijayawada — AlphaBull Academy",
+    title: "Trading Classes in Vijayawada â€” AlphaBull Academy",
     description: "Live online trading course for Vijayawada. 2000+ students trained.",
-    images: ["https://alphabullacademy.com/og-image.jpg"],
+    images: ["https://www.alphabullacademy.com/og-image.jpg"],
   },
 };
 
@@ -65,24 +65,24 @@ const localities = [
 const courses = [
   {
     name: "Stock Market Fundamentals",
-    price: "₹8,999",
-    duration: "4 weeks · Online",
+    price: "â‚¹8,999",
+    duration: "4 weeks Â· Online",
     summary:
-      "Beginner-friendly trading course delivered live online. Perfect for Vijayawada students new to the markets — learn equity basics, terminology, and place your first structured practice trade by week 4.",
+      "Beginner-friendly trading course delivered live online. Perfect for Vijayawada students new to the markets â€” learn equity basics, terminology, and place your first structured practice trade by week 4.",
     href: "https://rzp.io/rzp/7UZGE0Dg",
   },
   {
     name: "Technical Analysis Mastery",
-    price: "₹24,999",
-    duration: "4 weeks · Online",
+    price: "â‚¹24,999",
+    duration: "4 weeks Â· Online",
     summary:
-      "Andhra's most-requested technical analysis course. Price action, candlestick patterns, support/resistance, CPR, EMA, and breakout setups — all taught live with Vijayawada batch timings.",
+      "Andhra's most-requested technical analysis course. Price action, candlestick patterns, support/resistance, CPR, EMA, and breakout setups â€” all taught live with Vijayawada batch timings.",
     href: "https://rzp.io/rzp/yB1bafTe",
   },
   {
     name: "Options & Derivatives",
-    price: "₹44,999",
-    duration: "4 weeks · Online",
+    price: "â‚¹44,999",
+    duration: "4 weeks Â· Online",
     summary:
       "Advanced options & futures trading for serious AP traders. Strategies, hedging, position sizing, and live trade reviews. Recordings available for working professionals.",
     href: "https://wa.me/919032999466",
@@ -98,7 +98,7 @@ const reasons = [
   {
     icon: GraduationCap,
     title: "Columbia MBA / Wall Street mentor",
-    text: "Kiran Dutta brings US trading desk experience and an MBA from Columbia to Vijayawada students — a level of pedigree no local AP institute matches.",
+    text: "Kiran Dutta brings US trading desk experience and an MBA from Columbia to Vijayawada students â€” a level of pedigree no local AP institute matches.",
   },
   {
     icon: Users,
@@ -108,7 +108,7 @@ const reasons = [
   {
     icon: Clock,
     title: "Weekend & evening batches",
-    text: "Designed for working professionals in Vijayawada's IT, banking, and government sectors. 7–9 PM weekday or weekend morning options.",
+    text: "Designed for working professionals in Vijayawada's IT, banking, and government sectors. 7â€“9 PM weekday or weekend morning options.",
   },
 ];
 
@@ -123,7 +123,7 @@ const faqs = [
   },
   {
     q: "How are classes delivered?",
-    a: "Live Zoom sessions twice a week + recordings within 12 hours + private Telegram group + 1-on-1 mentor calls when stuck. You don't need any specialised software — a laptop, phone, and demat account are enough.",
+    a: "Live Zoom sessions twice a week + recordings within 12 hours + private Telegram group + 1-on-1 mentor calls when stuck. You don't need any specialised software â€” a laptop, phone, and demat account are enough.",
   },
   {
     q: "I'm in Guntur / Mangalagiri / Tadepalli / Gannavaram. Can I join?",
@@ -131,7 +131,7 @@ const faqs = [
   },
   {
     q: "What is the fee structure?",
-    a: "Stock Market Fundamentals: ₹8,999. Technical Analysis Mastery: ₹24,999. Options & Derivatives: ₹44,999. All include lifetime mentorship. No hidden costs.",
+    a: "Stock Market Fundamentals: â‚¹8,999. Technical Analysis Mastery: â‚¹24,999. Options & Derivatives: â‚¹44,999. All include lifetime mentorship. No hidden costs.",
   },
   {
     q: "Do you offer placements?",
@@ -143,11 +143,11 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
   name: "AlphaBull Trading Academy - Online Trading Classes Vijayawada",
-  url: "https://alphabullacademy.com/trading-classes-vijayawada",
-  logo: "https://alphabullacademy.com/logo.png",
+  url: "https://www.alphabullacademy.com/trading-classes-vijayawada",
+  logo: "https://www.alphabullacademy.com/logo.png",
   email: "contact@alphabullacademy.com",
   telephone: "+91-9032999466",
-  priceRange: "₹8,999 – ₹44,999",
+  priceRange: "â‚¹8,999 â€“ â‚¹44,999",
   description:
     "Live online stock market and trading classes for students in Vijayawada and the Krishna / Guntur districts of Andhra Pradesh.",
   areaServed: localities.concat([
@@ -163,7 +163,7 @@ const localBusinessSchema = {
       "@type": "Offer",
       position: i + 1,
       itemOffered: { "@type": "Course", name: c.name, description: c.summary },
-      price: c.price.replace("₹", "").replace(",", ""),
+      price: c.price.replace("â‚¹", "").replace(",", ""),
       priceCurrency: "INR",
     })),
   },
@@ -183,12 +183,12 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://alphabullacademy.com/" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.alphabullacademy.com/" },
     {
       "@type": "ListItem",
       position: 2,
       name: "Trading Classes Vijayawada",
-      item: "https://alphabullacademy.com/trading-classes-vijayawada",
+      item: "https://www.alphabullacademy.com/trading-classes-vijayawada",
     },
   ],
 };
@@ -208,10 +208,10 @@ export default function TradingClassesVijayawadaPage() {
             <div className="container mx-auto px-4 max-w-5xl">
               <Badge className="mb-4 bg-white/15 text-white border-white/20">
                 <Video className="w-3 h-3 mr-1" />
-                Live Online · Vijayawada · Krishna · Guntur
+                Live Online Â· Vijayawada Â· Krishna Â· Guntur
               </Badge>
               <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-6">
-                Trading Classes in Vijayawada — Live Online with an Experienced Mentor
+                Trading Classes in Vijayawada â€” Live Online with an Experienced Mentor
               </h1>
               <p className="text-lg md:text-xl text-white/85 max-w-3xl mb-8 leading-relaxed">
                 AlphaBull Academy brings structured trading mentorship straight to Vijayawada through live online cohorts that students from Benz Circle, Patamata, MG Road, Tadepalli and Mangalagiri rely on for serious market education. 2000+ alumni. Learn from Columbia MBA and Wall Street alum Kiran Dutta.
@@ -239,7 +239,7 @@ export default function TradingClassesVijayawadaPage() {
                 Why Vijayawada Students Choose AlphaBull
               </h2>
               <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
-                Vijayawada has plenty of trading institutes — but very few that are taught by mentors with US trading desk experience. That's our edge.
+                Vijayawada has plenty of trading institutes â€” but very few that are taught by mentors with US trading desk experience. That's our edge.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {reasons.map((r) => (
@@ -265,7 +265,7 @@ export default function TradingClassesVijayawadaPage() {
                 Trading Courses for Vijayawada Students
               </h2>
               <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
-                Three structured paths — beginner to options pro. All delivered live online with recordings, mentor calls, and a private community.
+                Three structured paths â€” beginner to options pro. All delivered live online with recordings, mentor calls, and a private community.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {courses.map((c) => (
@@ -273,7 +273,7 @@ export default function TradingClassesVijayawadaPage() {
                     <h3 className="text-xl font-bold mb-2">{c.name}</h3>
                     <div className="flex items-baseline gap-2 mb-3">
                       <span className="text-3xl font-bold text-primary">{c.price}</span>
-                      <span className="text-sm text-muted-foreground">· {c.duration}</span>
+                      <span className="text-sm text-muted-foreground">Â· {c.duration}</span>
                     </div>
                     <p className="text-muted-foreground mb-6 flex-1">{c.summary}</p>
                     <a href={c.href} target="_blank" rel="noopener noreferrer">
@@ -296,7 +296,7 @@ export default function TradingClassesVijayawadaPage() {
                   Online Trading Classes Reaching Every Corner of Vijayawada
                 </h2>
                 <p className="text-muted-foreground max-w-2xl mx-auto">
-                  Our cohorts include students from across Vijayawada, the broader Krishna district, and neighbouring Guntur. Wherever you are — class is just a click away.
+                  Our cohorts include students from across Vijayawada, the broader Krishna district, and neighbouring Guntur. Wherever you are â€” class is just a click away.
                 </p>
               </div>
               <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
@@ -311,7 +311,7 @@ export default function TradingClassesVijayawadaPage() {
               <div className="mt-12 text-center">
                 <h3 className="text-2xl font-semibold mb-3">Also serving the rest of South India</h3>
                 <p className="text-muted-foreground max-w-2xl mx-auto">
-                  Many of our Vijayawada students train alongside peers from Visakhapatnam, Tirupati, Guntur, and Hyderabad in the same live cohort. <Link className="text-primary underline" href="/trading-classes-hyderabad">See our Hyderabad page</Link> · <Link className="text-primary underline" href="/trading-classes-visakhapatnam">See our Visakhapatnam page</Link>.
+                  Many of our Vijayawada students train alongside peers from Visakhapatnam, Tirupati, Guntur, and Hyderabad in the same live cohort. <Link className="text-primary underline" href="/trading-classes-hyderabad">See our Hyderabad page</Link> Â· <Link className="text-primary underline" href="/trading-classes-visakhapatnam">See our Visakhapatnam page</Link>.
                 </p>
               </div>
             </div>
@@ -320,7 +320,7 @@ export default function TradingClassesVijayawadaPage() {
           <section className="bg-muted/30 py-16 md:py-24">
             <div className="container mx-auto px-4 max-w-4xl">
               <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center">
-                Frequently Asked Questions — Vijayawada
+                Frequently Asked Questions â€” Vijayawada
               </h2>
               <div className="space-y-6">
                 {faqs.map((f) => (
@@ -339,7 +339,7 @@ export default function TradingClassesVijayawadaPage() {
                 Ready to Trade Like a Pro? Book Your Free Demo
               </h2>
               <p className="text-white/80 mb-8 max-w-2xl mx-auto text-lg">
-                See exactly how Kiran teaches, ask any question, and get a personalised roadmap for your trading journey — no commitment, just a 60-minute Zoom call.
+                See exactly how Kiran teaches, ask any question, and get a personalised roadmap for your trading journey â€” no commitment, just a 60-minute Zoom call.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="https://wa.me/919032999466" target="_blank" rel="noopener noreferrer">
